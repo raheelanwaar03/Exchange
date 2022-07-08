@@ -1,5 +1,12 @@
 @extends('layouts.logApp');
 
+
+@section('linkTitle')
+    Login to Exchange Currency
+@endsection
+
+
+
 @section('title')
     <h1 class="form-title">Login</h1>
 @endsection
@@ -22,7 +29,7 @@
     </form>
     @section('logFooter')
     <div class="signup-image">
-        <figure><img src="images/img3.png" alt="sing up image"></figure>
+        <figure><img src="{{ asset('assets/images/img3.png') }}" alt="sing up image"></figure>
         <a href="{{ route('register') }}" class="signup-image-link">I Have'nt Account Yet</a>
     </div>
 @endsection

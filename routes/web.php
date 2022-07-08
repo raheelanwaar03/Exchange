@@ -22,9 +22,5 @@ Route::get('/dashboard', function () {
 })->middleware(['auth','userAuth'])->name('user.index');
 
 
-Route::get('/admin.index', function () {
-    return view('admin.index');
-})->middleware(['auth','adminAuth'])->name('admin.index');
-
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

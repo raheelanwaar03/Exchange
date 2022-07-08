@@ -12,18 +12,19 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="apple-touch-icon" href="#" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/pogo-slider.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/pogo-slider.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assest/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assest/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assest/css/custom.css') }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 </head>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
 
     <div id="preloader">
         <div class="loader">
-            <img src="images/loader.gif" alt="#" />
+            <img src="{{ asset('assest/images/loader.gif') }}" alt="#" />
         </div>
     </div>
 
@@ -32,15 +33,15 @@
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
                     </div>
                     <div class="site_information">
                         <ul>
-                            <li><a href="mailto:exchang@gmail.com"><img src="images/mail_icon.png"
+                            <li><a href="mailto:exchang@gmail.com"><img src="{{ asset('assets/images/mail_icon.png') }}"
                                         alt="#" />exchang@gmail.com</a></li>
-                            <li><a href="tel:exchang@gmail.com"><img src="images/phone_icon.png"
+                            <li><a href="tel:exchang@gmail.com"><img src="{{ asset('assets/images/phone_icon.png') }}"
                                         alt="#" />+7123569847</a></li>
-                            <li><a class="join_bt" href="{{ route('register') }}">Sign Up</a></li>
+                            <li><a class="join_bt" href="{{ route('logout') }}">Logout</a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,9 +62,9 @@
                                 </button>
                                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                                     <ul class="navbar-nav">
-                                        <li><a class="nav-link active" href="index.html">Home</a></li>
+                                        <li><a class="nav-link active" href="{{ route('admin.index') }}">Home</a></li>
                                         <li><a class="nav-link" href="about.html">About</a></li>
-                                        <li><a class="nav-link" href="exchange.html">Exchange</a></li>
+                                        <li><a class="nav-link" href="{{ route('admin.create') }}">Coin Mangment</a></li>
                                         <li><a class="nav-link" href="services.html">Services</a></li>
                                         <li><a class="nav-link" href="new.html">News</a></li>
                                         <li><a class="nav-link" href="contact.html">Contact</a></li>
@@ -88,7 +89,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image:url(images/slide_img.png);">
+                    <div class="pogoSlider-slide" style="background-image:{{ asset('assets/images/slide_img.png') }}">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">
@@ -101,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="pogoSlider-slide" style="background-image:url(images/slide_img.png);">
+                    <div class="pogoSlider-slide" style="background-image:{{ asset('assets/images/slide_img.png') }}">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-12">

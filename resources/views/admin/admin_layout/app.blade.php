@@ -1,5 +1,3 @@
-@include('layouts.navigation');
-
-@yield('content')
-
-@include('layouts.footer');
+@include('admin.admin_layout.navigation');
+@yield('content');
+@include('admin.admin_layout.footer');

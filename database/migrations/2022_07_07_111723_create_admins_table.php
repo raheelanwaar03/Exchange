@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
+            $table->string('coinName');
+            $table->string('buyPrice');
+            $table->string('sellPrice');
             $table->timestamps();
         });
     }

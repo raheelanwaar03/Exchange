@@ -3,4 +3,4 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
-Route::resource('/addCoin', AdminController::class);
+Route::resource('/admin', AdminController::class)->middleware(['auth','adminAuth']);
