@@ -1,4 +1,4 @@
-@extends('layouts.logApp');
+@extends('layouts.logApp')
 
 
 @section('linkTitle')
@@ -24,13 +24,13 @@
         </div>
 
         <div class="form-group form-button">
-            <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+            <input type="submit" name="signup" id="signup" class="form-submit" value="Login" />
         </div>
     </form>
     @section('logFooter')
     <div class="signup-image">
         <figure><img src="{{ asset('assets/images/img3.png') }}" alt="sing up image"></figure>
-        <a href="{{ route('register') }}" class="signup-image-link">I Have'nt Account Yet</a>
+        <a href="{{ route('register') }}" class="signup-image-link">I Have'nt Registered My Account</a>
     </div>
 @endsection
 @endsection

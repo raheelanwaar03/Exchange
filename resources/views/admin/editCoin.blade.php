@@ -10,27 +10,28 @@
             <div class="col-md-12 mt-4">
                 <div class="card">
                     <div class="card-title">
-                        <h1 style="color: #FF890E" class="card-title text-center">Admin Add Coin</h1>
+                        <h1 style="color: #FF890E" class="card-title text-center">Admin Edit Coin's Details</h1>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.store') }}" method="POST">
+                        <form action="{{ route('admin.update',['admin'=>$admin->id]) }}" method="POST">
+                            @method('PUT')
                             @csrf
                             <div class="form-group">
                                 <label for="coinName">Coin Name</label>
                                 <input type="text" class="form-control" id="coinName" name="coinName"
-                                    placeholder="Enter Coin Name">
+                                    value="{{ $admin->coinName }}">
                             </div>
                             <div class="form-group">
                                 <label for="buyPrice">Buying Price</label>
                                 <input type="text" class="form-control" id="buyPrice" name="buyPrice"
-                                    placeholder="Enter Coin Buy Price">
+                                    value="{{ $admin->buyPrice }}">
                             </div>
                             <div class="form-group">
                                 <label for="sellPrice">Selling Price</label>
                                 <input type="text" class="form-control" id="sellPrice" name="sellPrice"
-                                    placeholder="Enter Coin Sell Price">
+                                    value="{{ $admin->sellPrice }}">
                             </div>
-                            <button type="submit" class="btn-yellow">Add Coin</button>
+                            <button type="submit" class="btn-yellow">Update Coin</button>
                         </form>
                     </div>
                 </div>

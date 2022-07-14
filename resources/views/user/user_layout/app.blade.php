@@ -1,5 +1,5 @@
-@include('layouts.navigation');
+@include('user.user_layout.navigation')
 
 @yield('content')
 
-@include('layouts.footer');
+@include('user.user_layout.footer');

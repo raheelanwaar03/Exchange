@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Basic -->
 
 <head>
     <meta charset="utf-8">
@@ -14,9 +12,9 @@
     <link rel="apple-touch-icon" href="#" />
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/pogo-slider.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assest/css/style.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assest/css/responsive.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assest/css/custom.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
 </head>
 
@@ -24,24 +22,31 @@
 
     <div id="preloader">
         <div class="loader">
-            <img src="{{ asset('assest/images/loader.gif') }}" alt="#" />
+            <img src="{{ asset('assets/images/loader.gif') }}" alt="#" />
         </div>
     </div>
-
+    <!-- Navigation Bar -->
     <header class="top-header">
         <div class="header_top">
             <div class="container">
                 <div class="row">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
+                        <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.png') }}"
+                                alt="image"></a>
                     </div>
                     <div class="site_information">
                         <ul>
-                            <li><a href="mailto:exchang@gmail.com"><img src="{{ asset('assets/images/mail_icon.png') }}"
-                                        alt="#" />exchang@gmail.com</a></li>
-                            <li><a href="tel:exchang@gmail.com"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                        alt="#" />+7123569847</a></li>
-                            <li><a class="join_bt" href="{{ route('logout') }}">Logout</a></li>
+                            <li><a href="mailto:support@instantflexy.com"><img
+                                        src="{{ asset('assets/images/mail_icon.png') }}"
+                                        alt="#" />{{ env('APP_Email') }}</a></li>
+                            <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
+                                        alt="#" />{{ env('APP_Phone') }}</a></li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="Post">
+                                    @csrf
+                                    <button type="submit" class="btn-yellow">Logout</button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -62,9 +67,9 @@
                                 </button>
                                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                                     <ul class="navbar-nav">
-                                        <li><a class="nav-link active" href="{{ route('admin.index') }}">Home</a></li>
+                                        <li><a class="nav-link" href="{{ route('admin.index') }}">Home</a></li>
                                         <li><a class="nav-link" href="about.html">About</a></li>
-                                        <li><a class="nav-link" href="{{ route('admin.create') }}">Coin Mangment</a></li>
+                                        <li><a class="nav-link" href="exchange.html">Exchange</a></li>
                                         <li><a class="nav-link" href="services.html">Services</a></li>
                                         <li><a class="nav-link" href="new.html">News</a></li>
                                         <li><a class="nav-link" href="contact.html">Contact</a></li>
@@ -75,47 +80,25 @@
                         <div class="search-box">
                             <input type="text" class="search-txt" placeholder="Search">
                             <a class="search-btn">
-                                <img src="images/search_icon.png" alt="#" />
+                                <img src="{{ asset('assets/images/search_icon.png') }}" alt="#" />
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </header>
-
-    <div class="ulockd-home-slider">
-        <div class="container-fluid">
+    <!-- End header -->
+    <!-- Start Banner -->
+    <div class="section inner_page_banner">
+        <div class="container">
             <div class="row">
-                <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image:{{ asset('assets/images/slide_img.png') }}">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3>Progress & Success<br><strong>Currency</strong></h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" style="background-image:{{ asset('assets/images/slide_img.png') }}">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3>Progress & Success<br><strong>Currency</strong></h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange ></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-12">
+                    <div class="banner_title">
+                        @yield('page-title')
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- End Banner -->

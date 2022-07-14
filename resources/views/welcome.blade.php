@@ -12,15 +12,20 @@
                 <div class="col-md-6 layout_padding">
                     <div class="full paddding_left_15">
                         <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Welcome</span> To Exchange</h2>
+                            <h2><span class="theme_color">{{ env('APP_NAME') }} </span></h2>
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p>
+                            {{ env('APP_NAME') }} is a total e-business solution provider that specializes in the provision
+                            of fast, reliable and efficient e-currency exchange service to the clients who desire to buy and
+                            sell online with ease. We are one of the World's most reliable and fastest link to the World of
+                            e-currency. We help you convert your Cash to E-currency and we also help you convert your
+                            E-currency to Cash. We provide convenience for our clients in all areas of e-business.
+
+                            Our mission is to provide unbeatable, un-equalled and unique e-commerce Solutions. We do not
+                            even allow you to take any risks. We bear all the risk and deliver our services to your
+                            doorsteps wherever you may be in the world.</p>
                     </div>
                     <div class="full paddding_left_15">
                         <a class="main_bt" href="#">About more ></a>
@@ -94,11 +99,14 @@
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p>Welcome, E-money or Electronic money or E-currency (also known as fiat currency) is a virtual
+                            currency used as a means of payment for goods and services on the internet. There are millions
+                            of online stores and merchants that accept E-currency worldwide. Examples of such e-currencies
+                            are Perfect Money (PM), Okpay, PayPal, Skrill, Solid Trust Pay, WebMoney, Payeer etc.
+
+                            At {{ env('APP_NAME') }}, we provide an easy platform for funding and withdrawal from the major
+                            e-currencies, some of which are already mentioned above. So, you do not need to worry about
+                            converting your e-currency to cash or your cash to e-currency.</p>
                     </div>
                     <div class="full paddding_left_15">
                         <a class="main_bt" href="#">Exchange ></a>
@@ -118,11 +126,14 @@
                         </div>
                     </div>
                     <div class="full paddding_left_15">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        <p>{{ env('APP_NAME') }} is dedicated to becoming the industry leader in e-currency and
+                            crypto-currency exchange, payment solutions and related services for companies and individuals
+                            worldwide. {{ env('APP_NAME') }} was built on the principles of credibility and security. We are
+                            one of the very few oldest and long surviving exchange in the continent operating since 2007.
+
+                            Over a decade we have been a part of the industry evolution and a solely pioneer of the ever
+                            used term - Instant Funding (the term widely used now by almost all exchanges/exchangers in the
+                            country).</p>
                     </div>
                     <div class="full paddding_left_15">
                         <a class="main_bt" href="#">Read More ></a>

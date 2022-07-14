@@ -1,4 +1,4 @@
-@extends('layouts.logApp');
+@extends('layouts.logApp')
 
 @section('linkTitle')
     Sign Up to Exchange Currency
@@ -30,18 +30,6 @@
         <div class="form-group">
             <label for="country"><i class="zmdi zmdi-gps-dot"></i></label>
             <input type="country" name="country" id="country" placeholder="Your Country" />
-        </div>
-        <div class="form-group">
-            <label for="state"><i class="zmdi zmdi-gps-dot"></i></label>
-            <input type="state" name="state" id="state" placeholder="Your State" />
-        </div>
-        <div class="form-group">
-            <label for="city"><i class="zmdi zmdi-gps-dot"></i></label>
-            <input type="city" name="city" id="city" placeholder="Your City" />
-        </div>
-        <div class="form-group">
-            <label for="street"><i class="zmdi zmdi-gps-dot"></i></label>
-            <input type="street" name="street" id="street" placeholder="Your Street" />
         </div>
         <div class="form-group">
             <label for="password"><i class="zmdi zmdi-lock"></i></label>

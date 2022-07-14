@@ -14,7 +14,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        $admins = Admin::get();
+        return view('admin.index', compact('admins'));
     }
 
     /**
@@ -35,7 +36,17 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'coinName' => 'required|string|max:255',
+            'buyPrice' => 'required|numeric',
+            'sellPrice' => 'required|numeric',
+        ]);
+        $admin = new Admin;
+        $admin->coinName = $data['coinName'];
+        $admin->buyPrice = $data['buyPrice'];
+        $admin->sellPrice = $data['sellPrice'];
+        $admin->save();
+        return redirect()->route('admin.index')->with('success', 'Coin added successfully');
     }
 
     /**
@@ -57,7 +68,7 @@ class AdminController extends Controller
      */
     public function edit(Admin $admin)
     {
-        //
+        return view('admin.editCoin', compact('admin'));
     }
 
     /**
@@ -69,7 +80,18 @@ class AdminController extends Controller
      */
     public function update(Request $request, Admin $admin)
     {
-        //
+        // edit coin
+        $data = $request->validate([
+            'coinName' => 'required|string|max:255',
+            'buyPrice' => 'required|numeric',
+            'sellPrice' => 'required|numeric',
+        ]);
+        $admin = Admin::find($admin->id);
+        $admin->coinName = $data['coinName'];
+        $admin->buyPrice = $data['buyPrice'];
+        $admin->sellPrice = $data['sellPrice'];
+        $admin->save();
+        return redirect()->route('admin.index')->with('massage', 'Coin updated successfully');
     }
 
     /**
@@ -80,6 +102,8 @@ class AdminController extends Controller
      */
     public function destroy(Admin $admin)
     {
-        //
+        // delete coin from database
+        $admin->delete();
+        return redirect()->route('admin.index')->with('success', 'Coin deleted successfully');
     }
 }

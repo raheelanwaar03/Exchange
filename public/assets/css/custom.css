@@ -1,1 +1,19 @@
 /** ADD YOUR AWESOME CODES HERE **/
+
+.btn-yellow {
+    background: #ff880e;
+    width: 180px;
+    text-align: center;
+    height: 35px;
+    border: #db6f02;
+    line-height: 30px;
+    border-radius: 75px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.btn-yellow:hover,
+a.btn-yellow:focus {
+	background: #222;
+	color: #fff !important;
+}

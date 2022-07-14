@@ -27,13 +27,7 @@
                         <div class="full">
                             <div class="footer_blog full white_fonts">
                                 <h3>Newsletter</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-                                <div class="newsletter_form">
-                                    <form action="index.html">
-                                        <input type="email" placeholder="Your Email" name="#" required="">
-                                        <button>Submit</button>
-                                    </form>
-                                </div>
+                                <p>Start Exchange Your E-currency with {{ env('APP_NAME') }}</p>
                             </div>
                         </div>
                     </div>
@@ -42,9 +36,9 @@
                             <div class="footer_blog full white_fonts">
                                 <h3>Contact us</h3>
                                 <ul class="full">
-                                    <li><img src="images/i5.png"><span>London 145<br>United Kingdom</span></li>
-                                    <li><img src="{{ asset('assets/images/i6.png') }}"><span>demo@gmail.com</span></li>
-                                    <li><img src="{{ asset('assets/images/i7.png') }}"><span>+12586954775</span></li>
+                                    <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li>
+                                    <li><img src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span></li>
+                                    <li><img src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,11 +49,13 @@
     </div>
 </footer>
 
+<x-alert/>
+
 <div class="footer_bottom">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="crp">� Copyrights 2019 design by html.design</p>
+                <p class="crp">Copyrights 2020 design by {{ env('APP_NAME') }} </p>
             </div>
         </div>
     </div>
