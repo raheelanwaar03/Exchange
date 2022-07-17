@@ -67,12 +67,12 @@
                                 </button>
                                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                                     <ul class="navbar-nav">
-                                        <li><a class="nav-link" href="{{ route('admin.index') }}">Home</a></li>
-                                        <li><a class="nav-link" href="about.html">About</a></li>
-                                        <li><a class="nav-link" href="exchange.html">Exchange</a></li>
-                                        <li><a class="nav-link" href="services.html">Services</a></li>
+                                        <li><a class="nav-link" href="{{ route('user.index') }}">Home</a></li>
+                                        <li><a class="nav-link" href="{{ route('user.about') }}">About</a></li>
+                                        <li><a class="nav-link" href="{{ route('user.liveRates') }}">Live Rates</a></li>
+                                        <li><a class="nav-link" href="{{ route('user.help') }}">How to Buy&Sell</a></li>
                                         <li><a class="nav-link" href="new.html">News</a></li>
-                                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                                        <li><a class="nav-link" href="{{ route('user.contact') }}">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>

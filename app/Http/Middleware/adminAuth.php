@@ -20,7 +20,7 @@ class adminAuth
             return $next($request);
         }
         elseif (auth()->user()->role == 'user') {
-            return redirect('user.index');
+            return redirect()->route('user.index');
         }
     }
 }

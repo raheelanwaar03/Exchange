@@ -14,12 +14,11 @@
                         </div>
                         <div class="full">
                             <ul class="menu_footer">
-                                <li><a href="home.html">> Home</a></li>
-                                <li><a href="about.html">> About</a></li>
-                                <li><a href="exchange.html">> Exchange</a></li>
-                                <li><a href="services.html">> Services</a></li>
-                                <li><a href="new.html">> New</a></li>
-                                <li><a href="contact.html">> Contact</a></li>
+                                <li><a href="{{ route('user.index') }}">>Home</a></li>
+                                <li><a href="{{ route('user.about') }}">>About</a></li>
+                                <li><a href="exchange.html">>Exchange</a></li>
+                                <li><a href="{{ route('user.help') }}">How to Buy&Sell</a></li>
+                                <li><a href="{{ route('user.contact') }}">>Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -36,9 +35,10 @@
                             <div class="footer_blog full white_fonts">
                                 <h3>Contact us</h3>
                                 <ul class="full">
-                                    <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li>
+                                    {{-- <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li> --}}
                                     <li><img src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span></li>
                                     <li><img src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span></li>
+                                    <li><img src="{{ asset('assets/images/whatsapp.png') }}"><span>{{ env('APP_Phone2') }}</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="crp">Copyrights 2020 design by {{ env('APP_NAME') }} </p>
+                <p class="crp">Copyrights 2022 design by {{ env('APP_NAME') }} </p>
             </div>
         </div>
     </div>

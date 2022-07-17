@@ -14,6 +14,19 @@
 
 .btn-yellow:hover,
 a.btn-yellow:focus {
-	background: #222;
-	color: #fff !important;
+    background: #222;
+    color: #fff !important;
+}
+
+.whatsapp {
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    padding: 15px 20px;
+    border-radius: 50px;
+}
+
+.whatsapp img {
+    color: #fff;
+    font-size: 100px;
 }
