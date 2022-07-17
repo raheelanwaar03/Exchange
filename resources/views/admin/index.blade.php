@@ -15,6 +15,7 @@
                       <tr>
                         <th class="bg-warning" scope="col">#</th>
                         <th class="bg-warning" scope="col">Coin Name</th>
+                        <th class="bg-warning" scope="col">Coin Image</th>
                         <th class="bg-warning" scope="col">Buy Price</th>
                         <th class="bg-warning" scope="col">Sell Price</th>
                         <th class="bg-warning" scope="col">Action</th>
@@ -25,6 +26,7 @@
                             <tr>
                                 <th scope="row">{{ $admin->id }}</th>
                                 <td>{{ $admin->coinName }}</td>
+                                <td><img src="{{ asset('images/'.$admin->coinImage) }}" alt="{{ $admin->coinName }}" height="90px" width="90px" class="img-fluid img-thumbnail"></td>
                                 <td>{{ $admin->buyPrice }}</td>
                                 <td>{{ $admin->sellPrice }}</td>
                                 <td>

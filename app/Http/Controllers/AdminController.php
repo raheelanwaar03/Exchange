@@ -38,11 +38,19 @@ class AdminController extends Controller
     {
         $data = $request->validate([
             'coinName' => 'required|string|max:255',
+            'coinImage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'buyPrice' => 'required|numeric',
             'sellPrice' => 'required|numeric',
         ]);
+
+        $file = $request->file('coinImage');
+        $fileName = rand(1111,999999). '.'.  $file->getClientOriginalExtension();
+        $file->move(public_path('images'), $fileName);
+
+
         $admin = new Admin;
         $admin->coinName = $data['coinName'];
+        $admin->coinImage = $fileName;
         $admin->buyPrice = $data['buyPrice'];
         $admin->sellPrice = $data['sellPrice'];
         $admin->save();

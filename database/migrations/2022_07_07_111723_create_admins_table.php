@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('coinName');
             $table->string('buyPrice');
+            $table->string('coinImage');
             $table->string('sellPrice');
             $table->timestamps();
         });

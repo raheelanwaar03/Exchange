@@ -69,7 +69,7 @@
                                             <td>{{ $tetherRate['usdt_usd']['sell'] }}$</td>
                                             <td>{{ $tetherRate['usdt_usd']['buy'] }}$</td>
                                         </tr>
-                                        <tr>
+                                        {{-- <tr>
                                             <td class="w-25">
                                                 <img src="{{ asset('assets/images/paypal.png') }}"
                                                     class="img-fluid img-thumbnail" alt="btc" height="90px"
@@ -86,7 +86,7 @@
                                             </td>
                                             <td>{{ $admin->sellPrice }}$</td>
                                             <td>{{ $admin->buyPrice }}$</td>
-                                        </tr>
+                                        </tr> --}}
                                     </tbody>
                                 </table>
                             </div>
