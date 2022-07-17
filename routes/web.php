@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+
     return view('welcome');
 });
 
 Route::get('/user/about', [UserController::class, 'about'])->name('user.about')->middleware(['auth','userAuth']);
 Route::get('/user/help', [UserController::class, 'help'])->name('user.help')->middleware(['auth','userAuth']);
 Route::get('/user/contact', [UserController::class, 'contact'])->name('user.contact')->middleware(['auth','userAuth']);
-Route::get('/user/liveRates', [UserController::class, 'liveRates'])->name('user.liveRates')->middleware(['auth','userAuth']);
 Route::resource('/user', UserController::class)->middleware(['auth','userAuth']);
 
 

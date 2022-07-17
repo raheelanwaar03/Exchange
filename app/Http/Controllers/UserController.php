@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('user.index');
+        // calling the array from admin site and passing it to the view
+        $admins = Admin::get();
+        return view('user.index', compact('admins'));
     }
 
     public function about()
@@ -30,11 +33,6 @@ class UserController extends Controller
     public function Contact()
     {
         return view('user.contact');
-    }
-
-    public function liveRates()
-    {
-        return view('user.liveRates');
     }
 
     /**

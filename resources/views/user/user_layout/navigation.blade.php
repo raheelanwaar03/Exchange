@@ -69,7 +69,6 @@
                                     <ul class="navbar-nav">
                                         <li><a class="nav-link" href="{{ route('user.index') }}">Home</a></li>
                                         <li><a class="nav-link" href="{{ route('user.about') }}">About</a></li>
-                                        <li><a class="nav-link" href="{{ route('user.liveRates') }}">Live Rates</a></li>
                                         <li><a class="nav-link" href="{{ route('user.help') }}">How to Buy&Sell</a></li>
                                         <li><a class="nav-link" href="new.html">News</a></li>
                                         <li><a class="nav-link" href="{{ route('user.contact') }}">Contact</a></li>

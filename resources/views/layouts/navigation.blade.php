@@ -43,7 +43,10 @@
                                         alt="#" />{{ env('APP_Email') }}</a></li>
                             <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
                                         alt="#" />{{ env('APP_Phone') }}</a></li>
-                            <li><a class="join_bt" href="{{ route('register') }}">Register</a></li>
+                                        <div class="d-flex justify-content-center align-items-center">
+                                            <li><a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a></li>
+                                            <li><a class="join_bt" href="{{ route('login') }}">login</a></li>
+                                        </div>
                         </ul>
                     </div>
                 </div>
