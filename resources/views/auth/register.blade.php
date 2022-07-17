@@ -21,11 +21,11 @@
         </div>
         <div class="form-group">
             <label for="phone"><i class="zmdi zmdi-phone-in-talk"></i></label>
-            <input type="phone" name="phone" id="phone" placeholder="Your Phone" />
+            <input type="phone" name="phone_number" id="phone_number" placeholder="Your Phone" />
         </div>
         <div class="form-group">
-            <label for="brith_date"><i class="zmdi zmdi-calendar"></i></label>
-            <input type="brith_date" name="brith_date" id="brith_date" placeholder="Your Date of Brith in 2022-07-9" />
+            <label for="date_of_birth"><i class="zmdi zmdi-calendar"></i></label>
+            <input type="brith_date" name="date_of_birth" id="date_of_birth" placeholder="Your Date of Brith in 2022-07-9" />
         </div>
         <div class="form-group">
             <label for="country"><i class="zmdi zmdi-gps-dot"></i></label>
