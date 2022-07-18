@@ -69,24 +69,17 @@
                                             <td>{{ $tetherRate['usdt_usd']['sell'] }}$</td>
                                             <td>{{ $tetherRate['usdt_usd']['buy'] }}$</td>
                                         </tr>
-                                        {{-- <tr>
+                                        @foreach ($admins as $admin)
+                                        <tr>
                                             <td class="w-25">
-                                                <img src="{{ asset('assets/images/paypal.png') }}"
+                                                <img src="{{ asset('images/'.$admin->coinImage) }}" alt="{{ $admin->name }}"
                                                     class="img-fluid img-thumbnail" alt="btc" height="90px"
                                                     width="90px">
                                             </td>
                                             <td>{{ $admin->sellPrice }}$</td>
                                             <td>{{ $admin->buyPrice }}$</td>
                                         </tr>
-                                        <tr>
-                                            <td class="w-25">
-                                                <img src="{{ asset('assets/images/payeer.png') }}"
-                                                    class="img-fluid img-thumbnail" alt="btc" height="90px"
-                                                    width="90px">
-                                            </td>
-                                            <td>{{ $admin->sellPrice }}$</td>
-                                            <td>{{ $admin->buyPrice }}$</td>
-                                        </tr> --}}
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
