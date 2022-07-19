@@ -35,7 +35,7 @@
                                 <input type="text" class="form-control" id="sellPrice" name="sellPrice"
                                     placeholder="Enter E-currency Sell Price">
                             </div>
-                            <button type="submit" class="btn-yellow">Add Coin</button>
+                            <button type="submit" class="btn-yellow">Add E-currency</button>
                         </form>
                     </div>
                 </div>

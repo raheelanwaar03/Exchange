@@ -20,6 +20,8 @@ Route::get('/', function () {
 });
 
 Route::get('/user/about', [UserController::class, 'about'])->name('user.about')->middleware(['auth','userAuth']);
+Route::get('/user/policy', [UserController::class, 'policy'])->name('user.policy')->middleware(['auth','userAuth']);
+Route::get('/user/FAQ', [UserController::class, 'FAQ'])->name('user.FAQ')->middleware(['auth','userAuth']);
 Route::get('/user/help', [UserController::class, 'help'])->name('user.help')->middleware(['auth','userAuth']);
 Route::get('/user/contact', [UserController::class, 'contact'])->name('user.contact')->middleware(['auth','userAuth']);
 Route::resource('/user', UserController::class)->middleware(['auth','userAuth']);

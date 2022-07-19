@@ -29,12 +29,12 @@
                                         <p style="color: #FF890E">
                                             1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
                                         </p>
-                                        <p style="color: #FF890E">
+                                        {{-- <p style="color: #FF890E">
                                             BTC Sell Rate = ₦ {{ $admin->sellPrice }}
                                         </p>
                                         <p style="color: #FF890E">
                                             BTC Buy Rate = ₦ {{ $admin->buyPrice }}
-                                        </p>
+                                        </p> --}}
                                     </div>
                                 </div>
                             </div>
@@ -58,8 +58,8 @@
                                                             alt="{{ $admin->name }}" class="img-fluid img-thumbnail"
                                                             alt="btc" height="90px" width="90px">
                                                     </td>
-                                                    <td>₦{{ $admin->sellPrice }}</td>
                                                     <td>₦{{ $admin->buyPrice }}</td>
+                                                    <td>₦{{ $admin->sellPrice }}</td>
                                                 </tr>
                                             @endforeach
                                         </tbody>

@@ -39,6 +39,9 @@
                                     <li><img src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span></li>
                                     <li><img src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span></li>
                                     <li><img src="{{ asset('assets/images/whatsapp.png') }}"><span>{{ env('APP_Phone2') }}</span></li>
+                                    <li><img src="{{ asset('assets/images/instagram.png') }}"><span>{{ env('APP_Instagram') }}</span></li>
+                                    <li><img src="{{ asset('assets/images/Telegram.png') }}"><span>{{ env('APP_TELEGRAM') }}</span></li>
+                                    <li><img src="{{ asset('assets/images/twitter.png') }}"><span>{{ env('APP_TWITTER') }}</span></li>
                                 </ul>
                             </div>
                         </div>
