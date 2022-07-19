@@ -1,7 +1,7 @@
-@extends('admin.admin_layout.app');
+@extends('admin.admin_layout.app')
 
 @section('page-title')
-    <h3>Add Coins</h3>
+    <h3>Add E-currency Rates</h3>
 @endsection
 
 @section('content')
@@ -19,7 +19,7 @@
                             <div class="form-group">
                                 <label for="coinName">E-currency Name</label>
                                 <input type="text" class="form-control" id="coinName" name="coinName"
-                                    placeholder="Enter Coin Name">
+                                    placeholder="Enter E-currency Name">
                             </div>
                             <div class="form-group">
                                 <label for="coinImage">E-currency Image</label>
@@ -28,12 +28,12 @@
                             <div class="form-group">
                                 <label for="buyPrice">Buying Price</label>
                                 <input type="text" class="form-control" id="buyPrice" name="buyPrice"
-                                    placeholder="Enter Coin Buy Price">
+                                    placeholder="Enter E-currency Buy Price">
                             </div>
                             <div class="form-group">
                                 <label for="sellPrice">Selling Price</label>
                                 <input type="text" class="form-control" id="sellPrice" name="sellPrice"
-                                    placeholder="Enter Coin Sell Price">
+                                    placeholder="Enter E-currency Sell Price">
                             </div>
                             <button type="submit" class="btn-yellow">Add Coin</button>
                         </form>

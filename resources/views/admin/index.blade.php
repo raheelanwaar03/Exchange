@@ -1,4 +1,4 @@
-@extends('admin.admin_layout.app');
+@extends('admin.admin_layout.app')
 
 @section('page-title')
     <h3>Hi {{ auth()->user()->name }} To Admin Dashboard</h3>

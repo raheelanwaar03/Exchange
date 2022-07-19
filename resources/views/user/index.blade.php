@@ -11,14 +11,6 @@
         $btcRate = file_get_contents('https://yobit.net/api/3/ticker/btc_usd');
         // convert to array
         $btcRate = json_decode($btcRate, true);
-        // //for eth
-        // $ethRate = file_get_contents('https://yobit.net/api/3/ticker/eth_usd');
-        // // convert to array
-        // $ethRate = json_decode($ethRate, true);
-        // //for tether
-        // $tetherRate = file_get_contents('https://yobit.net/api/3/ticker/usdt_usd');
-        // // convert to array
-        // $tetherRate = json_decode($tetherRate, true);
         ?>
     </div>
     <!-- section -->
@@ -30,10 +22,22 @@
                         <div class="heading_main text_align_center">
                             <h2><span class="theme_color"></span>Live Rates</h2>
                         </div>
-                        <div>
-                        <p style="color: #FF890E">
-                            1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
-                        </p>
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <p style="color: #FF890E">
+                                            1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
+                                        </p>
+                                        <p style="color: #FF890E">
+                                            BTC Sell Rate = ₦ {{ $admin->sellPrice }}
+                                        </p>
+                                        <p style="color: #FF890E">
+                                            BTC Buy Rate = ₦ {{ $admin->buyPrice }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="container">
                             <div class="row">

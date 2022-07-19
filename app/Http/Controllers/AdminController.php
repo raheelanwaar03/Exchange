@@ -38,7 +38,7 @@ class AdminController extends Controller
     {
         $data = $request->validate([
             'coinName' => 'required|string|max:255',
-            'coinImage' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'coinImage' => 'required|image|mimes:jpeg,png,jpg,gif,web,svg|max:2048',
             'buyPrice' => 'required|numeric',
             'sellPrice' => 'required|numeric',
         ]);

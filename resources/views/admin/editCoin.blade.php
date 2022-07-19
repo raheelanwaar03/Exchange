@@ -1,4 +1,4 @@
-@extends('admin.admin_layout.app');
+@extends('admin.admin_layout.app')
 
 @section('page-title')
     <h3>Add Coins</h3>

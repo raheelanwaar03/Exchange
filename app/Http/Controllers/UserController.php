@@ -15,9 +15,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        // calling the array from admin site and passing it to the view
         $admins = Admin::get();
-        return view('user.index', compact('admins'));
+        $admin = Admin::first();
+        return view('user.index', compact('admins' , 'admin'));
     }
 
     public function about()
