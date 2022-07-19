@@ -14,8 +14,8 @@
                     <thead>
                       <tr>
                         <th class="bg-warning" scope="col">#</th>
-                        <th class="bg-warning" scope="col">Coin Name</th>
-                        <th class="bg-warning" scope="col">Coin Image</th>
+                        <th class="bg-warning" scope="col">E-currency Name</th>
+                        <th class="bg-warning" scope="col">E-currency Image</th>
                         <th class="bg-warning" scope="col">Buy Price</th>
                         <th class="bg-warning" scope="col">Sell Price</th>
                         <th class="bg-warning" scope="col">Action</th>
@@ -27,8 +27,8 @@
                                 <th scope="row">{{ $admin->id }}</th>
                                 <td>{{ $admin->coinName }}</td>
                                 <td><img src="{{ asset('images/'.$admin->coinImage) }}" alt="{{ $admin->coinName }}" height="90px" width="90px" class="img-fluid img-thumbnail"></td>
-                                <td>{{ $admin->buyPrice }}</td>
-                                <td>{{ $admin->sellPrice }}</td>
+                                <td>₦{{ $admin->buyPrice }}</td>
+                                <td>₦{{ $admin->sellPrice }}</td>
                                 <td>
                                    <a href="{{ route('admin.edit', $admin->id) }}" class="btn btn-dark">Edit</a>
                                     <form action="{{ route('admin.destroy', $admin->id) }}" method="POST" style="display: inline-block;">

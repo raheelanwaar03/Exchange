@@ -10,18 +10,19 @@
             <div class="col-md-12 mt-4">
                 <div class="card">
                     <div class="card-title">
-                        <h1 style="color: #FF890E" class="card-title text-center">Admin Add Coin</h1>
+                        <h1 style="color: #FF890E" class="card-title text-center">Admin Add E-currency
+                            Rates</h1>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('admin.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="coinName">Coin Name</label>
+                                <label for="coinName">E-currency Name</label>
                                 <input type="text" class="form-control" id="coinName" name="coinName"
                                     placeholder="Enter Coin Name">
                             </div>
                             <div class="form-group">
-                                <label for="coinImage">Coin Image</label>
+                                <label for="coinImage">E-currency Image</label>
                                 <input type="file" class="form-control" id="coinImage" name="coinImage">
                             </div>
                             <div class="form-group">
