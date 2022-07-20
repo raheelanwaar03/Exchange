@@ -43,10 +43,10 @@
                                         alt="#" />{{ env('APP_Email') }}</a></li>
                             <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
                                         alt="#" />{{ env('APP_Phone') }}</a></li>
-                                        <div class="d-flex justify-content-center align-items-center">
-                                            <li><a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a></li>
-                                            <li><a class="join_bt" href="{{ route('login') }}">login</a></li>
-                                        </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <li><a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a></li>
+                                <li><a class="join_bt" href="{{ route('login') }}">login</a></li>
+                            </div>
                         </ul>
                     </div>
                 </div>
@@ -63,9 +63,12 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slide_text white_fonts">
-                                        <h3>Progress & Success<br><strong>E-Currency</strong></h3>
+                                        <h3><small>Welcome to the TRUST&EFFICIENCY </small>
+                                            <br>{{ env('APP_NAME') }}
+                                        </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange With {{ env('APP_NAME') }}</a>
+                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange With
+                                            {{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -76,9 +79,76 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="slide_text white_fonts">
-                                        <h3>Progress & Success<br><strong>E-Currency</strong></h3>
+                                        <h3><small>Instant Funding & Instant Withdrawal!</small>
+                                            <br>{{ env('APP_NAME') }}
+                                        </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange with{{ env('APP_NAME') }}</a>
+                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                            with{{ env('APP_NAME') }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slide_text white_fonts">
+                                        <h3><small>Tested & Trusted</small>
+                                            <br>{{ env('APP_NAME') }}
+                                        </h3>
+                                        <br>
+                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                            with{{ env('APP_NAME') }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slide_text white_fonts">
+                                        <h3><small>Highly Competitive & Unbeatable Prices</small>
+                                            <br>{{ env('APP_NAME') }}
+                                        </h3>
+                                        <br>
+                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                            with{{ env('APP_NAME') }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slide_text white_fonts">
+                                        <h3><small>24/7 MultiChannel Customer Support</small>
+                                            <br>{{ env('APP_NAME') }}
+                                        </h3>
+                                        <br>
+                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                            with{{ env('APP_NAME') }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="slide_text white_fonts">
+                                        <h3><small>We are the Choice of the Whales!</small>
+                                            <br>{{ env('APP_NAME') }}
+                                        </h3>
+                                        <br>
+                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                            with{{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
                             </div>

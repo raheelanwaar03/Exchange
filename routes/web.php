@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\landingPageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
 
-    return view('welcome');
-});
+//landing page
+
+Route::get('/',[landingPageController::class,'index']);
+
+//user routes
 
 Route::get('/user/about', [UserController::class, 'about'])->name('user.about')->middleware(['auth','userAuth']);
 Route::get('/user/policy', [UserController::class, 'policy'])->name('user.policy')->middleware(['auth','userAuth']);
