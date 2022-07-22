@@ -7,11 +7,6 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
-                <!-- sidenav-bar -->
-                @include('user.user_layout.sideNav')
-                <!-- end of sidenav-bar -->
-            </div>
             <div class="col-md-8">
                 <h1 class="text-center" style="color:#FF890E">About Us
                     <hr style="width: 400px"; color="#FF890E">
@@ -57,6 +52,11 @@
                     Over a decade we have been a part of the industry evolution and a solely pioneer of the ever used term -
                     Instant Funding (the term widely used now by almost all exchanges/exchangers in the country).
                 </p>
+            </div>
+            <div class="col-md-2">
+
+                @include('user.user_layout.sideNav')
+
             </div>
         </div>
     </div>

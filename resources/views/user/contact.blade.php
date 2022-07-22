@@ -7,11 +7,6 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
-                <!-- sidenav-bar -->
-                @include('user.user_layout.sideNav')
-                <!-- end of sidenav-bar -->
-            </div>
             <div class="col-md-8">
                 <h1 class="text-center" style="color:#FF890E">Contact Us
                     <hr style="width: 400px"; color="#FF890E">
@@ -39,6 +34,11 @@
                     NOTICE: Funding and withdrawals are attended 24/7. However, instant funding is only guaranteed during
                     the working hours stated above.
                 </p>
+            </div>
+            <div class="col-md-2">
+
+                @include('user.user_layout.sideNav')
+
             </div>
         </div>
     </div>

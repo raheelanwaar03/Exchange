@@ -7,11 +7,6 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
-                <!-- sidenav-bar -->
-                @include('user.user_layout.sideNav')
-                <!-- end of sidenav-bar -->
-            </div>
             <div class="col-md-8">
                 <h1 class="text-center" style="color:#FF890E">How to Buy and Sell
                     <hr style="width: 400px"; color="#FF890E">
@@ -27,6 +22,11 @@
                     e-currencies, some of which are already mentioned above. So, you do not need to worry about converting
                     your e-currency to cash or your cash to e-currency.
                 </p>
+            </div>
+            <div class="col-md-2">
+
+                @include('user.user_layout.sideNav')
+
             </div>
         </div>
     </div>
