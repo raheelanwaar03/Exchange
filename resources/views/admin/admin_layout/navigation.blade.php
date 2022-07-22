@@ -68,11 +68,11 @@
                                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                                     <ul class="navbar-nav">
                                         <li><a class="nav-link" href="{{ route('admin.index') }}">Home</a></li>
-                                        <li><a class="nav-link" href="{{ route('user.about') }}">About</a></li>
+                                        <li><a class="nav-link" href="#">About</a></li>
                                         <li><a class="nav-link" href="{{ route('admin.create') }}">Add E-currency</a></li>
                                         <li><a class="nav-link" href="services.html">Services</a></li>
                                         <li><a class="nav-link" href="new.html">News</a></li>
-                                        <li><a class="nav-link" href="{{ route('user.contact') }}">Contact</a></li>
+                                        <li><a class="nav-link" href="@">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>

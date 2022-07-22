@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -114,4 +115,26 @@ class AdminController extends Controller
         $admin->delete();
         return redirect()->route('admin.index')->with('success', 'Coin deleted successfully');
     }
+
+    public function news()
+    {
+        $news = News::get();
+        return view('admin.news' , compact('news'));
+    }
+
+    public function newSaving(Request $request)
+    {
+        $data = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+        ]);
+
+
+        $news = new News();
+        $news->title = $data['title'];
+        $news->description = $data['description'];
+        $news->save();
+        return redirect()->back()->with('success', 'News added successfully');
+    }
+
 }

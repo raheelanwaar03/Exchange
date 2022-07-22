@@ -15,10 +15,10 @@
                         <div class="full">
                             <ul class="menu_footer">
                                 <li><a href="{{ route('admin.index') }}">> Home</a></li>
-                                <li><a href="{{ route('user.about') }}">> About</a></li>
-                                <li><a href="exchange.html">> Exchange</a></li>
-                                <li><a href="services.html">> Services</a></li>
-                                <li><a href="{{ route('user.contact') }}">> Contact</a></li>
+                                <li><a href="#">> About</a></li>
+                                <li><a href="exchange.html"> Exchange</a></li>
+                                <li><a href="services.html"> Services</a></li>
+                                <li><a href="#"></a> Contact</a></li>
                             </ul>
                         </div>
                     </div>
