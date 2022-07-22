@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">

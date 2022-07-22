@@ -1,13 +1,18 @@
 @extends('user.user_layout.app')
 
 @section('page-title')
-    <h3>Hi {{ auth()->user()->name }} To Your {{ env('APP_NAME') }}Account </h3>
+    <h3>Hi {{ auth()->user()->name }} To Your {{ env('APP_NAME') }} Account </h3>
 @endsection
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-2">
+                <!-- sidenav-bar -->
+                @include('user.user_layout.sideNav')
+                <!-- end of sidenav-bar -->
+            </div>
+            <div class="col-md-8">
                 <h1 class="text-center" style="color:#FF890E">About Us
                     <hr style="width: 400px"; color="#FF890E">
                 </h1>

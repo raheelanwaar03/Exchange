@@ -11,6 +11,6 @@ class landingPageController extends Controller
     {
         $admins = Admin::get();
         $admin = Admin::first();
-        return view('welcome' , compact('admins' , 'admin'));
+        return view('landingPage.welcome' , compact('admins' , 'admin'));
     }
 }
