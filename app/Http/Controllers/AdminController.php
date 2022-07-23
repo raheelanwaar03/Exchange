@@ -125,8 +125,8 @@ class AdminController extends Controller
     public function newSaving(Request $request)
     {
         $data = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
+            'title' => 'required|max:255',
+            'description' => 'required',
         ]);
 
 

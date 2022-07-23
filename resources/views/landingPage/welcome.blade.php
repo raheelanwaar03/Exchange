@@ -1,7 +1,6 @@
 @extends('layouts.app');
 
 @section('content')
-
     <!-- new designed section -->
     <div>
         <?php
@@ -15,7 +14,7 @@
     <div class="section layout_padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-8">
                     <div class="full">
                         <div class="heading_main text_align_center">
                             <h2><span class="theme_color"></span>Live Rates</h2>
@@ -24,7 +23,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p style="color: #FF890E">
+                                        <p style="color: #FF890E;font-size:30px">
                                             1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
                                         </p>
                                         {{-- <p style="color: #FF890E">
@@ -65,6 +64,19 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="heading_main text_align_center">
+                        <h2><span class="theme_color"></span>News & Updates</h2>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        @foreach ($news as $news)
+                            <div class="card-body">
+                                <h3 class="card-title">{{ $news->title }}</h3>
+                                <p class="card-text">{{ $news->description }}</p>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
