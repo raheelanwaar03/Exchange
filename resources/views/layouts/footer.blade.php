@@ -67,7 +67,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
+                                        <a href="https://twitter.com/send?={{ env('APP_TWITTER') }}" target="_blank">
                                             <img
                                                 src="{{ asset('assets/images/twitter.png') }}"><span>{{ env('APP_TWITTER') }}</span>
                                         </a>
