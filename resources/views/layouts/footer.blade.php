@@ -5,7 +5,8 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="full">
-                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}" alt="#" />
+                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}"
+                                alt="#" />
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">
@@ -14,12 +15,11 @@
                         </div>
                         <div class="full">
                             <ul class="menu_footer">
-                                <li><a href="home.html">> Home</a></li>
-                                <li><a href="about.html">> About</a></li>
-                                <li><a href="exchange.html">> Exchange</a></li>
-                                <li><a href="services.html">> Services</a></li>
-                                <li><a href="new.html">> New</a></li>
-                                <li><a href="contact.html">> Contact</a></li>
+                                <li><a href="{{ route('user.index') }}">>Home</a></li>
+                                <li><a href="{{ route('user.about') }}">>About</a></li>
+                                <li><a href="exchange.html">>Exchange</a></li>
+                                <li><a href="{{ route('user.help') }}">How to Buy&Sell</a></li>
+                                <li><a href="{{ route('user.contact') }}">>Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -27,13 +27,7 @@
                         <div class="full">
                             <div class="footer_blog full white_fonts">
                                 <h3>Newsletter</h3>
-                                <p>Start Exchange with {{ env('APP_NAME') }}</p>
-                                <div class="newsletter_form">
-                                    <form action="index.html">
-                                        <input type="email" placeholder="Your Email" name="#" required="">
-                                        <button>Submit</button>
-                                    </form>
-                                </div>
+                                <p>Start Exchange Your E-currency with {{ env('APP_NAME') }}</p>
                             </div>
                         </div>
                     </div>
@@ -42,13 +36,42 @@
                             <div class="footer_blog full white_fonts">
                                 <h3>Contact us</h3>
                                 <ul class="full">
-                                    <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/whatsapp.png') }}"><span>{{ env('APP_Phone2') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/instagram.png') }}"><span>{{ env('APP_Instagram') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/Telegram.png') }}"><span>{{ env('APP_TELEGRAM') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/twitter.png') }}"><span>{{ env('APP_TWITTER') }}</span></li>
+                                    {{-- <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li> --}}
+                                    <li>
+                                        <a href="https://mail.google.com/send?={{ env('APP_Email') }}" target="_blank">
+                                            <img
+                                                src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span>
+                                        </a>
+                                    </li>
+                                    <li><img
+                                            src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span>
+                                    </li>
+                                    <li>
+                                        <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}"
+                                            target="_blank">
+                                            <img
+                                                src="{{ asset('assets/images/whatsapp.png') }}"><span>{{ env('APP_Phone2') }}</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/?url=https://www.drdrop.com/"
+                                            target="_blank">
+                                            <img
+                                                src="{{ asset('assets/images/instagram.png') }}"><span>{{ env('APP_Instagram') }}</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
+                                            <img src="{{ asset('assets/images/Telegram.png') }}"><span
+                                                style="font-size: larger">{{ env('APP_TELEGRAM') }}</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
+                                            <img
+                                                src="{{ asset('assets/images/twitter.png') }}"><span>{{ env('APP_TWITTER') }}</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -59,32 +82,33 @@
     </div>
 </footer>
 
+<x-alert />
+
 <div class="footer_bottom">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="crp">� Copyrights 2019 design by {{ env('APP_NAME') }}</p>
+                <p class="crp">Copyrights 2022 design by {{ env('APP_NAME') }} </p>
             </div>
         </div>
     </div>
 </div>
-<x-alert/>
 
 <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
-<script src="{{ asset('assets/js/jquery.min.js')}}"></script>
-<script src="{{ asset('assets/js/popper.min.js')}}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/popper.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 
-<script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{ asset('assets/js/jquery.pogo-slider.min.js')}}"></script>
-<script src="{{ asset('assets/js/slider-index.js')}}"></script>
-<script src="{{ asset('assets/js/smoothscroll.js')}}"></script>
-<script src="{{ asset('assets/js/form-validator.min.js')}}"></script>
-<script src="{{ asset('assets/js/contact-form-script.js')}}"></script>
-<script src="{{ asset('assets/js/isotope.min.js')}}"></script>
-<script src="{{ asset('assets/js/images-loded.min.js')}}"></script>
-<script src="{{ asset('assets/js/custom.js')}}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.pogo-slider.min.js') }}"></script>
+<script src="{{ asset('assets/js/slider-index.js') }}"></script>
+<script src="{{ asset('assets/js/smoothscroll.js') }}"></script>
+<script src="{{ asset('assets/js/form-validator.min.js') }}"></script>
+<script src="{{ asset('assets/js/contact-form-script.js') }}"></script>
+<script src="{{ asset('assets/js/isotope.min.js') }}"></script>
+<script src="{{ asset('assets/js/images-loded.min.js') }}"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
 <script>
     (function($) {
         $.fn.countTo = function(options) {
