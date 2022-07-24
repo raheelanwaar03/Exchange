@@ -9,15 +9,15 @@
 
     <div class="container">
         <div class="row">
-            @foreach ($news as $news)
-                <div class="col-md-8">
+            <div class="col-md-8">
+                @foreach ($news as $news)
                     <div class="jumbotron">
                         <h1>{{ $news->title }}</h1>
                         <p class="lead">{{ $news->description }}</p>
                         <hr class="my-4">
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
 
             <div class="col-md-3">
 
