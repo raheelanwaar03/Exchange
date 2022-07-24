@@ -12,7 +12,7 @@
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-pie fa-fw me-3"></i><span>History</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple">
+                <a href="{{ route('user.news') }}" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-bar fa-fw me-3"></i><span>News</span>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\News;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
@@ -38,6 +39,12 @@ class UserController extends Controller
     public function FAQ()
     {
         return view('user.FaQ');
+    }
+
+    public function news()
+    {
+        $news = News::get();
+        return view('user.news', compact('news'));
     }
 
     /**

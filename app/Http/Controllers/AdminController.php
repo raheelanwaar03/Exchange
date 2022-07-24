@@ -118,8 +118,13 @@ class AdminController extends Controller
 
     public function news()
     {
+        return view('admin.news');
+    }
+
+    public function newsDetails()
+    {
         $news = News::get();
-        return view('admin.news' , compact('news'));
+        return view('admin.newsDetails' , compact('news'));
     }
 
     public function newSaving(Request $request)
