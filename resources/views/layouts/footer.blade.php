@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="full">
-                            <img class="img-responsive" src="{{ asset('assets/images/logo.png') }}" alt="footer logo" />
+                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}" alt="footer logo" />
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">

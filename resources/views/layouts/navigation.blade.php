@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="logo_section">
                         <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.png') }}"
-                                alt="image"></a>
+                                alt="image" class="logo_radius"></a>
                     </div>
                     <div class="site_information">
                         <ul>

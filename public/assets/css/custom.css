@@ -30,9 +30,7 @@ a.btn-yellow:focus {
     color: #fff;
     font-size: 100px;
 }
-
-/* .table-image {
-    td , th {
-      vertical-align: middle;
-    }
-  } */
+.logo_radius
+{
+    border-radius: 10%;
+}
