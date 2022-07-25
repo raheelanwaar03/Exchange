@@ -16,9 +16,9 @@
                             <ul class="menu_footer">
                                 <li><a href="{{ route('admin.index') }}">> Home</a></li>
                                 <li><a href="#">> About</a></li>
-                                <li><a href="exchange.html"> Exchange</a></li>
-                                <li><a href="services.html"> Services</a></li>
-                                <li><a href="#"></a> Contact</a></li>
+                                <li><a href="exchange.html">>Exchange</a></li>
+                                <li><a href="services.html">>Services</a></li>
+                                <li><a href="#"></a>>Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -27,12 +27,6 @@
                             <div class="footer_blog full white_fonts">
                                 <h3>Newsletter</h3>
                                 <p>Start Exchange With {{ env('APP_NAME') }}</p>
-                                <div class="newsletter_form">
-                                    <form action="index.html">
-                                        <input type="email" placeholder="Your Email" name="#" required="">
-                                        <button>Submit</button>
-                                    </form>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,11 +34,35 @@
                         <div class="full">
                             <div class="footer_blog full white_fonts">
                                 <h3>Contact us</h3>
-                                <ul class="full">
-                                    <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/whatsapp.png') }}"><span>{{ env('APP_Phone2') }}</span></li>
+                                <ul class="d-flex justify-content-center align-items-center">
+                                    {{-- <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li> --}}
+                                    <li>
+                                        <a href="https://mail.google.com/send?={{ env('APP_Email') }}" target="_blank">
+                                            <img src="{{ asset('assets/images/gmail.jpg') }}" height="50px" width="50px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}"
+                                            target="_blank">
+                                            <img src="{{ asset('assets/images/whatsapp.png') }}" height="50px" width="50px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/?url=https://www.drdrop.com/"
+                                            target="_blank">
+                                            <img src="{{ asset('assets/images/instagram.png') }}" height="50px" width="50px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
+                                            <img src="{{ asset('assets/images/Telegram.png') }}" height="50px" width="60px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/send?={{ env('APP_TWITTER') }}" target="_blank">
+                                            <img src="{{ asset('assets/images/twitter.png') }}" height="50px" width="50px">
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

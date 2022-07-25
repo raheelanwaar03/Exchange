@@ -18,8 +18,12 @@
                 <a href="{{ route('admin.newsDetails') }}" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-bar fa-fw me-3"></i><span>News</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-                        class="fa fa-sign-out" aria-hidden="true"></i><span>Logout</span></a>
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="list-group-item list-group-item-action py-2 ripple">
+                        <i class="fas fa-sign-out-alt fa-fw me-3"></i><span>Logout</span>
+                    </button>
+                </form>
             </div>
         </div>
     </nav>

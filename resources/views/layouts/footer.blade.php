@@ -5,8 +5,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="full">
-                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}"
-                                alt="#" />
+                            <img class="img-responsive" src="{{ asset('assets/images/logo.png') }}" alt="footer logo" />
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">
@@ -35,41 +34,33 @@
                         <div class="full">
                             <div class="footer_blog full white_fonts">
                                 <h3>Contact us</h3>
-                                <ul class="full">
+                                <ul class="d-flex justify-content-center align-items-center">
                                     {{-- <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li> --}}
                                     <li>
                                         <a href="https://mail.google.com/send?={{ env('APP_Email') }}" target="_blank">
-                                            <img
-                                                src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span>
+                                            <img src="{{ asset('assets/images/gmail.jpg') }}" height="50px" width="50px">
                                         </a>
-                                    </li>
-                                    <li><img
-                                            src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span>
                                     </li>
                                     <li>
                                         <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}"
                                             target="_blank">
-                                            <img
-                                                src="{{ asset('assets/images/whatsapp.png') }}"><span>{{ env('APP_Phone2') }}</span>
+                                            <img src="{{ asset('assets/images/whatsapp.png') }}" height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/?url=https://www.drdrop.com/"
                                             target="_blank">
-                                            <img
-                                                src="{{ asset('assets/images/instagram.png') }}"><span>{{ env('APP_Instagram') }}</span>
+                                            <img src="{{ asset('assets/images/instagram.png') }}" height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
-                                            <img src="{{ asset('assets/images/Telegram.png') }}"><span
-                                                style="font-size: larger">{{ env('APP_TELEGRAM') }}</span>
+                                            <img src="{{ asset('assets/images/Telegram.png') }}" height="50px" width="60px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://twitter.com/send?={{ env('APP_TWITTER') }}" target="_blank">
-                                            <img
-                                                src="{{ asset('assets/images/twitter.png') }}"><span>{{ env('APP_TWITTER') }}</span>
+                                            <img src="{{ asset('assets/images/twitter.png') }}" height="50px" width="50px">
                                         </a>
                                     </li>
                                 </ul>
