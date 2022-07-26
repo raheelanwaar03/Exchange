@@ -37,7 +37,7 @@
                                 <ul class="d-flex justify-content-center align-items-center">
                                     {{-- <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li> --}}
                                     <li>
-                                        <a href="https://mail.google.com/send?={{ env('APP_Email') }}" target="_blank">
+                                        <a href="https://mail.google.com/mail/{{ env('APP_Email') }}/0" target="_blank">
                                             <img src="{{ asset('assets/images/gmail.jpg') }}" height="50px" width="50px">
                                         </a>
                                     </li>
@@ -48,7 +48,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/?url=https://www.drdrop.com/"
+                                        <a href="https://www.instagram.com/instantflexyexchange/"
                                             target="_blank">
                                             <img src="{{ asset('assets/images/instagram.png') }}" height="50px" width="50px">
                                         </a>
@@ -59,7 +59,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/send?={{ env('APP_TWITTER') }}" target="_blank">
+                                        <a href="https://twitter.com/Instantflexy?t=efd24_80Zf0Kt8ygOTs0FQ&s=09" target="_blank">
                                             <img src="{{ asset('assets/images/twitter.png') }}" height="50px" width="50px">
                                         </a>
                                     </li>
