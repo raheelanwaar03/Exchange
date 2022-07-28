@@ -106,6 +106,7 @@
 <script src="{{ asset('assets/js/isotope.min.js') }}"></script>
 <script src="{{ asset('assets/js/images-loded.min.js') }}"></script>
 <script src="{{ asset('assets/js/custom.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 <script>
     (function($) {
         $.fn.countTo = function(options) {
