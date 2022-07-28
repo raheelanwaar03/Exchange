@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BuyEcurrencyController;
 use App\Http\Controllers\landingPageController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -29,6 +30,16 @@ Route::get('/user/help', [UserController::class, 'help'])->name('user.help')->mi
 Route::get('/user/contact', [UserController::class, 'contact'])->name('user.contact')->middleware(['auth','userAuth']);
 Route::get('/user/news', [UserController::class, 'news'])->name('user.news')->middleware(['auth','userAuth']);
 Route::resource('/user', UserController::class)->middleware(['auth','userAuth']);
+
+
+
+//buying e-currency routes
+
+Route::get('/user/buy/ecurrency', [BuyEcurrencyController::class, 'index'])->name('user.buy.ecurrency')->middleware(['auth','userAuth']);
+Route::post('/user/buy/ecurrency/store', [BuyEcurrencyController::class, 'store'])->name('user.buy.ecurrency.store')->middleware(['auth','userAuth']);
+
+
+
 
 
 require __DIR__.'/auth.php';

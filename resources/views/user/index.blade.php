@@ -26,7 +26,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">Ref</th>
-                                                        <th scope="col">Description</th>
+                                                        <th scope="col">E-Bank</th>
                                                         <th scope="col">Amount</th>
                                                         <th scope="col">Date</th>
                                                         <th scope="col">Status</th>
@@ -34,18 +34,15 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    {{-- @foreach ($admins as $admin)
-                                                            <tr>
-                                                                <td class="w-25">
-                                                                    <img src="{{ asset('images/' . $admin->coinImage) }}"
-                                                                        alt="{{ $admin->name }}"
-                                                                        class="img-fluid img-thumbnail" alt="btc"
-                                                                        height="90px" width="90px">
-                                                                </td>
-                                                                <td>₦{{ $admin->buyPrice }}</td>
-                                                                <td>₦{{ $admin->sellPrice }}</td>
-                                                            </tr>
-                                                        @endforeach --}}
+                                                  @foreach ($buyEcurrencys as $buyEcurrency)
+                                                      <tr>
+                                                            <td>{{ $buyEcurrency->transaction_id }}</td>
+                                                            <td>{{ $buyEcurrency->e_bank }}</td>
+                                                            <td>{{ $buyEcurrency->buyingAmount }}</td>
+                                                            <td>{{ $buyEcurrency->created_at }}</td>
+                                                            <td>{{ $buyEcurrency->status }}</td>
+                                                      </tr>
+                                                  @endforeach
                                                 </tbody>
                                             </table>
                                         </div>

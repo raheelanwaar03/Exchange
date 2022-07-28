@@ -5,7 +5,8 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="full">
-                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}" alt="#" />
+                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}"
+                                alt="#" />
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">
@@ -34,14 +35,40 @@
                         <div class="full">
                             <div class="footer_blog full white_fonts">
                                 <h3>Contact us</h3>
-                                <ul class="full">
+                                <ul class="d-flex justify-content-center align-items-center">
                                     {{-- <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li> --}}
-                                    <li><img src="{{ asset('assets/images/i6.png') }}"><span>{{ env('APP_Email') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/i7.png') }}"><span>{{ env('APP_Phone') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/whatsapp.png') }}"><span>{{ env('APP_Phone2') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/instagram.png') }}"><span>{{ env('APP_Instagram') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/Telegram.png') }}"><span>{{ env('APP_TELEGRAM') }}</span></li>
-                                    <li><img src="{{ asset('assets/images/twitter.png') }}"><span>{{ env('APP_TWITTER') }}</span></li>
+                                    <li>
+                                        <a href="https://mail.google.com/mail/{{ env('APP_Email') }}/0" target="_blank">
+                                            <img src="{{ asset('assets/images/gmail.jpg') }}" height="50px"
+                                                width="50px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}"
+                                            target="_blank">
+                                            <img src="{{ asset('assets/images/whatsapp.png') }}" height="50px"
+                                                width="50px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/instantflexyexchange/" target="_blank">
+                                            <img src="{{ asset('assets/images/instagram.png') }}" height="50px"
+                                                width="50px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
+                                            <img src="{{ asset('assets/images/Telegram.png') }}" height="50px"
+                                                width="60px">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/Instantflexy?t=efd24_80Zf0Kt8ygOTs0FQ&s=09"
+                                            target="_blank">
+                                            <img src="{{ asset('assets/images/twitter.png') }}" height="50px"
+                                                width="50px">
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -52,7 +79,7 @@
     </div>
 </footer>
 
-<x-alert/>
+<x-alert />
 
 <div class="footer_bottom">
     <div class="container">
@@ -66,19 +93,19 @@
 
 <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
-<script src="{{ asset('assets/js/jquery.min.js')}}"></script>
-<script src="{{ asset('assets/js/popper.min.js')}}"></script>
-<script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/popper.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
 
-<script src="{{ asset('assets/js/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{ asset('assets/js/jquery.pogo-slider.min.js')}}"></script>
-<script src="{{ asset('assets/js/slider-index.js')}}"></script>
-<script src="{{ asset('assets/js/smoothscroll.js')}}"></script>
-<script src="{{ asset('assets/js/form-validator.min.js')}}"></script>
-<script src="{{ asset('assets/js/contact-form-script.js')}}"></script>
-<script src="{{ asset('assets/js/isotope.min.js')}}"></script>
-<script src="{{ asset('assets/js/images-loded.min.js')}}"></script>
-<script src="{{ asset('assets/js/custom.js')}}"></script>
+<script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('assets/js/jquery.pogo-slider.min.js') }}"></script>
+<script src="{{ asset('assets/js/slider-index.js') }}"></script>
+<script src="{{ asset('assets/js/smoothscroll.js') }}"></script>
+<script src="{{ asset('assets/js/form-validator.min.js') }}"></script>
+<script src="{{ asset('assets/js/contact-form-script.js') }}"></script>
+<script src="{{ asset('assets/js/isotope.min.js') }}"></script>
+<script src="{{ asset('assets/js/images-loded.min.js') }}"></script>
+<script src="{{ asset('assets/js/custom.js') }}"></script>
 <script>
     (function($) {
         $.fn.countTo = function(options) {

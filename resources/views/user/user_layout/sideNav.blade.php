@@ -1,7 +1,7 @@
     <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-dark">
         <div class="position-sticky">
             <div class="list-group list-group-flush mx-3 mt-4">
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                <a href="{{ route('user.buy.ecurrency') }}" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                     <i class="fa fa-credit-card-alt" aria-hidden="true"></i><span>Buy E-currency</span>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fa fa-money"
