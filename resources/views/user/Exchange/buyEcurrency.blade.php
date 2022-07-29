@@ -20,7 +20,7 @@
                             @csrf
                             <div class="form-group">
                                 <label for="">Enter Desired Amount (in US Dollars)</label>
-                                <input type="number" class="form-control" name="buyingAmount" placeholder="e.g 50.00 $">
+                                <input type="text" class="form-control" name="buyingAmount" placeholder="e.g 50.00 $">
                             </div>
                             <div class="form-group">
                                 <label for="">E-Bank Name (to Fund)</label>
@@ -47,6 +47,11 @@
                                 <label for="">E-Name in the Bank</label>
                                 <input type="text" class="form-control" name="account_name"
                                     placeholder="Enter the Name which you had been provide to your E-Bank">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Your Email</label>
+                                <input type="email" class="form-control" name="email"
+                                    placeholder="Enter Email">
                             </div>
                             <button type="submit" class="btn-yellow">Procced</button>
                         </form>

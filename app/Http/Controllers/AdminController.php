@@ -55,7 +55,7 @@ class AdminController extends Controller
         $admin->buyPrice = $data['buyPrice'];
         $admin->sellPrice = $data['sellPrice'];
         $admin->save();
-        return redirect()->route('admin.index')->with('success', 'Coin added successfully');
+        return redirect()->route('admin.index')->with('success', 'E-Currency added successfully');
     }
 
     /**
@@ -100,7 +100,7 @@ class AdminController extends Controller
         $admin->buyPrice = $data['buyPrice'];
         $admin->sellPrice = $data['sellPrice'];
         $admin->save();
-        return redirect()->route('admin.index')->with('massage', 'Coin updated successfully');
+        return redirect()->route('admin.index')->with('massage', 'E-Currency updated successfully');
     }
 
     /**
@@ -113,7 +113,7 @@ class AdminController extends Controller
     {
         // delete coin from database
         $admin->delete();
-        return redirect()->route('admin.index')->with('success', 'Coin deleted successfully');
+        return redirect()->route('admin.index')->with('success', 'E-Currency has been deleted successfully');
     }
 
     public function news()

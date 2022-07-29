@@ -28,7 +28,7 @@ class BuyEcurrencyController extends Controller
 
          // validate the data
          $validatedData = $request->validate([
-             'buyingAmount' => 'required',
+             'buyingAmount' => 'required|numeric',
              'e_bank' => 'required|string',
              'account_number' => 'required|string',
              'account_name' => 'required|string',
@@ -45,9 +45,9 @@ class BuyEcurrencyController extends Controller
         $buyEcurrency->account_name = $validatedData['account_name'];
         $buyEcurrency->save();
 
-        // redirect to the index page
-        return redirect()->route('user.index')->with('success', 'Your Buying E-currency request has been Recived');
+        return view('user.Exchange.confirmExchange', compact('buyEcurrency'));
 
     }
+
 
 }
