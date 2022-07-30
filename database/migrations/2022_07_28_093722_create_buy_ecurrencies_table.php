@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations.w
      *
      * @return void
      */
@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('e_bank');
             $table->string('account_number');
             $table->string('account_name');
+            $table->string('buyer_Email');
             $table->string('totalSellingPrice');
             $table->timestamps();
         });

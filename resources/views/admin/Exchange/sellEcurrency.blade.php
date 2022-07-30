@@ -21,6 +21,7 @@
                                 <th class="bg-warning">E-Bank Name</th>
                                 <th class="bg-warning">E-Account No:</th>
                                 <th class="bg-warning">E-Account Name</th>
+                                <th class="bg-warning">Email</th>
                                 <th class="bg-warning">Date</th>
                                 <th class="bg-warning">You Received</th>
                                 <th class="bg-warning">Action</th>
@@ -36,6 +37,7 @@
                                     <td>{{ $buyEcurrency->e_bank }}</td>
                                     <td>{{ $buyEcurrency->account_number }}</td>
                                     <td>{{ $buyEcurrency->account_name }}</td>
+                                    <td>{{ $buyEcurrency->buyer_Email }}</td>
                                     <td>{{ $buyEcurrency->created_at }}</td>
                                     <td>{{ $buyEcurrency->totalSellingPrice }}</td>
                                     <td class="d-flex"> <a href="{{ route('admin.buyingRequest.complete', ['id' => $buyEcurrency->id]) }}"

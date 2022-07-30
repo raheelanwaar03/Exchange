@@ -24,22 +24,23 @@ class BuyEcurrencyController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     function store(Request $request)
-     {
+    function store(Request $request)
+    {
 
-         // validate the data
-         $validatedData = $request->validate([
-             'buyingAmount' => 'required|numeric',
-             'e_bank' => 'required|string',
-             'account_number' => 'required|string',
-             'account_name' => 'required|string',
-            ]);
+        // validate the data
+        $validatedData = $request->validate([
+            'buyingAmount' => 'required|numeric',
+            'e_bank' => 'required|string',
+            'account_number' => 'required|string',
+            'account_name' => 'required|string',
+            'buyer_Email' => 'required|email',
+        ]);
 
-            // This Method Rates
-            $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
-            $adminSellingPrice = $query->sellPrice;
+        // This Method Rates
+        $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
+        $adminSellingPrice = $query->sellPrice;
 
-            // return transaction_id();
+        // return transaction_id();
 
         // store in the database
         $buyEcurrency = new BuyEcurrency();
@@ -55,6 +56,7 @@ class BuyEcurrencyController extends Controller
         $buyEcurrency->e_bank = $validatedData['e_bank'];
         $buyEcurrency->account_number = $validatedData['account_number'];
         $buyEcurrency->account_name = $validatedData['account_name'];
+        $buyEcurrency->buyer_Email = $validatedData['buyer_Email'];
         $buyEcurrency->save();
 
         // // get the user desired amount
@@ -62,8 +64,7 @@ class BuyEcurrencyController extends Controller
         // // get the admin selling price
         // $totalSellingPrice = $adminSellingPrice * $userBuyingAmount;
 
-        return view('user.Exchange.confirmExchange', compact('buyEcurrency'))->with('success', 'Transaction Recevied Successful');
-
+        return view('user.Exchange.confirmBuyExchange', compact('buyEcurrency'))->with('success', 'Transaction Recevied Successful');
     }
 
     public function destroy($id)
