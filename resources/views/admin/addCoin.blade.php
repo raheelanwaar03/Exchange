@@ -17,9 +17,20 @@
                         <form action="{{ route('admin.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="coinName">E-currency Name</label>
-                                <input type="text" class="form-control" id="coinName" name="coinName"
-                                    placeholder="Enter E-currency Name">
+                                <label for="">E-Bank Name</label>
+                                <select name="coinName" id="" class="form-control">
+                                    <option value="">Select E-Bank</option>
+                                    <option value="Paypal">Paypal</option>
+                                    <option value="Payeer">Payeer</option>
+                                    <option value="Bitcoin">Bitcoin</option>
+                                    <option value="BUSD">BUSD</option>
+                                    <option value="USDT">USDT</option>
+                                    <option value="Etherum">Etherum</option>
+                                    <option value="Skrill">Skrill</option>
+                                    <option value="Neteller">Neteller</option>
+                                    <option value="Perfectmoney">Perfectmoney</option>
+                                    <option value="Payoneer">Payoneer</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="coinImage">E-currency Image</label>
