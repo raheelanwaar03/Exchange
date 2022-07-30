@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Models\BuyEcurrency;
 use App\Models\News;
+use App\Models\SellEcurrency;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -47,7 +48,7 @@ class AdminController extends Controller
         ]);
 
         $file = $request->file('coinImage');
-        $fileName = rand(1111,999999). '.'.  $file->getClientOriginalExtension();
+        $fileName = rand(1111, 999999) . '.' .  $file->getClientOriginalExtension();
         $file->move(public_path('images'), $fileName);
 
 
@@ -123,7 +124,7 @@ class AdminController extends Controller
     public function newsDetails()
     {
         $news = News::get();
-        return view('admin.newsDetails' , compact('news'));
+        return view('admin.newsDetails', compact('news'));
     }
 
     public function newSaving(Request $request)
@@ -145,7 +146,7 @@ class AdminController extends Controller
 
     public function buyingRequest()
     {
-        $buyEcurrencies = BuyEcurrency::where('status' , 'pending')->get();
+        $buyEcurrencies = SellEcurrency::where('status', 'pending')->get();
         return view('admin.Exchange.sellEcurrency', compact('buyEcurrencies'));
     }
 
@@ -167,4 +168,35 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Buying request declined successfully');
     }
 
+    public function sellingRequest()
+    {
+        $sellEcurrencys = SellEcurrency::where('status', 'pending')->get();
+        return view('admin.Exchange.buyEcurrency', compact('sellEcurrencys'));
+    }
+
+    // admin can see the selling requests from users and can complete or decline them
+    public function completeSell($id)
+    {
+        // complete the selling request
+        $sellEcurrency = SellEcurrency::find($id);
+        $sellEcurrency->status = 'completed';
+        $sellEcurrency->save();
+        return redirect()->back()->with('success', 'Selling request completed successfully');
+    }
+
+    public function declineSell($id)
+    {
+        $sellEcurrency = SellEcurrency::find($id);
+        $sellEcurrency->status = 'declined';
+        $sellEcurrency->save();
+        return redirect()->back()->with('success', 'Buying request declined successfully');
+    }
+
+    public function closed($id)
+    {
+        $sellEcurrency = SellEcurrency::find($id);
+        $sellEcurrency->status = 'closed';
+        $sellEcurrency->save();
+        return redirect()->back()->with('success', 'Buying request closed successfully');
+    }
 }
