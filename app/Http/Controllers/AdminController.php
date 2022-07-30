@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\BuyEcurrency;
 use App\Models\News;
 use Illuminate\Http\Request;
 
@@ -140,6 +141,14 @@ class AdminController extends Controller
         $news->description = $data['description'];
         $news->save();
         return redirect()->back()->with('success', 'News added successfully');
+    }
+
+    // admin can see the buying requests from users
+
+    public function buyingRequest()
+    {
+        $buyEcurrencies = BuyEcurrency::where('status' , 'pending')->get();
+        return view('admin.sellEcurrency', compact('buyEcurrencies'));
     }
 
 }

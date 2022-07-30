@@ -46,17 +46,23 @@ class BuyEcurrencyController extends Controller
         $buyEcurrency->user_id = auth()->user()->id;
         $buyEcurrency->transaction_id = transaction_id();
         $buyEcurrency->buyingAmount = $validatedData['buyingAmount'];
+        // get the user desired amount
+        $userBuyingAmount = $validatedData['buyingAmount'];
+        // get the admin selling price
+        $totalSellingPrice = $adminSellingPrice * $userBuyingAmount;
+        $buyEcurrency->totalSellingPrice = $totalSellingPrice;
+
         $buyEcurrency->e_bank = $validatedData['e_bank'];
         $buyEcurrency->account_number = $validatedData['account_number'];
         $buyEcurrency->account_name = $validatedData['account_name'];
         $buyEcurrency->save();
 
-        // get the user desired amount
-        $userBuyingAmount = $validatedData['buyingAmount'];
-        // get the admin selling price
-        $totalSellingPrice = $adminSellingPrice * $userBuyingAmount;
+        // // get the user desired amount
+        // $userBuyingAmount = $validatedData['buyingAmount'];
+        // // get the admin selling price
+        // $totalSellingPrice = $adminSellingPrice * $userBuyingAmount;
 
-        return view('user.Exchange.confirmExchange', compact('buyEcurrency' ,'totalSellingPrice'))->with('success', 'Transaction Recevied Successful');
+        return view('user.Exchange.confirmExchange', compact('buyEcurrency'))->with('success', 'Transaction Recevied Successful');
 
     }
 

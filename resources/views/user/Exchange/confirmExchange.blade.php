@@ -42,7 +42,7 @@
                             <h5>Your Total Payment</h5>
                         </th>
                         <td>
-                            <h5>₦{{ $totalSellingPrice }}</h5>
+                            <h5>₦{{ $buyEcurrency->totalSellingPrice }}</h5>
                         </td>
                     </tr>
                     <tr>
