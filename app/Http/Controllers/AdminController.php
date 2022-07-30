@@ -148,7 +148,25 @@ class AdminController extends Controller
     public function buyingRequest()
     {
         $buyEcurrencies = BuyEcurrency::where('status' , 'pending')->get();
-        return view('admin.sellEcurrency', compact('buyEcurrencies'));
+        return view('admin.Exchange.sellEcurrency', compact('buyEcurrencies'));
+    }
+
+    public function complete($id)
+    {
+        // complete the buying request
+        $buyEcurrency = BuyEcurrency::find($id);
+        $buyEcurrency->status = 'completed';
+        $buyEcurrency->save();
+        return redirect()->back()->with('success', 'Buying request completed successfully');
+    }
+
+    public function decline($id)
+    {
+        // decline the buying request
+        $buyEcurrency = BuyEcurrency::find($id);
+        $buyEcurrency->status = 'declined';
+        $buyEcurrency->save();
+        return redirect()->back()->with('success', 'Buying request declined successfully');
     }
 
 }

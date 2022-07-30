@@ -38,7 +38,7 @@ Route::resource('/user', UserController::class)->middleware(['auth','userAuth'])
 Route::get('/user/buy/ecurrency', [BuyEcurrencyController::class, 'index'])->name('user.buy.ecurrency')->middleware(['auth','userAuth']);
 Route::post('/user/buy/ecurrency/store', [BuyEcurrencyController::class, 'store'])->name('user.buy.ecurrency.store')->middleware(['auth','userAuth']);
 // delete the latest transaction
-Route::post('users/transcation/{id}/delete',[BuyEcurrencyController::class, 'destroy'])->name('user.transcation.delete')->middleware(['auth','userAuth']);
+Route::post('users/transcation/delete/{id}',[BuyEcurrencyController::class, 'destroy'])->name('user.transcation.delete')->middleware(['auth','userAuth']);
 
 
 

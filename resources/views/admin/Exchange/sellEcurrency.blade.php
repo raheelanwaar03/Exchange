@@ -15,14 +15,14 @@
                         <thead>
                             <tr>
                                 <th class="bg-warning">#</th>
-                                <th class="bg-warning">Tranction REF</th>
+                                <th class="bg-warning">REF</th>
                                 <th class="bg-warning">Status</th>
-                                <th class="bg-warning">Requested Amount</th>
-                                <th class="bg-warning">E-Bank to Fund</th>
-                                <th class="bg-warning">E-Bank Account No:</th>
-                                <th class="bg-warning">E-Bank Account Name</th>
+                                <th class="bg-warning">Amount</th>
+                                <th class="bg-warning">E-Bank Name</th>
+                                <th class="bg-warning">E-Account No:</th>
+                                <th class="bg-warning">E-Account Name</th>
                                 <th class="bg-warning">Date</th>
-                                <th class="bg-warning">Fund You will Recevi</th>
+                                <th class="bg-warning">You Received</th>
                                 <th class="bg-warning">Action</th>
                             </tr>
                         </thead>
@@ -38,6 +38,11 @@
                                     <td>{{ $buyEcurrency->account_name }}</td>
                                     <td>{{ $buyEcurrency->created_at }}</td>
                                     <td>{{ $buyEcurrency->totalSellingPrice }}</td>
+                                    <td class="d-flex"> <a href="{{ route('admin.buyingRequest.complete', ['id' => $buyEcurrency->id]) }}"
+                                            class="btn btn-sm btn-success">Complete</a>
+                                        <a href="{{ route('admin.buyingRequest.decline', ['id' => $buyEcurrency->id]) }}"
+                                            class="btn btn-sm btn-danger">Decline</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
