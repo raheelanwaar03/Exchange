@@ -40,6 +40,7 @@ class AdminController extends Controller
     {
         $data = $request->validate([
             'coinName' => 'required|string|max:255',
+            'e_bank' => 'required|string|max:255',
             'coinImage' => 'required|image|mimes:jpeg,png,jpg,gif,web,svg|max:2048',
             'buyPrice' => 'required|numeric',
             'sellPrice' => 'required|numeric',
@@ -52,6 +53,7 @@ class AdminController extends Controller
 
         $admin = new Admin;
         $admin->coinName = $data['coinName'];
+        $admin->e_bank = $data['e_bank'];
         $admin->coinImage = $fileName;
         $admin->buyPrice = $data['buyPrice'];
         $admin->sellPrice = $data['sellPrice'];
@@ -91,15 +93,11 @@ class AdminController extends Controller
     public function update(Request $request, Admin $admin)
     {
         // edit coin
-        $data = $request->validate([
-            'coinName' => 'required|string|max:255',
-            'buyPrice' => 'required|numeric',
-            'sellPrice' => 'required|numeric',
-        ]);
         $admin = Admin::find($admin->id);
-        $admin->coinName = $data['coinName'];
-        $admin->buyPrice = $data['buyPrice'];
-        $admin->sellPrice = $data['sellPrice'];
+        $admin->coinName = $request->coinName;
+        $admin->buyPrice = $request->buyPrice;
+        $admin->sellPrice = $request->sellPrice;
+        $admin->e_bank = $request->e_bank;
         $admin->save();
         return redirect()->route('admin.index')->with('massage', 'E-Currency updated successfully');
     }

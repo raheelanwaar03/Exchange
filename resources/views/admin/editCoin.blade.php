@@ -22,6 +22,11 @@
                                     value="{{ $admin->coinName }}">
                             </div>
                             <div class="form-group">
+                                <label for="e_bank">E-Bank Details</label>
+                                <input type="text" class="form-control" id="e_bank" name="e_bank"
+                                    value="{{ $admin->e_bank }}">
+                            </div>
+                            <div class="form-group">
                                 <label for="buyPrice">Buying Price</label>
                                 <input type="text" class="form-control" id="buyPrice" name="buyPrice"
                                     value="{{ $admin->buyPrice }}">

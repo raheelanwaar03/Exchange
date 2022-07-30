@@ -4,7 +4,7 @@
                 <a href="{{ route('user.buy.ecurrency') }}" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                     <i class="fa fa-credit-card-alt" aria-hidden="true"></i><span>Buy E-currency</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i class="fa fa-money"
+                <a href="{{ route('user.sell.ecurrency') }}" class="list-group-item list-group-item-action py-2 ripple"><i class="fa fa-money"
                         aria-hidden="true"></i><span>Sell E-currency
                     </span></a>
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i

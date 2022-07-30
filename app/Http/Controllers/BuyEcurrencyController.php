@@ -59,7 +59,7 @@ class BuyEcurrencyController extends Controller
         $buyEcurrency->buyer_Email = $validatedData['buyer_Email'];
         $buyEcurrency->save();
 
-        // // get the user desired amount
+         // get the user desired amount
         // $userBuyingAmount = $validatedData['buyingAmount'];
         // // get the admin selling price
         // $totalSellingPrice = $adminSellingPrice * $userBuyingAmount;

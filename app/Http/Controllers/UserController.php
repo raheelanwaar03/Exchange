@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use App\Models\BuyEcurrency;
 use App\Models\News;
+use App\Models\SellEcurrency;
 use App\Models\User\User;
 use Illuminate\Http\Request;
 
@@ -18,9 +19,10 @@ class UserController extends Controller
     public function index()
     {
         $buyEcurrencys = BuyEcurrency::where('user_id', auth()->user()->id)->get();
+        $sellEcurrencys = SellEcurrency::where('user_id', auth()->user()->id)->get();
         $admins = Admin::get();
         $admin = Admin::first();
-        return view('user.index', compact('admins' , 'admin' , 'buyEcurrencys'));
+        return view('user.index', compact('admins' , 'admin' , 'buyEcurrencys' , 'sellEcurrencys'));
     }
 
     public function about()

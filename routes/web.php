@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BuyEcurrencyController;
 use App\Http\Controllers\landingPageController;
+use App\Http\Controllers\SellEcurrencyController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,10 @@ Route::post('/user/buy/ecurrency/store', [BuyEcurrencyController::class, 'store'
 // delete the latest transaction
 Route::post('users/transcation/delete/{id}',[BuyEcurrencyController::class, 'destroy'])->name('user.transcation.delete')->middleware(['auth','userAuth']);
 
+//selling e-currency routes
+Route::get('/user/sell/ecurrency', [SellEcurrencyController::class, 'index'])->name('user.sell.ecurrency')->middleware(['auth','userAuth']);
+Route::post('/user/sell/ecurrency/store', [SellEcurrencyController::class, 'store'])->name('user.sell.ecurrency.store')->middleware(['auth','userAuth']);
+Route::post('users/sell/transcation/delete/{id}',[SellEcurrencyController::class, 'destroy'])->name('user.selling.transcation.delete')->middleware(['auth','userAuth']);
 
 
 

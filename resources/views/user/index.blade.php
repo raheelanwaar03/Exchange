@@ -16,7 +16,7 @@
                             <div class="col-md-12">
                                 <div class="full">
                                     <div class="heading_main text_align_center">
-                                        <h2><span class="theme_color"></span>Transaction History</h2>
+                                        <h2><span class="theme_color"></span>Buying History</h2>
                                     </div>
                                 </div>
                                 <div class="container">
@@ -30,7 +30,6 @@
                                                         <th scope="col">Amount</th>
                                                         <th scope="col">Date</th>
                                                         <th scope="col">Status</th>
-                                                        <th scope="col">Paid?</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -45,6 +44,46 @@
                                                   @endforeach
                                                 </tbody>
                                             </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- User selling History --}}
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="full">
+                                        <div class="heading_main text_align_center">
+                                            <h2><span class="theme_color"></span>Selling History</h2>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <table class="table table-image">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Ref</th>
+                                                            <th scope="col">E-Bank</th>
+                                                            <th scope="col">Amount</th>
+                                                            <th scope="col">Date</th>
+                                                            <th scope="col">Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                      @foreach ($sellEcurrencys as $sellEcurrency)
+                                                          <tr>
+                                                                <td>{{ $sellEcurrency->transaction_id }}</td>
+                                                                <td>{{ $sellEcurrency->e_bank }}</td>
+                                                                <td>{{ $sellEcurrency->buyingAmount }}</td>
+                                                                <td>{{ $sellEcurrency->created_at }}</td>
+                                                                <td>{{ $sellEcurrency->status }}</td>
+                                                          </tr>
+                                                      @endforeach
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -25,12 +25,16 @@
                                     <option value="Bitcoin">Bitcoin</option>
                                     <option value="BUSD">BUSD</option>
                                     <option value="USDT">USDT</option>
-                                    <option value="Etherum">Etherum</option>
+                                    <option value="Etherum">Etherum</option>x
                                     <option value="Skrill">Skrill</option>
                                     <option value="Neteller">Neteller</option>
                                     <option value="Perfectmoney">Perfectmoney</option>
                                     <option value="Payoneer">Payoneer</option>
                                 </select>
+                            </div>
+                            <div>
+                                <label for="">E-Bank Wallet</label>
+                                <input type="text" class="form-control" name="e_bank" placeholder="Admin Your E-bank Details">
                             </div>
                             <div class="form-group">
                                 <label for="coinImage">E-currency Image</label>

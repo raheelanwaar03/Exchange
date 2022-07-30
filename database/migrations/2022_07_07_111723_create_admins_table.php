@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
             $table->string('coinName');
+            $table->string('e_bank');
             $table->string('buyPrice');
             $table->string('coinImage');
             $table->string('sellPrice');
