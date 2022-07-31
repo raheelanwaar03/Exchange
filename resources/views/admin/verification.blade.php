@@ -5,10 +5,16 @@
 @endsection
 
 @section('content')
-    <h1 style="color: #ff880e;" class="text-center">User's Account Verification Request</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="color: #ff880e;" class="text-center">User's Account Verification Request</h1>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-12">
                 <table>
                     <thead class="table table-striped table-border">
                         <tr>
@@ -44,9 +50,6 @@
                         @endforeach
                     </tbody>
                 </table>
-            </div>
-            <div class="col-md-3">
-                @include('admin.admin_layout.sideNav')
             </div>
         </div>
     </div>
