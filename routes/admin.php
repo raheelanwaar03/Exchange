@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminCheckAccountController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,9 @@ Route::get('/admin/sellingRequest/complete/{id}', [AdminController::class, 'comp
 Route::get('/admin/sellingRequest/decline/{id}', [AdminController::class, 'declineSell'])->name('admin.sellingRequest.declineSell')->middleware(['auth','adminAuth']);
 Route::get('/admin/sellingRequest/closed/{id}', [AdminController::class, 'closed'])->name('admin.sellingRequest.closed')->middleware(['auth','adminAuth']);
 
-
 Route::resource('/admin', AdminController::class)->middleware(['auth','adminAuth']);
+
+// admin account verification request routes
+Route::get('/admin/account/verification', [AdminCheckAccountController::class, 'index'])->name('admin.account.verification')->middleware(['auth','adminAuth']);
+Route::get('/admin/account/verification/{id}', [AdminCheckAccountController::class, 'action'])->name('admin.account.verification.verify')->middleware(['auth','adminAuth']);
+

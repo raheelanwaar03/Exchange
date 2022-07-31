@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('country');
             $table->string('password');
             $table->string('role')->default('user');
+            $table->string('account_type')->default('unverified');
             $table->rememberToken();
             $table->timestamps();
         });

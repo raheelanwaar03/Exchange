@@ -16,7 +16,7 @@
                         <h3 class="text-center mt-3">Please Provide Your Real Details OtherWise It will not Verified! </h3>
                     </div>
                     <div class="card-body">
-                        <form action="" method="POST">
+                        <form action="{{ route('user.account.verification.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="">Your Passport</label>

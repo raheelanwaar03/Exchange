@@ -7,8 +7,8 @@
                 <a href="{{ route('admin.sellingRequest') }}" class="list-group-item list-group-item-action py-2 ripple"><i class="fa fa-money"
                         aria-hidden="true"></i><span>Sell E-currency
                     </span></a>
-                <a href="#" class="list-group-item list-group-item-action py-2 ripple"><i
-                        class="fas fa-chart-line fa-fw me-3"></i><span>My WALLET</span></a>
+                <a href="{{ route('admin.account.verification') }}" class="list-group-item list-group-item-action py-2 ripple"><i
+                        class="fas fa-chart-line fa-fw me-3"></i><span>Verification</span></a>
                 <a href="#" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="fas fa-chart-pie fa-fw me-3"></i><span>History</span>
                 </a>
