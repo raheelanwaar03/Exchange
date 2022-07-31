@@ -39,6 +39,11 @@ class SellEcurrencyController extends Controller
         $sellEcurrency->sellingAmount = $validatedData['sellingAmount'];
         // get the user desired amount
         $userSellingAmount = $validatedData['sellingAmount'];
+        //checking the amount is greater than 50
+        if ($userSellingAmount < 50)
+        {
+            return redirect()->back()->with('error', 'Minimum amount is 50 for Transaction');
+        }
         // get the admin buying price
         $totalBuyingPrice = $adminBuyingAmount * $userSellingAmount;
         $sellEcurrency->totalBuyingPrice = $totalBuyingPrice;

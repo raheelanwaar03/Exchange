@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <h1 style="color: #ff880e;" class="text-center">Buying E-Currency Request from Users </h1>
+    <h1 style="color: #ff880e;" class="text-center">Selling E-Currency Request from Users </h1>
 
     <div class="container">
         <div class="d-flex justify-content-center align-items-centers">

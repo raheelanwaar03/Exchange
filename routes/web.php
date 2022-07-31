@@ -4,6 +4,7 @@ use App\Http\Controllers\BuyEcurrencyController;
 use App\Http\Controllers\landingPageController;
 use App\Http\Controllers\SellEcurrencyController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserVerificationAccountController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,6 +47,9 @@ Route::get('/user/sell/ecurrency', [SellEcurrencyController::class, 'index'])->n
 Route::post('/user/sell/ecurrency/store', [SellEcurrencyController::class, 'store'])->name('user.sell.ecurrency.store')->middleware(['auth','userAuth']);
 Route::post('users/sell/transcation/delete/{id}',[SellEcurrencyController::class, 'destroy'])->name('user.selling.transcation.delete')->middleware(['auth','userAuth']);
 
+// user account verification center
+Route::get('/user/account/verification', [UserVerificationAccountController::class, 'index'])->name('user.account.verification')->middleware(['auth','userAuth']);
+Route::post('/user/account/verification/store', [UserVerificationAccountController::class, 'store'])->name('user.account.verification.store')->middleware(['auth','userAuth']);
 
 
 require __DIR__.'/auth.php';
