@@ -29,4 +29,17 @@ class AdminCheckAccountController extends Controller
         return redirect()->route('admin.account.verification')->with('success', 'Account verified successfully');
     }
 
+    // change the user account status to rejected
+    public function reject($id)
+    {
+        $userVerification = UserVerificationAccount::find($id);
+        $userVerification->status = 'rejected';
+        $userVerification->save();
+        // change the user account type to verified
+        $user = User::find($userVerification->user_id);
+        $user->account_type = 'rejected';
+        $user->save();
+        return redirect()->route('admin.account.verification')->with('success', 'Account rejected successfully');
+    }
+
 }

@@ -16,27 +16,25 @@
                         <h3 class="text-center mt-3">Please Provide Your Real Details OtherWise It will not Verified! </h3>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('user.account.verification.store') }}" method="POST">
+                        <form action="{{ route('user.account.verification.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="">Your Passport</label>
-                                <input type="text" name="passport" class="form-control"
-                                    placeholder="Please Enter Your Passport Number">
+                                <select name="method" class="form-control">
+                                    <option value="">Select Method</option>
+                                    <option value="passport">Passport</option>
+                                    <option value="voter">Voter Card</option>
+                                    <option value="nin">National Id (NIN)</option>
+                                    <option value="drivingLicence">Driving Licence</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="">Your Voters Card</label>
-                                <input type="text" name="voterCard" class="form-control"
-                                    placeholder="Please Enter Your Voters Card Number">
+                                <label for="">Front Side</label>
+                                <input type="file" name="front_side" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Your National Identification Number (NIN)</label>
-                                <input type="text" name="nin" class="form-control"
-                                    placeholder="Please Enter Your National Identification Number">
-                            </div>
-                            <div class="form-group">
-                                <label for="">Your Driving Licence</label>
-                                <input type="text" name="drivingLicence" class="form-control"
-                                    placeholder="Please Enter Your National Identification Number">
+                                <label for="">Back Side</label>
+                                <input type="file" name="back_side" class="form-control">
                             </div>
                             <button type="submit" class="btn-yellow">Procced</button>
                         </form>

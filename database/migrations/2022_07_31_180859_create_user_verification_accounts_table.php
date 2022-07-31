@@ -16,10 +16,9 @@ return new class extends Migration
         Schema::create('user_verification_accounts', function (Blueprint $table) {
             $table->id();
             $table->string('user_id');
-            $table->string('passport');
-            $table->string('voterCard');
-            $table->string('nin');
-            $table->string('drivingLicence');
+            $table->string('method');
+            $table->string('front_side');
+            $table->string('back_side');
             $table->string('status')->default('pending');
             $table->timestamps();
         });

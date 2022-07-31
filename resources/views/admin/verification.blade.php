@@ -7,16 +7,15 @@
 @section('content')
     <h1 style="color: #ff880e;" class="text-center">User's Account Verification Request</h1>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-9">
                 <table>
                     <thead class="table table-striped table-border">
                         <tr>
                             <th>#</th>
-                            <th>Passport</th>
-                            <th>NIN</th>
-                            <th>Voter Card</th>
-                            <th>Driver Lincenc</th>
+                            <th>Method</th>
+                            <th>Front</th>
+                            <th>Back</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -25,13 +24,21 @@
                         @foreach ($userVerifications as $ver)
                             <tr>
                                 <td>{{ $ver->id }}</td>
-                                <td>{{ $ver->passport }}</td>
-                                <td>{{ $ver->nin }}</td>
-                                <td>{{ $ver->voterCard }}</td>
-                                <td>{{ $ver->drivingLicence }}</td>
+                                <td>{{ $ver->method }}</td>
+                                <td>
+                                    <img src="{{ asset('images/' . $ver->front_side) }}" alt="{{ $ver->front_side }}"
+                                        height="90px" width="90px" class="img-fluid img-thumbnail">
+                                </td>
+                                <td>
+                                    <img src="{{ asset('images/' . $ver->back_side) }}" alt="{{ $ver->back_side }}"
+                                        height="90px" width="90px" class="img-fluid img-thumbnail">
+                                </td>
                                 <td>{{ $ver->status }}</td>
                                 <td>
-                                    <a href="{{ route('admin.account.verification.verify',['id' => $ver->id]) }}" class="btn btn-success">verify</a>
+                                    <a href="{{ route('admin.account.verification.verify', ['id' => $ver->id]) }}"
+                                        class="btn btn-success">Verify</a>
+                                    <a href="{{ route('admin.account.verification.reject', ['id' => $ver->id]) }}"
+                                        class="btn btn-danger">Reject</a>
                                 </td>
                             </tr>
                         @endforeach

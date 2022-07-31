@@ -21,4 +21,4 @@ Route::resource('/admin', AdminController::class)->middleware(['auth','adminAuth
 // admin account verification request routes
 Route::get('/admin/account/verification', [AdminCheckAccountController::class, 'index'])->name('admin.account.verification')->middleware(['auth','adminAuth']);
 Route::get('/admin/account/verification/{id}', [AdminCheckAccountController::class, 'action'])->name('admin.account.verification.verify')->middleware(['auth','adminAuth']);
-
+Route::get('/admin/account/verification/reject/{id}', [AdminCheckAccountController::class, 'reject'])->name('admin.account.verification.reject')->middleware(['auth','adminAuth']);
