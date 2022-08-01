@@ -146,7 +146,7 @@ class AdminController extends Controller
 
     public function buyingRequest()
     {
-        $buyEcurrencies = SellEcurrency::where('status', 'pending')->get();
+        $buyEcurrencies = BuyEcurrency::where('status', 'pending')->get();
         return view('admin.Exchange.sellEcurrency', compact('buyEcurrencies'));
     }
 

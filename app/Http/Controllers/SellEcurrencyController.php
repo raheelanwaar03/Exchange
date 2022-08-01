@@ -44,6 +44,22 @@ class SellEcurrencyController extends Controller
         {
             return redirect()->back()->with('error', 'Minimum amount is 50 for Transaction');
         }
+
+        //checking limit for unverified users is not greater than 1000 for one day
+        if (auth()->user()->account_type == 'unverified')
+        {
+            $limit = 1000;
+            $today = date('Y-m-d');
+            $count = SellEcurrency::where('user_id', auth()->user()->id)->where('created_at', '>=', $today)->get();
+            //get the sum of the selling amount
+            $sum = $count->sum('sellingAmount');
+            //check the sum of the selling amount is greater than the limit
+            if ($sum >= $limit)
+            {
+                return redirect()->back()->with('error', 'You have exceeded the limit of 1000 for one day.Verify your account to continue');
+            }
+        }
+
         // get the admin buying price
         $totalBuyingPrice = $adminBuyingAmount * $userSellingAmount;
         $sellEcurrency->totalBuyingPrice = $totalBuyingPrice;

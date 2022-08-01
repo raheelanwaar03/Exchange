@@ -89,7 +89,7 @@
                                                             <tr>
                                                                 <td>{{ $sellEcurrency->transaction_id }}</td>
                                                                 <td>{{ $sellEcurrency->e_bank }}</td>
-                                                                <td>{{ $sellEcurrency->buyingAmount }}</td>
+                                                                <td>{{ $sellEcurrency->sellingAmount }}</td>
                                                                 <td>{{ $sellEcurrency->created_at }}</td>
                                                                 <td>{{ $sellEcurrency->status }}</td>
                                                             </tr>
