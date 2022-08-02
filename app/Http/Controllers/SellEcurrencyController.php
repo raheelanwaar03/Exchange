@@ -54,12 +54,15 @@ class SellEcurrencyController extends Controller
             $sellCount = SellEcurrency::where('user_id', auth()->user()->id)->where('created_at', '>=', $today)->get();
             //get the sum of the selling amount
             $sellSum = $sellCount->sum('sellingAmount');
+            // return $sellSum;
             //checking the buyEcurrency
             $buyCount = BuyEcurrency::where('user_id', auth()->user()->id)->where('created_at', '>=', $today)->get();
             //get the sum of the selling amount
             $buySum = $buyCount->sum('buyingAmount');
+            // return $buySum;
             //calculte the total amount
             $total = $sellSum + $buySum;
+            // return $total;
             //check the sum of the selling amount is greater than the limit
             if ($total >= $limit)
             {

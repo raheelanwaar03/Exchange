@@ -4,7 +4,7 @@
     <!-- new designed section -->
     <div>
         <?php
-        //for btc
+        // for btc
         $btcRate = file_get_contents('https://yobit.net/api/3/ticker/btc_usd');
         // convert to array
         $btcRate = json_decode($btcRate, true);
@@ -24,7 +24,7 @@
                                 <div class="col-md-12">
                                     <div class="d-flex justify-content-between align-items-center">
                                         <p style="color: #FF890E;font-size:30px">
-                                            {{-- 1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD --}}
+                                            1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
                                         </p>
                                         {{-- <p style="color: #FF890E">
                                             BTC Sell Rate = ₦ {{ $admin->sellPrice }}
