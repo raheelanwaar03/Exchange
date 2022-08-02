@@ -14,7 +14,7 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <table>
                     <thead class="table table-striped table-border">
                         <tr>
@@ -50,6 +50,9 @@
                         @endforeach
                     </tbody>
                 </table>
+            </div>
+            <div class="col-md-3">
+                @include('admin.admin_layout.sideNav')
             </div>
         </div>
     </div>

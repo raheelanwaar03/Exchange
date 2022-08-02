@@ -15,13 +15,12 @@
                         <h1 class="display-4">{{ $news->title }}</h1>
                         <p class="lead">{{ $news->description }}</p>
                         <hr class="my-4">
+                        <a href="{{ route('admin.newsDestroy',['id' => $news->id]) }}" class="btn btn-danger" style="float: right">Delete</a>
                     </div>
                 @endforeach
             </div>
             <div class="col-md-3">
-
                 @include('admin.admin_layout.sideNav')
-
             </div>
         </div>
     </div>

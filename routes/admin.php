@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin/news', [AdminController::class, 'news'])->name('admin.news')->middleware(['auth','adminAuth']);
 Route::get('/admin/newsDetails', [AdminController::class, 'newsDetails'])->name('admin.newsDetails')->middleware(['auth','adminAuth']);
 Route::post('/admin/newSaving', [AdminController::class, 'newSaving'])->name('admin.newSaving')->middleware(['auth','adminAuth']);
+Route::get('/admin/newsDestroy/{id}', [AdminController::class, 'destroyNews'])->name('admin.newsDestroy')->middleware(['auth','adminAuth']);
 Route::get('/admin/buyingRequest', [AdminController::class, 'buyingRequest'])->name('admin.buyingRequest')->middleware(['auth','adminAuth']);
 Route::get('/admin/sellingRequest', [AdminController::class, 'sellingRequest'])->name('admin.sellingRequest')->middleware(['auth','adminAuth']);
 Route::get('/admin/buyingRequest/complete/{id}', [AdminController::class, 'complete'])->name('admin.buyingRequest.complete')->middleware(['auth','adminAuth']);

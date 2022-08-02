@@ -130,8 +130,8 @@ class AdminController extends Controller
     public function newSaving(Request $request)
     {
         $data = $request->validate([
-            'title' => 'required|max:255',
-            'description' => 'required',
+            'title' => 'required|max:60',
+            'description' => 'required|max:355',
         ]);
 
 
@@ -198,5 +198,13 @@ class AdminController extends Controller
         $sellEcurrency->status = 'closed';
         $sellEcurrency->save();
         return redirect()->back()->with('success', 'Buying request closed successfully');
+    }
+
+    // destroy this news
+    public function destroyNews($id)
+    {
+        $news = News::find($id);
+        $news->delete();
+        return redirect()->back()->with('success', 'News deleted successfully');
     }
 }
