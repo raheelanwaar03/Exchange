@@ -9,6 +9,8 @@
 @endsection
 
 @section('form')
+<x-auth-validation-errors/>
+
     <form action="{{ route('register') }}" method="POST" class="register-form" id="register-form">
         @csrf
         <div class="form-group">
