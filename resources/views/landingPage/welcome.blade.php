@@ -71,11 +71,11 @@
                         <h2><span class="theme_color"></span>News & Updates</h2>
                     </div>
                     <div class="card" style="width: 18rem;">
-                        @foreach ($news as $news)
+                        @foreach ($news as $new)
                             <div class="card-body">
                                 <h3 class="card-title">{{ $news->title }}</h3>
                                 <p class="card-text">{{ $news->description }}</p>
-                                <a href="https://www.telegram.com" target="_blank" class="btn btn-primary">Read More</a>
+                                {{-- <a href="https://www.telegram.com" target="_blank" class="btn btn-primary">Read More</a> --}}
                             </div>
                         @endforeach
                     </div>
