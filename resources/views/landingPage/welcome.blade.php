@@ -73,8 +73,8 @@
                     <div class="card" style="width: 18rem;">
                         @foreach ($news as $new)
                             <div class="card-body">
-                                <h3 class="card-title">{{ $news->title }}</h3>
-                                <p class="card-text">{{ $news->description }}</p>
+                                <h3 class="card-title">{{ $new->title }}</h3>
+                                <p class="card-text">{{ $new->description }}</p>
                                 {{-- <a href="https://www.telegram.com" target="_blank" class="btn btn-primary">Read More</a> --}}
                             </div>
                         @endforeach
