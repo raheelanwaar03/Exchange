@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\BuyEcurrency;
 use App\Models\SellEcurrency;
 use Illuminate\Http\Request;
 
@@ -50,11 +51,17 @@ class SellEcurrencyController extends Controller
         {
             $limit = 1000;
             $today = date('Y-m-d');
-            $count = SellEcurrency::where('user_id', auth()->user()->id)->where('created_at', '>=', $today)->get();
+            $sellCount = SellEcurrency::where('user_id', auth()->user()->id)->where('created_at', '>=', $today)->get();
             //get the sum of the selling amount
-            $sum = $count->sum('sellingAmount');
+            $sellSum = $sellCount->sum('sellingAmount');
+            //checking the buyEcurrency
+            $buyCount = BuyEcurrency::where('user_id', auth()->user()->id)->where('created_at', '>=', $today)->get();
+            //get the sum of the selling amount
+            $buySum = $buyCount->sum('buyingAmount');
+            //calculte the total amount
+            $total = $sellSum + $buySum;
             //check the sum of the selling amount is greater than the limit
-            if ($sum >= $limit)
+            if ($total >= $limit)
             {
                 return redirect()->back()->with('error', 'You have exceeded the limit of 1000 for one day.Verify your account to continue');
             }
