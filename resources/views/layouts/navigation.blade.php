@@ -71,7 +71,7 @@
         {{-- </div> --}}
     </header>
 
-    <div class="ulockd-home-slider">
+    <div class="ulockd-home-slider mb-2">
         <div class="container-fluid">
             <div class="row">
                 <div class="pogoSlider" id="js-main-slider">
