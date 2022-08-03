@@ -11,7 +11,6 @@
                     <p class="text-white">Our Daily Transction Limit is (Unlimited) for Verified Account</p>
                     <p class="text-white">Contact Us If Your Account is Rejected</p>
                 </div>
-
             </div>
         </div>
     </div>
