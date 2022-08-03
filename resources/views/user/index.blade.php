@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h3>Hi {{ auth()->user()->name }} To Your {{ env('APP_NAME') }} Account Your Account Type is
+                <h3>Welcome {{ auth()->user()->name }} <br> Logged in as: {{ auth()->user()->email }} <br> Account Status:
                     ({{ auth()->user()->account_type }}) </h3>
                 <div class="d-flex justify-content-between align-items-center">
                     <p class="text-white">Our Daily Transction Limit is (50$ to 1000$) for Unverified Account</p>
