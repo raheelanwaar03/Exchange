@@ -9,8 +9,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon" />
-    {{-- <link rel="apple-touch-icon" href="{{ asset('assets/images/logo.png') }}" /> --}}
+    <link rel="shortcut icon" href="{{ asset('assets/images/favi.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/pogo-slider.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
