@@ -34,7 +34,7 @@
     <!--End of Tawk.to Script-->
 </head>
 
-<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+<body id="home" data-offset="98">
 
     <div id="preloader">
         <div class="loader">
@@ -44,31 +44,31 @@
 
     <header class="top-header">
         {{-- <div class="header_top"> --}}
-            <div class="container-fluid">
-                <div class="row justify-content-center align-itmes-center">
-                    <div class="col-md-9 d-flex justify-content-center align-itmes-center">
-                        <div class="logo_section">
-                            <a class="navbar-brand" href="{{ route('register') }}"><img src="{{ asset('assets/images/logo.png') }}"
-                                    alt="image"></a>
-                        </div>
-                        <div class="site_information mt-3">
-                            <ul>
-                                <li><a href="mailto:support@instantflexy.com"><img
-                                            src="{{ asset('assets/images/mail_icon.png') }}"
-                                            alt="#" />{{ env('APP_Email') }}</a></li>
-                                <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                            alt="#" />{{ env('APP_Phone') }}</a></li>
-                            </ul>
-                        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center align-itmes-center">
+                <div class="col-md-9 d-flex justify-content-center align-itmes-center">
+                    <div class="logo_section">
+                        <a class="navbar-brand" href="{{ route('register') }}"><img
+                                src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
                     </div>
-                    <div class="col-md-3">
-                        <div class="d-flex justify-content-around align-items-center mt-4">
-                            <a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a>
-                            <a class="join_bt" href="{{ route('login') }}">login</a>
-                        </div>
+                    <div class="site_information mt-3">
+                        <ul>
+                            <li><a href="mailto:support@instantflexy.com"><img
+                                        src="{{ asset('assets/images/mail_icon.png') }}"
+                                        alt="#" />{{ env('APP_Email') }}</a></li>
+                            <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
+                                        alt="#" />{{ env('APP_Phone') }}</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="d-flex justify-content-around align-items-center mt-4">
+                        <a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a>
+                        <a class="join_bt" href="{{ route('login') }}">login</a>
                     </div>
                 </div>
             </div>
+        </div>
         {{-- </div> --}}
     </header>
 
@@ -173,6 +173,38 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    {{-- navbar --}}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ route('landingPage.aboutUs') }}">About Us</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{{ route('landingPage.contactUs') }}">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ route('landingPage.faq') }}">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ route('landingPage.help') }}">How to Buy$Sell</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ route('landingPage.policy') }}">Terms & Conditions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ route('landingPage.news') }}">News & Updates</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Reviews</a>
+                            </li>
+                        </ul>
+                </nav>
             </div>
         </div>
     </div>

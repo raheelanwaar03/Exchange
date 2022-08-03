@@ -22,6 +22,15 @@ use Illuminate\Support\Facades\Route;
 //landing page
 
 Route::get('/',[landingPageController::class,'index']);
+Route::get('/contactUs',[landingPageController::class,'contactUs'])->name('landingPage.contactUs');
+Route::get('/aboutUs',[landingPageController::class,'aboutUs'])->name('landingPage.aboutUs');
+Route::get('/faq',[landingPageController::class,'faq'])->name('landingPage.faq');
+Route::get('/help',[landingPageController::class,'help'])->name('landingPage.help');
+Route::get('/policy',[landingPageController::class,'policy'])->name('landingPage.policy');
+Route::get('/news',[landingPageController::class,'news'])->name('landingPage.news');
+
+
+
 
 //user routes
 
