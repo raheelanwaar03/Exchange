@@ -207,4 +207,9 @@ class AdminController extends Controller
         $news->delete();
         return redirect()->back()->with('success', 'News deleted successfully');
     }
+
+    public function aboutUs()
+    {
+        return view('admin.aboutUs');
+    }
 }
