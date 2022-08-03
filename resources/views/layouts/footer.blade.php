@@ -44,23 +44,23 @@
                                     <li>
                                         <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}"
                                             target="_blank">
-                                            <img src="{{ asset('assets/images/whatsapp.png') }}" height="50px" width="50px">
+                                            <img src="{{ asset('assets/images/whatsapp.png') }}" alt="social_img" height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/instantflexyexchange/"
                                             target="_blank">
-                                            <img src="{{ asset('assets/images/Instagram.png') }}" height="50px" width="50px">
+                                            <img src="{{ asset('assets/images/Instagram.png') }}" alt="social_img" height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
-                                            <img src="{{ asset('assets/images/Telegram.png') }}" height="50px" width="60px">
+                                            <img src="{{ asset('assets/images/Telegram.png') }}" alt="social_img" height="50px" width="60px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://twitter.com/Instantflexy?t=efd24_80Zf0Kt8ygOTs0FQ&s=09" target="_blank">
-                                            <img src="{{ asset('assets/images/twitter.png') }}" height="50px" width="50px">
+                                            <img src="{{ asset('assets/images/twitter.png') }}" alt="social_img" height="50px" width="50px">
                                         </a>
                                     </li>
                                 </ul>
