@@ -31,7 +31,6 @@
         })();
     </script>
     <!--End of Tawk.to Script-->
-
 </head>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
