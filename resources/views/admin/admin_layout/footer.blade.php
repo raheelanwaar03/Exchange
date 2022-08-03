@@ -50,7 +50,7 @@
                                     <li>
                                         <a href="https://www.instagram.com/?url=https://www.drdrop.com/"
                                             target="_blank">
-                                            <img src="{{ asset('assets/images/instagram.png') }}" height="50px" width="50px">
+                                            <img src="{{ asset('assets/images/Instagram.png') }}" height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>

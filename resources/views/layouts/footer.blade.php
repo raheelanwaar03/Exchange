@@ -50,7 +50,7 @@
                                     <li>
                                         <a href="https://www.instagram.com/instantflexyexchange/"
                                             target="_blank">
-                                            <img src="{{ asset('assets/images/instagram.png') }}" height="50px" width="50px">
+                                            <img src="{{ asset('assets/images/Instagram.png') }}" height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>
