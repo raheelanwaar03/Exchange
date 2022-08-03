@@ -44,29 +44,33 @@
     </div>
 
     <header class="top-header">
-        <div class="header_top">
-            <div class="container">
-                <div class="row">
-                    <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.png') }}"
-                                alt="image"></a>
+        {{-- <div class="header_top"> --}}
+            <div class="container-fluid">
+                <div class="row justify-content-center align-itmes-center">
+                    <div class="col-md-9 d-flex justify-content-center align-itmes-center">
+                        <div class="logo_section">
+                            <a class="navbar-brand" href="{{ route('register') }}"><img src="{{ asset('assets/images/logo.png') }}"
+                                    alt="image"></a>
+                        </div>
+                        <div class="site_information mt-3">
+                            <ul>
+                                <li><a href="mailto:support@instantflexy.com"><img
+                                            src="{{ asset('assets/images/mail_icon.png') }}"
+                                            alt="#" />{{ env('APP_Email') }}</a></li>
+                                <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
+                                            alt="#" />{{ env('APP_Phone') }}</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="site_information">
-                        <ul>
-                            <li><a href="mailto:support@instantflexy.com"><img
-                                        src="{{ asset('assets/images/mail_icon.png') }}"
-                                        alt="#" />{{ env('APP_Email') }}</a></li>
-                            <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                        alt="#" />{{ env('APP_Phone') }}</a></li>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <li><a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a></li>
-                                <li><a class="join_bt" href="{{ route('login') }}">login</a></li>
-                            </div>
-                        </ul>
+                    <div class="col-md-3">
+                        <div class="d-flex justify-content-around align-items-center mt-4">
+                            <a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a>
+                            <a class="join_bt" href="{{ route('login') }}">login</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        {{-- </div> --}}
     </header>
 
     <div class="ulockd-home-slider">
