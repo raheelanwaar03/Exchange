@@ -85,7 +85,7 @@
                                             <br>{{ env('APP_NAME') }}
                                         </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange With
+                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange With
                                             {{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
@@ -101,7 +101,7 @@
                                             <br>{{ env('APP_NAME') }}
                                         </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
                                             with{{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@
                                             <br>{{ env('APP_NAME') }}
                                         </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
                                             with{{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
@@ -133,7 +133,7 @@
                                             <br>{{ env('APP_NAME') }}
                                         </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
                                             with{{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
@@ -149,7 +149,7 @@
                                             <br>{{ env('APP_NAME') }}
                                         </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
                                             with{{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
                                             <br>{{ env('APP_NAME') }}
                                         </h3>
                                         <br>
-                                        <a class="start_exchange_bt" href="exchange.html">Start Exchange
+                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
                                             with{{ env('APP_NAME') }}</a>
                                     </div>
                                 </div>
