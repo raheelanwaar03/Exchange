@@ -9,8 +9,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="#" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon" />
+    {{-- <link rel="apple-touch-icon" href="{{ asset('assets/images/logo.png') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/pogo-slider.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
@@ -55,7 +55,7 @@
                         <ul>
                             <li><a href="mailto:support@instantflexy.com"><img
                                         src="{{ asset('assets/images/mail_icon.png') }}"
-                                        alt="#" />{{ env('APP_Email') }}</a></li>
+                                        alt="#" />instantcash345@gmail.com</a></li>
                             <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
                                         alt="#" />{{ env('APP_Phone') }}</a></li>
                         </ul>
