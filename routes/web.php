@@ -31,7 +31,7 @@ Route::get('/user/FAQ', [UserController::class, 'FAQ'])->name('user.FAQ')->middl
 Route::get('/user/help', [UserController::class, 'help'])->name('user.help')->middleware(['auth','userAuth']);
 Route::get('/user/contact', [UserController::class, 'contact'])->name('user.contact')->middleware(['auth','userAuth']);
 Route::get('/user/news', [UserController::class, 'news'])->name('user.news')->middleware(['auth','userAuth']);
-Route::resource('/user', UserController::class)->middleware(['auth','userAuth']);
+Route::resource('/user', UserController::class)->middleware(['auth', 'verified' ,'userAuth']);
 
 
 
