@@ -55,6 +55,12 @@ class BuyEcurrencyController extends Controller
         {
             return redirect()->back()->with('error', 'Minimum amount is 50 for Transaction');
         }
+
+        // check if user account type is rejected
+        if (auth()->user()->account_type == 'rejected')
+        {
+            return redirect()->back()->with('error', 'Your account is rejected. Please contact admin');
+        }
         //checking limit for unverified users is not greater than 1000 for one day
         if (auth()->user()->account_type == 'unverified')
         {
