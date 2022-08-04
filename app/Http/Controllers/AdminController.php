@@ -212,4 +212,9 @@ class AdminController extends Controller
     {
         return view('admin.aboutUs');
     }
+
+    public function contactUs()
+    {
+        return view('admin.contactUs');
+    }
 }

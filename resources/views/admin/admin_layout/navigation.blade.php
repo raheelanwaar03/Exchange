@@ -86,7 +86,7 @@
                                         <li><a class="nav-link" href="{{ route('admin.aboutUs') }}">About Us</a></li>
                                         <li><a class="nav-link" href="{{ route('admin.create') }}">Add E-currency</a>
                                         </li>
-                                        <li><a class="nav-link" href="services.html">Services</a></li>
+                                        <li><a class="nav-link" href="{{ route('admin.contactUs') }}">Contact Us</a></li>
                                         <li><a class="nav-link" href="new.html">News</a></li>
                                         <li><a class="nav-link" href="@">Contact</a></li>
                                     </ul>

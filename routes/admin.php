@@ -17,6 +17,7 @@ Route::get('/admin/sellingRequest/complete/{id}', [AdminController::class, 'comp
 Route::get('/admin/sellingRequest/decline/{id}', [AdminController::class, 'declineSell'])->name('admin.sellingRequest.declineSell')->middleware(['auth','adminAuth']);
 Route::get('/admin/sellingRequest/closed/{id}', [AdminController::class, 'closed'])->name('admin.sellingRequest.closed')->middleware(['auth','adminAuth']);
 Route::get('/admin/aboutUs', [AdminController::class, 'aboutUs'])->name('admin.aboutUs')->middleware(['auth','adminAuth']);
+Route::get('/admin/contactUs', [AdminController::class, 'contactUs'])->name('admin.contactUs')->middleware(['auth','adminAuth']);
 
 Route::resource('/admin', AdminController::class)->middleware(['auth','adminAuth']);
 
