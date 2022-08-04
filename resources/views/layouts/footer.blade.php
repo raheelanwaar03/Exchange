@@ -5,7 +5,8 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="full">
-                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}" alt="footer logo" />
+                            <img class="img-responsive" src="{{ asset('assets/images/footer_logo.png') }}"
+                                alt="footer logo" />
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-3">
@@ -38,29 +39,34 @@
                                     {{-- <li><img src="{{ asset('assets/images/i5.png') }}"><span>{{ env('APP_ADDRESS') }}</span></li> --}}
                                     <li>
                                         <a href="https://mail.google.com/mail/{{ env('APP_Email') }}/0" target="_blank">
-                                            <img src="{{ asset('assets/images/gmail.jpg') }}" height="50px" width="50px">
+                                            <img src="{{ asset('assets/images/gmail.jpg') }}" height="50px"
+                                                width="50px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}"
                                             target="_blank">
-                                            <img src="{{ asset('assets/images/whatsapp.png') }}" alt="social_img" height="50px" width="50px">
+                                            <img src="{{ asset('assets/images/whatsapp.png') }}" alt="social_img"
+                                                height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/instantflexyexchange/"
-                                            target="_blank">
-                                            <img src="{{ asset('assets/images/Instagram.png') }}" alt="social_img" height="50px" width="50px">
+                                        <a href="https://www.instagram.com/instantflexyexchange/" target="_blank">
+                                            <img src="{{ asset('assets/images/Instagram.png') }}" alt="social_img"
+                                                height="50px" width="50px">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
-                                            <img src="{{ asset('assets/images/Telegram.png') }}" alt="social_img" height="50px" width="60px">
+                                            <img src="{{ asset('assets/images/Telegram.png') }}" alt="social_img"
+                                                height="50px" width="60px">
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://twitter.com/Instantflexy?t=efd24_80Zf0Kt8ygOTs0FQ&s=09" target="_blank">
-                                            <img src="{{ asset('assets/images/twitter.png') }}" alt="social_img" height="50px" width="50px">
+                                        <a href="https://twitter.com/Instantflexy?t=efd24_80Zf0Kt8ygOTs0FQ&s=09"
+                                            target="_blank">
+                                            <img src="{{ asset('assets/images/twitter.png') }}" alt="social_img"
+                                                height="50px" width="50px">
                                         </a>
                                     </li>
                                 </ul>
@@ -87,6 +93,13 @@
 
 <a href="#" id="scroll-to-top" class="hvr-radial-out"><i class="fa fa-angle-up"></i></a>
 
+<html class="no-js">
+<script src="modernizr.custom.js"></script>
+<script type="text/javascript">
+    $('#mainNavbar').flexMenu();
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<script src="flexmenu.min.js"></script>
 <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 <script src="{{ asset('assets/js/popper.min.js') }}"></script>
 <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>

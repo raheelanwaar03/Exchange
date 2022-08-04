@@ -34,3 +34,59 @@ a.btn-yellow:focus {
 {
     border-radius: 10%;
 }
+/* navigation css */
+.navbar {
+    background-color: #db6f02;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    line-height: 1;
+    height: 90px;
+    overflow: hidden;
+}
+
+.navbar li, .navbar a {
+    display: inline-block;
+}
+
+.navbar li {
+    list-style-type: none;
+}
+
+.navbar > li {
+    margin-left: .25em;
+}
+
+.navbar > li:first-child {
+    margin-left: 0;
+}
+
+.navbar a {
+    padding: .25em;
+    text-decoration: none;
+    height: 1em;
+    font-weight: bold;
+    color: #fff;
+}
+/*
+.navbar a:hover {
+    background-color: white;
+    color: #ff880e;
+} */
+
+/* @media only screen and (max-width: 550px) { */
+    /* aside, article {
+        width: 95%;
+        float: none;
+    }
+
+    article {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+} */
+
+.js .navbar {
+    height: 1.5em;
+    overflow: hidden;
+}

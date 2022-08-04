@@ -56,7 +56,7 @@
                                         src="{{ asset('assets/images/mail_icon.png') }}"
                                         alt="#" />instantcash345@gmail.com</a></li>
                             <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                        alt="#" />{{ env('APP_Phone') }}</a></li>
+                                        alt="#" />+2349128499395</a></li>
                         </ul>
                     </div>
                 </div>
@@ -179,34 +179,44 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('landingPage') }}">Home</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('landingPage.aboutUs') }}">About Us</a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{{ route('landingPage.contactUs') }}">Contact Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('landingPage.faq') }}">FAQ</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('landingPage.help') }}">How to Buy$Sell</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('landingPage.policy') }}">Terms & Conditions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('landingPage.news') }}">News & Updates</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Reviews</a>
-                            </li>
-                        </ul>
-                </nav>
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav>
+                                <ul class="navbar" id="mainNavbar">
+                                    <li>
+                                        <a href="{{ route('landingPage') }}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('landingPage.aboutUs') }}">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('landingPage.contactUs') }}">Contact
+                                            Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('landingPage.faq') }}">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('landingPage.help') }}">How to
+                                            Buy$Sell</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('landingPage.policy') }}">Terms &
+                                            Conditions</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('landingPage.news') }}">News &
+                                            Updates</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Reviews</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
