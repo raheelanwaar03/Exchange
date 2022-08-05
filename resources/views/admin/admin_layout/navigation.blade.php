@@ -8,7 +8,8 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/favi.png') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="#" />
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/pogo-slider.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
@@ -82,12 +83,10 @@
                                 <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
                                     <ul class="navbar-nav">
                                         <li><a class="nav-link" href="{{ route('admin.index') }}">Home</a></li>
-                                        <li><a class="nav-link" href="{{ route('admin.aboutUs') }}">About Us</a></li>
+                                        <li><a class="nav-link" href="{{ route('admin.home.aboutUs') }}">About Us</a></li>
                                         <li><a class="nav-link" href="{{ route('admin.create') }}">Add E-currency</a>
                                         </li>
-                                        <li><a class="nav-link" href="{{ route('admin.contactUs') }}">Contact Us</a></li>
-                                        <li><a class="nav-link" href="new.html">News</a></li>
-                                        <li><a class="nav-link" href="@">Contact</a></li>
+                                        <li><a class="nav-link" href="{{ route('admin.home.contactUs') }}">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
