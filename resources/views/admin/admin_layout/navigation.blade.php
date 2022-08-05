@@ -67,40 +67,6 @@
                 </div>
             </div>
         </div>
-        <div class="header_bottom">
-            <div class="container">
-                <div class="col-sm-12">
-                    <div class="menu_orange_section" style="background: #ff880e;">
-                        <nav class="navbar header-nav navbar-expand-lg">
-                            <div class="menu_section">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                                    <ul class="navbar-nav">
-                                        <li><a class="nav-link" href="{{ route('admin.index') }}">Home</a></li>
-                                        <li><a class="nav-link" href="{{ route('admin.home.aboutUs') }}">About Us</a></li>
-                                        <li><a class="nav-link" href="{{ route('admin.create') }}">Add E-currency</a>
-                                        </li>
-                                        <li><a class="nav-link" href="{{ route('admin.home.contactUs') }}">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                        <div class="search-box">
-                            <input type="text" class="search-txt" placeholder="Search">
-                            <a class="search-btn">
-                                <img src="{{ asset('assets/images/search_icon.png') }}" alt="#" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
     <!-- End header -->
     <!-- Start Banner -->
@@ -116,3 +82,51 @@
         </div>
     </div>
     <!-- End Banner -->
+
+    {{-- start Navigation New --}}
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav>
+                                <ul class="navbar" id="mainNavbar">
+                                    <li>
+                                        <a href="{{ route('admin.index') }}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('admin.help') }}">How to
+                                            Buy$Sell</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('admin.contactUs') }}">Contact
+                                            Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('admin.policy') }}">FAQ</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('admin.aboutUs') }}">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('admin.create') }}">Add E-Currency</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('landingPage.news') }}">News &
+                                            Updates</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Reviews</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
