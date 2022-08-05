@@ -54,9 +54,10 @@
                         <ul>
                             <li><a href="mailto:support@instantflexy.com"><img
                                         src="{{ asset('assets/images/mail_icon.png') }}"
-                                        alt="#" />{{ env('APP_Email') }}</a></li>
+                                        alt="email" />instantcash345@gmail.com
+                                </a></li>
                             <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                        alt="#" />{{ env('APP_Phone') }}</a></li>
+                                        alt="num" />+2349128499395</a></li>
                             <li>
                                 <form action="{{ route('logout') }}" method="Post">
                                     @csrf
@@ -64,42 +65,6 @@
                                 </form>
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header_bottom">
-            <div class="container">
-                <div class="col-sm-12">
-                    <div class="menu_orange_section" style="background: #ff880e;">
-                        <nav class="navbar header-nav navbar-expand-lg">
-                            <div class="menu_section">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                                    <ul class="navbar-nav">
-                                        <li><a class="nav-link" href="{{ route('user.index') }}">Home</a></li>
-                                        <li><a class="nav-link" href="{{ route('user.about') }}">About</a></li>
-                                        <li><a class="nav-link" href="{{ route('user.FAQ') }}">FaQ</a></li>
-                                        <li><a class="nav-link" href="{{ route('user.policy') }}">Policy</a></li>
-                                        <li><a class="nav-link" href="{{ route('user.help') }}">How to Buy&Sell</a>
-                                        </li>
-                                        <li><a class="nav-link" href="{{ route('user.contact') }}">Contact</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                        <div class="search-box">
-                            <input type="text" class="search-txt" placeholder="Search">
-                            <a class="search-btn">
-                                <img src="{{ asset('assets/images/search_icon.png') }}" alt="#" />
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -119,3 +84,51 @@
         </div>
     </div>
     <!-- End Banner -->
+
+    {{-- start Navigation New --}}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container-fluid mt-4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav>
+                                <ul class="navbar" id="mainNavbar">
+                                    <li>
+                                        <a href="{{ route('user.index') }}">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('user.help') }}">How to
+                                            Buy$Sell</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('user.contact') }}">Contact
+                                            Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('user.FAQ') }}">FAQ</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="{{ route('user.about') }}">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('user.policy') }}">Terms &
+                                            Conditions</a>
+                                    </li>
+                                    {{-- <li>
+                                        <a href="{{ route('landingPage.news') }}">News &
+                                            Updates</a>
+                                    </li> --}}
+                                    <li>
+                                        <a href="#">Reviews</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

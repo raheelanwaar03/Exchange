@@ -188,7 +188,8 @@
                                         <a href="{{ route('landingPage') }}">Home</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('landingPage.aboutUs') }}">About Us</a>
+                                        <a href="{{ route('landingPage.help') }}">How to
+                                            Buy$Sell</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('landingPage.contactUs') }}">Contact
@@ -197,9 +198,9 @@
                                     <li>
                                         <a href="{{ route('landingPage.faq') }}">FAQ</a>
                                     </li>
+
                                     <li>
-                                        <a href="{{ route('landingPage.help') }}">How to
-                                            Buy$Sell</a>
+                                        <a href="{{ route('landingPage.aboutUs') }}">About Us</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('landingPage.policy') }}">Terms &
