@@ -19,9 +19,6 @@ Route::get('/admin/sellingRequest/complete/{id}', [AdminController::class, 'comp
 Route::get('/admin/sellingRequest/decline/{id}', [AdminController::class, 'declineSell'])->name('admin.sellingRequest.declineSell')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/closed/{id}', [AdminController::class, 'closed'])->name('admin.sellingRequest.closed')->middleware(['auth', 'adminAuth']);
 
-//resourse Controller
-
-Route::resource('/admin', AdminController::class)->middleware(['auth', 'adminAuth']);
 
 // admin account verification request routes
 Route::get('/admin/account/verification', [AdminCheckAccountController::class, 'index'])->name('admin.account.verification')->middleware(['auth', 'adminAuth']);
@@ -32,7 +29,13 @@ Route::get('/admin/unverified/accounts/{id}', [AdminCheckAccountController::clas
 
 
 //Admin Social pages routes
-Route::get('/admin/contactUs', [SocialPages::class, 'index'])->name('admin.contactUs')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/contactUs', [SocialPages::class, 'contactUs'])->name('admin.contactUs')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/aboutUs', [SocialPages::class, 'aboutUs'])->name('admin.aboutUs')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/policy', [SocialPages::class, 'policy'])->name('admin.policy')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/help', [SocialPages::class, 'help'])->name('admin.help')->middleware(['auth', 'adminAuth']);
+
+//resourse Controller
+Route::resource('/admin', AdminController::class)->middleware(['auth', 'adminAuth']);
+
+
+

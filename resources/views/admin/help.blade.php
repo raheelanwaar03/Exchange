@@ -1,7 +1,7 @@
 @extends('admin.admin_layout.app')
 
 @section('page-title')
-    <h3>Add E-currency Rates</h3>
+    <h3>How to Buy and Sell</h3>
 @endsection
 
 @section('content')

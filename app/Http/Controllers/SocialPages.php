@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class SocialPages extends Controller
 {
-    public function index()
+    public function contactUs()
     {
         return view('admin.contactUs');
     }

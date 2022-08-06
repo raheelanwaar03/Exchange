@@ -87,7 +87,7 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('admin.help') }}">How to
-                                            Buy$Sell</a>
+                                             Buy$Sell</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('admin.contactUs') }}">Contact
@@ -96,7 +96,6 @@
                                     <li>
                                         <a href="{{ route('admin.policy') }}">FAQ</a>
                                     </li>
-
                                     <li>
                                         <a href="{{ route('admin.aboutUs') }}">About Us</a>
                                     </li>

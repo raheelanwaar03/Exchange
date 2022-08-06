@@ -2,14 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TestMal;
 use App\Models\Admin;
 use App\Models\News;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class landingPageController extends Controller
 {
     public function index()
     {
+        // sending email
+        $email = "shakeel271@gmail.com";
+        Mail::to($email)->send(new TestMal());
+
         $news = News::get();
         $admins = Admin::get();
         $admin = Admin::first();

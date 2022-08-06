@@ -37,9 +37,9 @@
                                     {{ $user->account_type }}
                                 </td>
                                 <td>
-                                    <a href="{{ route('admin.account.verification.verify', ['id' => $ver->id]) }}"
+                                    <a href="{{ route('admin.account.verification.verify', ['id' => $user->id]) }}"
                                         class="btn btn-success">Verify</a>
-                                    <a href="{{ route('admin.account.verification.unverify', ['id' => $ver->id]) }}"
+                                    <a href="{{ route('admin.account.verification.unverify', ['id' => $user->id]) }}"
                                         class="btn btn-danger">Unverify</a>
                                 </td>
                             </tr>
