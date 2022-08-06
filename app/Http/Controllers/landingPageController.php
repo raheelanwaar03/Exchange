@@ -12,9 +12,9 @@ class landingPageController extends Controller
 {
     public function index()
     {
-        // sending email
-        $email = "shakeel271@gmail.com";
-        Mail::to($email)->send(new TestMal());
+        // // sending email
+        // $email = "shakeel271@gmail.com";
+        // Mail::to($email)->send(new TestMal());
 
         $news = News::get();
         $admins = Admin::get();
