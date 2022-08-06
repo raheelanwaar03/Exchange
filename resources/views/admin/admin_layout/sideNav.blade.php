@@ -7,5 +7,6 @@
         <a href="{{ route('admin.account.verification') }}" class="list-group-item list-group-item-action">Verification Center</a>
         <a href="{{ route('admin.news') }}" class="list-group-item list-group-item-action">Add News</a>
         <a href="{{ route('admin.newsDetails') }}" class="list-group-item list-group-item-action">News Details</a>
+        <a href="{{ route('admin.Rejected.accounts') }}" class="list-group-item list-group-item-action">Rejected Account</a>
       </div>
 </div>

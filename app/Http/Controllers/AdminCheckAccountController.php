@@ -42,4 +42,20 @@ class AdminCheckAccountController extends Controller
         return redirect()->route('admin.account.verification')->with('success', 'Account rejected successfully');
     }
 
+    public function rejectedAccounts()
+    {
+        $users = User::where('account_type', 'rejected')->get();
+        return view('admin.reject', compact('users'));
+    }
+
+    // unverify the user account
+
+    public function unverify($id)
+    {
+        $user = User::find($id);
+        $user->account_type = 'unverified';
+        $user->save();
+        return redirect()->back()->with('success', 'Account unverified successfully');
+    }
+
 }

@@ -27,6 +27,8 @@ Route::resource('/admin', AdminController::class)->middleware(['auth', 'adminAut
 Route::get('/admin/account/verification', [AdminCheckAccountController::class, 'index'])->name('admin.account.verification')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/account/verification/{id}', [AdminCheckAccountController::class, 'action'])->name('admin.account.verification.verify')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/account/verification/reject/{id}', [AdminCheckAccountController::class, 'reject'])->name('admin.account.verification.reject')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/Rejected/accounts', [AdminCheckAccountController::class, 'rejectedAccounts'])->name('admin.Rejected.accounts')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/unverified/accounts/{id}', [AdminCheckAccountController::class, 'unverified'])->name('admin.unverified.accounts')->middleware(['auth', 'adminAuth']);
 
 
 //Admin Social pages routes

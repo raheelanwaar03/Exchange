@@ -40,13 +40,13 @@
         {{-- <div class="header_top"> --}}
         <div class="container-fluid">
             <div class="row justify-content-around align-itmes-center">
-                <div class="col-md-6 d-flex justify-content-around align-itmes-center">
+                <div class="col-md-9 d-flex justify-content-around align-itmes-center">
                     <div class="logo_section">
                         <a class="navbar-brand" href="{{ route('user.index') }}"><img
                                 src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
                     </div>
                 </div>
-                <div class="col-md-6 mt-3">
+                <div class="col-md-3 mt-3">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button class="btn-yellow mt-3">Logout</button>

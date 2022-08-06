@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\BuyEcurrency;
 use App\Models\News;
 use App\Models\SellEcurrency;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -208,13 +209,8 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'News deleted successfully');
     }
 
-    public function aboutUs()
-    {
-        return view('admin.aboutUs');
-    }
+    // Rejected accounts
 
-    public function contactUs()
-    {
-        return view('admin.contactUs');
-    }
+
+
 }

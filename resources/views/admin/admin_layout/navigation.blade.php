@@ -46,7 +46,7 @@
                     </div>
 
                 </div>
-                <div class="col-md-6 mt-3">
+                <div class="col-md-3 mt-3">
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
                         <button class="btn-yellow mt-3">Logout</button>
@@ -102,10 +102,6 @@
                                     </li>
                                     <li>
                                         <a href="{{ route('admin.create') }}">Add E-Currency</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('landingPage.news') }}">News &
-                                            Updates</a>
                                     </li>
                                     <li>
                                         <a href="#">Reviews</a>
