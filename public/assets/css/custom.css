@@ -21,7 +21,7 @@ a.btn-yellow:focus {
 .whatsapp {
     position: fixed;
     right: 10px;
-    bottom: 90px;
+    bottom: 60px;
     padding: 15px 20px;
     border-radius: 50px;
 }
@@ -68,25 +68,18 @@ a.btn-yellow:focus {
     font-weight: bold;
     color: #fff;
 }
-/*
-.navbar a:hover {
-    background-color: white;
-    color: #ff880e;
-} */
-
-/* @media only screen and (max-width: 550px) { */
-    /* aside, article {
-        width: 95%;
-        float: none;
-    }
-
-    article {
-        margin-right: 0;
-        margin-bottom: 1em;
-    }
-} */
 
 .js .navbar {
     height: 1.5em;
     overflow: hidden;
+}
+.bg-mrinda
+{
+    background-color: #ff880e;
+}
+
+.E-images
+{
+    width: 100%;
+    height: 100%;
 }

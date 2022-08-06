@@ -5,9 +5,9 @@
     <div>
         <?php
         // for btc
-        $btcRate = file_get_contents('https://yobit.net/api/3/ticker/btc_usd');
+        // $btcRate = file_get_contents('https://yobit.net/api/3/ticker/btc_usd');
         // convert to array
-        $btcRate = json_decode($btcRate, true);
+        // $btcRate = json_decode($btcRate, true);
         ?>
     </div>
     <!-- section -->
@@ -23,9 +23,9 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <p style="color: #FF890E;font-size:30px">
+                                        {{-- <p style="color: #FF890E;font-size:30px">
                                             1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
-                                        </p>
+                                        </p> --}}
                                         {{-- <p style="color: #FF890E">
                                             BTC Sell Rate = ₦ {{ $admin->sellPrice }}
                                         </p>
@@ -42,6 +42,8 @@
                                     <table class="table table-image">
                                         <thead>
                                             <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Name</th>
                                                 <th scope="col">E-Currency</th>
                                                 <th scope="col">Buying Price</th>
                                                 <th scope="col">Selling Price</th>
@@ -50,6 +52,8 @@
                                         <tbody>
                                             @foreach ($admins as $admin)
                                                 <tr>
+                                                    <td>{{ $admin->id }}</td>
+                                                    <td>{{ $admin->coinName }}</td>
                                                     <td class="w-25">
                                                         <img src="{{ asset('images/' . $admin->coinImage) }}"
                                                             alt="{{ $admin->name }}" class="img-fluid img-thumbnail"

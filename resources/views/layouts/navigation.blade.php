@@ -35,33 +35,18 @@
 
 <body id="home" data-offset="98">
 
-    <div id="preloader">
-        <div class="loader">
-            <img src="{{ asset('assets/images/loader.gif') }}" alt="#" />
-        </div>
-    </div>
-
     <header class="top-header">
         {{-- <div class="header_top"> --}}
         <div class="container-fluid">
-            <div class="row justify-content-center align-itmes-center">
-                <div class="col-md-9 d-flex justify-content-center align-itmes-center">
+            <div class="row">
+                <div class="col-md-6 d-flex justify-content-around align-itmes-center">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="{{ route('register') }}"><img
+                        <a class="navbar-brand" href="{{ route('landingPage') }}"><img
                                 src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
                     </div>
-                    <div class="site_information mt-3">
-                        <ul>
-                            <li><a href="mailto:support@instantflexy.com"><img
-                                        src="{{ asset('assets/images/mail_icon.png') }}"
-                                        alt="#" />instantcash345@gmail.com</a></li>
-                            <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                        alt="#" />+2349128499395</a></li>
-                        </ul>
-                    </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="d-flex justify-content-around align-items-center mt-4">
+                <div class="col-md-6 mt-3">
+                    <div class="d-flex justify-content-center align-items-center mt-4">
                         <a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a>
                         <a class="join_bt" href="{{ route('login') }}">login</a>
                     </div>
@@ -70,111 +55,37 @@
         </div>
         {{-- </div> --}}
     </header>
+    <hr style="color: #ff890e;font-size:2px">
 
-    <div class="ulockd-home-slider mb-2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><small>Welcome to the TRUST&EFFICIENCY </small>
-                                            <br>{{ env('APP_NAME') }}
-                                        </h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange With
-                                            {{ env('APP_NAME') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><small>Instant Funding & Instant Withdrawal!</small>
-                                            <br>{{ env('APP_NAME') }}
-                                        </h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
-                                            with{{ env('APP_NAME') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><small>Tested & Trusted</small>
-                                            <br>{{ env('APP_NAME') }}
-                                        </h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
-                                            with{{ env('APP_NAME') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><small>Highly Competitive & Unbeatable Prices</small>
-                                            <br>{{ env('APP_NAME') }}
-                                        </h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
-                                            with{{ env('APP_NAME') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><small>24/7 MultiChannel Customer Support</small>
-                                            <br>{{ env('APP_NAME') }}
-                                        </h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
-                                            with{{ env('APP_NAME') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" style="background-image: url(assets/images/slide_img.png)">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><small>We are the Choice of the Whales!</small>
-                                            <br>{{ env('APP_NAME') }}
-                                        </h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="{{ route('login') }}">Start Exchange
-                                            with{{ env('APP_NAME') }}</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container bg-mrinda">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="text-white">InstantFlexy Exchange</h1>
+                <p class="text-white">
+                    InstantFlexy is the leading digital currency exchange in Nigeria with professional team working day
+                    and night for quality and fast delivery of services since the year 2022.
+                    <br>
+                    Thousands of satisfied customers cannot be wrong.
+                </p>
+                <br>
+                <h5 class="text-white">We guarantee instant funding 24/7. If you have questions or suggestions, feel free to Contact us.</h5>
+                <h4 class="text-white">Email: info@instantflexy.com</h4>
+                <h4 class="text-white">Phone: +2349128499395</h4>
+                <p class="text-white">either you can use our 24 hour live chat support or social accounts</p>
+            </div>
+            <div class="col-md-4">
+                    <img src="{{ asset('assets/images/neteller.jpg') }}" alt="neteller" height="80px" width="80px" class="img-fluid m-3">
+                    <img src="{{ asset('assets/images/bitcoin.png') }}" alt="bitcoin" height="80px" width="80px" class="img-fluid m-3">
+                    <img src="{{ asset('assets/images/paypal.png') }}" alt="paypal" height="80px" width="80px" class="img-fluid m-3">
+                    <img src="{{ asset('assets/images/perfect.png') }}" alt="pm" height="80px" width="80px" class="img-fluid m-3">
+                    <img src="{{ asset('assets/images/Payoneer.png') }}" alt="payooneer" height="80px" width="80px" class="img-fluid m-3">
+                    <img src="{{ asset('assets/images/skrill.png') }}" alt="skrill" height="80px" width="80px" class="img-fluid m-3">
+                    <img src="{{ asset('assets/images/payeer.png') }}" alt="payeer" height="80px" width="80px" class="img-fluid m-3">
             </div>
         </div>
     </div>
+
+
     {{-- navbar --}}
     <div class="container mt-5">
         <div class="row">

@@ -35,40 +35,26 @@
 </head>
 
 <body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
-
-    <div id="preloader">
-        <div class="loader">
-            <img src="{{ asset('assets/images/loader.gif') }}" alt="#" />
-        </div>
-    </div>
     <!-- Navigation Bar -->
     <header class="top-header">
-        <div class="header_top">
-            <div class="container">
-                <div class="row">
+        {{-- <div class="header_top"> --}}
+        <div class="container-fluid">
+            <div class="row justify-content-center align-itmes-center">
+                <div class="col-md-6 d-flex justify-content-around align-itmes-center">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.png') }}"
-                                alt="image"></a>
+                        <a class="navbar-brand" href="{{ route('register') }}"><img
+                                src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
                     </div>
-                    <div class="site_information">
-                        <ul>
-                            <li><a href="mailto:support@instantflexy.com"><img
-                                        src="{{ asset('assets/images/mail_icon.png') }}"
-                                        alt="email" />instantcash345@gmail.com
-                                </a></li>
-                            <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                        alt="num" />+2349128499395</a></li>
-                            <li>
-                                <form action="{{ route('logout') }}" method="Post">
-                                    @csrf
-                                    <button type="submit" class="btn-yellow">Logout</button>
-                                </form>
-                            </li>
-                        </ul>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div class="d-flex justify-content-around align-items-center mt-4">
+                        <a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a>
+                        <a class="join_bt" href="{{ route('login') }}">login</a>
                     </div>
                 </div>
             </div>
         </div>
+        {{-- </div> --}}
     </header>
     <!-- End header -->
     <!-- Start Banner -->
