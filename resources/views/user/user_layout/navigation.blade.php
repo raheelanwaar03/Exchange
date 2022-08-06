@@ -39,18 +39,18 @@
     <header class="top-header">
         {{-- <div class="header_top"> --}}
         <div class="container-fluid">
-            <div class="row justify-content-center align-itmes-center">
+            <div class="row justify-content-around align-itmes-center">
                 <div class="col-md-6 d-flex justify-content-around align-itmes-center">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="{{ route('register') }}"><img
+                        <a class="navbar-brand" href="{{ route('user.index') }}"><img
                                 src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
                     </div>
                 </div>
                 <div class="col-md-6 mt-3">
-                    <div class="d-flex justify-content-around align-items-center mt-4">
-                        <a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a>
-                        <a class="join_bt" href="{{ route('login') }}">login</a>
-                    </div>
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="btn-yellow mt-3">Logout</button>
+                    </form>
                 </div>
             </div>
         </div>

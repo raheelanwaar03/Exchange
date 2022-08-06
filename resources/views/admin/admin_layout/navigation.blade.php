@@ -41,24 +41,16 @@
             <div class="row justify-content-center align-itmes-center">
                 <div class="col-md-9 d-flex justify-content-center align-itmes-center">
                     <div class="logo_section">
-                        <a class="navbar-brand" href="{{ route('register') }}"><img
+                        <a class="navbar-brand" href="{{ route('admin.index') }}"><img
                                 src="{{ asset('assets/images/logo.png') }}" alt="image"></a>
                     </div>
-                    <div class="site_information mt-3">
-                        <ul>
-                            <li><a href="mailto:support@instantflexy.com"><img
-                                        src="{{ asset('assets/images/mail_icon.png') }}"
-                                        alt="#" />instantcash345@gmail.com</a></li>
-                            <li><a href="tel:+08063345163"><img src="{{ asset('assets/images/phone_icon.png') }}"
-                                        alt="#" />+2349128499395</a></li>
-                        </ul>
-                    </div>
+
                 </div>
-                <div class="col-md-3">
-                    <div class="d-flex justify-content-around align-items-center mt-4">
-                        <a class="join_bt mr-3" href="{{ route('register') }}">SignUp</a>
-                        <a class="join_bt" href="{{ route('login') }}">login</a>
-                    </div>
+                <div class="col-md-6 mt-3">
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="btn-yellow mt-3">Logout</button>
+                    </form>
                 </div>
             </div>
         </div>
