@@ -26,12 +26,6 @@
                                         <p style="color: #FF890E;font-size:30px">
                                             1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
                                         </p>
-                                        <p style="color: #FF890E">
-                                            BTC Sell Rate = ₦ {{ $admin->sellPrice }}
-                                        </p>
-                                        <p style="color: #FF890E">
-                                            BTC Buy Rate = ₦ {{ $admin->buyPrice }}
-                                        </p>
                                     </div>
                                 </div>
                             </div>
