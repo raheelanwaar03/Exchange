@@ -68,19 +68,35 @@
                     Thousands of satisfied customers cannot be wrong.
                 </p>
                 <br>
-                <h5 class="text-white">We guarantee instant funding 24/7. If you have questions or suggestions, feel free to Contact us.</h5>
+                <h5 class="text-white">We guarantee instant funding 24/7. If you have questions or suggestions, feel
+                    free to Contact us.</h5>
                 <h4 class="text-white">Email: info@instantflexy.com</h4>
                 <h4 class="text-white">Phone: +2349128499395</h4>
                 <p class="text-white">either you can use our 24 hour live chat support or social accounts</p>
             </div>
             <div class="col-md-4">
-                    <img src="{{ asset('assets/images/neteller.jpg') }}" alt="neteller" height="80px" width="80px" class="img-fluid m-3">
-                    <img src="{{ asset('assets/images/bitcoin.png') }}" alt="bitcoin" height="80px" width="80px" class="img-fluid m-3">
-                    <img src="{{ asset('assets/images/paypal.png') }}" alt="paypal" height="80px" width="80px" class="img-fluid m-3">
-                    <img src="{{ asset('assets/images/perfect.png') }}" alt="pm" height="80px" width="80px" class="img-fluid m-3">
-                    <img src="{{ asset('assets/images/Payoneer.png') }}" alt="payooneer" height="80px" width="80px" class="img-fluid m-3">
-                    <img src="{{ asset('assets/images/skrill.png') }}" alt="skrill" height="80px" width="80px" class="img-fluid m-3">
-                    <img src="{{ asset('assets/images/payeer.png') }}" alt="payeer" height="80px" width="80px" class="img-fluid m-3">
+                <img src="{{ asset('assets/images/neteller.jpg') }}" alt="neteller" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/bitcoin.png') }}" alt="bitcoin" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/paypal.png') }}" alt="paypal" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/perfect.png') }}" alt="pm" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/Payoneer.png') }}" alt="payooneer" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/Skrill.png') }}" alt="skrill" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/payeer.png') }}" alt="payeer" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/BUSD.jpeg') }}" alt="BUSD" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/etherum.png') }}" alt="etherum" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/tether.png') }}" alt="tether" height="80px" width="80px"
+                    class="img-fluid m-3">
+                <img src="{{ asset('assets/images/usdt.png') }}" alt="usdt" height="80px" width="80px"
+                    class="img-fluid m-3">
             </div>
         </div>
     </div>
