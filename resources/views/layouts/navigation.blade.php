@@ -91,7 +91,7 @@
                     class="img-fluid m-3">
                 <img src="{{ asset('assets/images/BUSD.jpeg') }}" alt="BUSD" height="80px" width="80px"
                     class="img-fluid m-3">
-                <img src="{{ asset('assets/images/etherum.png') }}" alt="etherum" height="80px" width="80px"
+                <img src="{{ asset('assets/images/ethereum.png') }}" alt="etherum" height="80px" width="80px"
                     class="img-fluid m-3">
                 <img src="{{ asset('assets/images/tether.png') }}" alt="tether" height="80px" width="80px"
                     class="img-fluid m-3">

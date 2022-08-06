@@ -4,9 +4,9 @@
     <!-- new designed section -->
     <div>
         <?php
-        for btc
+        //for btc
         $btcRate = file_get_contents('https://yobit.net/api/3/ticker/btc_usd');
-        convert to array
+       // convert to array
         $btcRate = json_decode($btcRate, true);
         ?>
     </div>
