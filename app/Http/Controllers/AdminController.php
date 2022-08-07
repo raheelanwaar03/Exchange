@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\closedsellTranction;
+use App\Mail\completesellTranction;
+use App\Mail\completeTranction;
+use App\Mail\declinesellTranction;
+use App\Mail\declineTranction;
 use App\Models\Admin;
 use App\Models\BuyEcurrency;
 use App\Models\News;
 use App\Models\SellEcurrency;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
@@ -157,6 +163,10 @@ class AdminController extends Controller
         $buyEcurrency = BuyEcurrency::find($id);
         $buyEcurrency->status = 'completed';
         $buyEcurrency->save();
+        // send email to the user
+        $user = User::find($buyEcurrency->user_id);
+        $user->email = $user->email;
+        Mail::to($user->email)->send(new completeTranction());
         return redirect()->back()->with('success', 'Buying request completed successfully');
     }
 
@@ -166,6 +176,10 @@ class AdminController extends Controller
         $buyEcurrency = BuyEcurrency::find($id);
         $buyEcurrency->status = 'declined';
         $buyEcurrency->save();
+        // send email to the user
+        $user = User::find($buyEcurrency->user_id);
+        $user->email = $user->email;
+        Mail::to($user->email)->send(new declineTranction());
         return redirect()->back()->with('success', 'Buying request declined successfully');
     }
 
@@ -182,6 +196,10 @@ class AdminController extends Controller
         $sellEcurrency = SellEcurrency::find($id);
         $sellEcurrency->status = 'completed';
         $sellEcurrency->save();
+        // send email to the user
+        $user = User::find($sellEcurrency->user_id);
+        $user->email = $user->email;
+        Mail::to($user->email)->send(new completesellTranction());
         return redirect()->back()->with('success', 'Selling request completed successfully');
     }
 
@@ -190,6 +208,10 @@ class AdminController extends Controller
         $sellEcurrency = SellEcurrency::find($id);
         $sellEcurrency->status = 'declined';
         $sellEcurrency->save();
+        // send email to the user
+        $user = User::find($sellEcurrency->user_id);
+        $user->email = $user->email;
+        Mail::to($user->email)->send(new declinesellTranction());
         return redirect()->back()->with('success', 'Buying request declined successfully');
     }
 
@@ -198,6 +220,10 @@ class AdminController extends Controller
         $sellEcurrency = SellEcurrency::find($id);
         $sellEcurrency->status = 'closed';
         $sellEcurrency->save();
+        // send email to the user
+        $user = User::find($sellEcurrency->user_id);
+        $user->email = $user->email;
+        Mail::to($user->email)->send(new closedsellTranction());
         return redirect()->back()->with('success', 'Buying request closed successfully');
     }
 
