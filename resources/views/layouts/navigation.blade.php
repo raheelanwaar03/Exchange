@@ -74,7 +74,7 @@
                 <h4 class="text-white">Phone: +2349128499395</h4>
                 <p class="text-white">either you can use our 24 hour live chat support or social accounts</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-4">
                 <img src="{{ asset('assets/images/neteller.jpg') }}" alt="neteller" height="80px" width="80px"
                     class="img-fluid m-3">
                 <img src="{{ asset('assets/images/bitcoin.png') }}" alt="bitcoin" height="80px" width="80px"
