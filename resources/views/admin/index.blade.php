@@ -43,8 +43,8 @@
                                                                     alt="{{ $admin->coinName }}" height="90px"
                                                                     width="90px" class="img-fluid img-thumbnail"></td>
                                                             <td>{{ $admin->e_bank }}</td>
-                                                            <td>?{{ $admin->buyPrice }}</td>
-                                                            <td>?{{ $admin->sellPrice }}</td>
+                                                            <td>₦{{ $admin->buyPrice }}</td>
+                                                            <td>₦{{ $admin->sellPrice }}</td>
                                                             <td>
                                                                 <a href="{{ route('admin.edit', $admin->id) }}"
                                                                     class="btn btn-dark">Edit</a>
