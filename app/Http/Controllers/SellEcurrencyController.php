@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\adminBuyEcurrencyReq;
+use App\Mail\sellEcurrencyReq;
 use App\Models\Admin;
 use App\Models\BuyEcurrency;
 use App\Models\SellEcurrency;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SellEcurrencyController extends Controller
 {
@@ -97,4 +101,20 @@ class SellEcurrencyController extends Controller
         $sellEcurrency->delete();
         return redirect()->route('user.index')->with('success', 'Transaction Deleted Successfully');
     }
+
+    public function mail()
+    {
+        //send email to the Admin
+
+        $adminEmail = User::where('role' , 'admin')->firstorFail();
+        $adminEmail = $adminEmail->email;
+        Mail::to($adminEmail)->send(new adminBuyEcurrencyReq());
+
+        // send Email to user
+        $user = User::where('id', auth()->user()->id)->first();
+        $userEmail = $user->email;
+        Mail::to($userEmail)->send(new sellEcurrencyReq());
+        return redirect()->route('user.index');
+    }
+
 }

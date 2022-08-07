@@ -47,12 +47,14 @@ Route::resource('/user', UserController::class)->middleware(['auth' ,'userAuth']
 //buying e-currency routes
 
 Route::get('/user/buy/ecurrency', [BuyEcurrencyController::class, 'index'])->name('user.buy.ecurrency')->middleware(['auth','userAuth']);
+Route::get('/user/buy/mail', [BuyEcurrencyController::class, 'mail'])->name('user.buy.Ecurrency.mail')->middleware(['auth','userAuth']);
 Route::post('/user/buy/ecurrency/store', [BuyEcurrencyController::class, 'store'])->name('user.buy.ecurrency.store')->middleware(['auth','userAuth']);
 // delete the latest transaction
 Route::post('users/transcation/delete/{id}',[BuyEcurrencyController::class, 'destroy'])->name('user.transcation.delete')->middleware(['auth','userAuth']);
 
 //selling e-currency routes
 Route::get('/user/sell/ecurrency', [SellEcurrencyController::class, 'index'])->name('user.sell.ecurrency')->middleware(['auth','userAuth']);
+Route::get('/user/sell/ecurrency/mail', [SellEcurrencyController::class, 'mail'])->name('user.sell.ecurrency.mail')->middleware(['auth','userAuth']);
 Route::post('/user/sell/ecurrency/store', [SellEcurrencyController::class, 'store'])->name('user.sell.ecurrency.store')->middleware(['auth','userAuth']);
 Route::post('users/sell/transcation/delete/{id}',[SellEcurrencyController::class, 'destroy'])->name('user.selling.transcation.delete')->middleware(['auth','userAuth']);
 

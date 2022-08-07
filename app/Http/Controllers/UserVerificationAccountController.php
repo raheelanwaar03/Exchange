@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\adminVerificationReq;
+use App\Mail\verificationReq;
 use App\Models\User;
 use App\Models\UserVerificationAccount;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class UserVerificationAccountController extends Controller
 {
@@ -44,6 +47,19 @@ class UserVerificationAccountController extends Controller
         $userVerification->front_side = $fileNameF;
         $userVerification->back_side = $fileNameB;
         $userVerification->save();
+
+
+        // send email to admin
+        $admin = User::where('role', 'admin')->first();
+        $adminEmail = $admin->email;
+        Mail::to($adminEmail)->send(new adminVerificationReq());
+
+        // send mail to this user aboun his request
+        $user = User::where('id', auth()->user()->id)->first();
+        $accVerificationEmail = $user->email;
+        // sending mail to admin and user
+        Mail::to($accVerificationEmail,)->send(new verificationReq());
+        // Redirect
         return redirect()->route('user.index')->with('success' , 'Your Account Verification Request Has Been Recived Successfully');
 
     }

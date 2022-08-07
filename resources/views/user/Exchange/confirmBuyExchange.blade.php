@@ -98,7 +98,7 @@
                             </form>
                         </th>
                         <td>
-                            <a href="{{ route('user.index') }}" class="btn btn-success">
+                            <a href="{{ route('user.buy.Ecurrency.mail') }}" class="btn btn-success">
                                 <i class="fa fa-check"></i>
                                 Confirm
                             </a>

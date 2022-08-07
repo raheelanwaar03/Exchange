@@ -89,7 +89,7 @@
                             </form>
                         </th>
                         <td>
-                            <a href="{{ route('user.index') }}" class="btn btn-success">
+                            <a href="{{ route('user.sell.ecurrency.mail') }}" class="btn btn-success">
                                 <i class="fa fa-check"></i>
                                 Confirm
                             </a>
