@@ -1,5 +1,5 @@
 @component('mail::message')
-# Introduction
+# Account Verification Request
 
 Hi {{ auth()->user()->name }}, Your Account has been Verify Successfully.
 Now you can Buy and Sell E-currency with No limits.

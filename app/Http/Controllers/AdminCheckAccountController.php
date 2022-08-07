@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\adminRejectAccount;
 use App\Mail\adminVerifyAccount;
 use App\Models\User;
 use App\Models\UserVerificationAccount;
@@ -38,12 +39,15 @@ class AdminCheckAccountController extends Controller
     public function reject($id)
     {
         $userVerification = UserVerificationAccount::find($id);
-        $userVerification->status = 'rejected';
+        $userVerification->status = 'unverified';
         $userVerification->save();
         // change the user account type to verified
         $user = User::find($userVerification->user_id);
         $user->account_type = 'rejected';
         $user->save();
+        // send mail to this user abouny his request
+        $userEmail = User::find($userVerification->user_id)->email;
+        Mail::to($userEmail)->send(new adminRejectAccount());
         return redirect()->route('admin.account.verification')->with('success', 'Account rejected successfully');
     }
 
