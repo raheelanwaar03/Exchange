@@ -4,7 +4,7 @@
 Hi Admin, you just got a request from {{ auth()->user()->name }} to verify his account.
 Please Do your further action.
 
-@component('mail::button', ['url' => '{{ route('admin.account.verification') }}'])
+@component('mail::button', ['url' => '/admin/account/verification'])
 View Request
 @endcomponent
 

@@ -5,7 +5,7 @@ Hi, {{ auth()->user()->name }} Your Selling Request has been Recived.
 We will notify you when it completed.
 
 
-@component('mail::button', ['url' => '{{ route('user.index') }}'])
+@component('mail::button', ['url' => '/user'])
 View Dashboard
 @endcomponent
 

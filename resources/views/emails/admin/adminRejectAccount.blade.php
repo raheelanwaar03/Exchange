@@ -5,7 +5,7 @@ Hi {{ auth()->user()->name }}, Your Account Verification Request has been reject
 You did not meet the requirements to be Verified.
 Contact with Admin for more details.
 
-@component('mail::button', ['url' => '{{ route('user.account.verification') }}'])
+@component('mail::button', ['url' => '/user'])
 Verify Account
 @endcomponent
 

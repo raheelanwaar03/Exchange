@@ -4,7 +4,7 @@
 Hi Admin, You just got a request from {{ auth()->user()->name }} to sell E-currency.
 Please Do your further action.
 
-@component('mail::button', ['url' => '{{ route('admin.buyingRequest') }}'])
+@component('mail::button', ['url' => '/admin/buyingRequest'])
 View Request
 @endcomponent
 

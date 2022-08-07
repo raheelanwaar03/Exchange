@@ -7,7 +7,7 @@ When It is approved, you will be notified.
 
 {{-- send user to his dasboard --}}
 
-@component('mail::button', ['url' => '{{ route('user.index') }}'])
+@component('mail::button', ['url' => '/user'])
 View Dashboard
 @endcomponent
 
