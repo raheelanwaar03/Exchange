@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                @forelse ($$reviews as $review)
+                @forelse ($reviews as $review)
                 <div class="jumbotron">
                     <h1>{{ $review->name }} give us {{ $review->stars }}</h1>
                     <hr>
