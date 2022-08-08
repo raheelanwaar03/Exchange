@@ -31,7 +31,7 @@ class ReviewController extends Controller
         // sending email to  user after review
         $userEmail = auth()->user()->email;
         // send email to user
-        // Mail::to($userEmail)->send(new MailReview($review));
+        Mail::to($userEmail)->send(new MailReview($review));
         return redirect()->route('user.index')->with('success', 'Review submitted successfully');
     }
 

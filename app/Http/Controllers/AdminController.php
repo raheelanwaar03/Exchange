@@ -10,6 +10,7 @@ use App\Mail\declineTranction;
 use App\Models\Admin;
 use App\Models\BuyEcurrency;
 use App\Models\News;
+use App\Models\Review;
 use App\Models\SellEcurrency;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -237,6 +238,23 @@ class AdminController extends Controller
 
     // Rejected accounts
 
+    //feedback
+
+    public function review()
+    {
+        $reviews = Review::all();
+        return view('admin.feedback' , compact('reviews'));
+    }
+
+
+    //delete tihs review
+
+    public function destroyReview($id)
+    {
+        $review = Review::find($id);
+        $review->delete();
+        return redirect()->back()->with('success', 'Review deleted successfully');
+    }
 
 
 }
