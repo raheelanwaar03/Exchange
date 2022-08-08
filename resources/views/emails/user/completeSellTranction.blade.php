@@ -4,7 +4,7 @@
 Hi {{auth()->user()->name}}, your tranction is completed.
 Please check your account and visit our website for more selling.
 
-@component('mail::button', ['url' => '/sell'])
+@component('mail::button', ['url' => 'https://instantflexy.com/user])
 View Dashboard
 @endcomponent
 

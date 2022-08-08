@@ -7,7 +7,7 @@ When It is approved, you will be notified.
 
 {{-- send user to his dasboard --}}
 
-@component('mail::button', ['url' => '/user'])
+@component('mail::button', ['url' => 'https://instantflexy.com/user'])
 View Dashboard
 @endcomponent
 
