@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\TestMal;
 use App\Models\Admin;
 use App\Models\News;
+use App\Models\Review;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -51,6 +52,12 @@ class landingPageController extends Controller
     {
         $news = News::get();
         return view('landingPage.news' , compact('news'));
+    }
+
+    public function review()
+    {
+        $reviews = Review::all();
+        return view('landingPage.review' , compact('reviews'));
     }
 
 }

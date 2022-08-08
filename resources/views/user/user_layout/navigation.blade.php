@@ -103,12 +103,12 @@
                                         <a href="{{ route('user.policy') }}">Terms &
                                             Conditions</a>
                                     </li>
-                                    {{-- <li>
-                                        <a href="{{ route('landingPage.news') }}">News &
-                                            Updates</a>
-                                    </li> --}}
                                     <li>
-                                        <a href="#">Reviews</a>
+                                        <a href="{{ route('user.news') }}">News &
+                                            Updates</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('user.review') }}">Give Reviews</a>
                                     </li>
                                 </ul>
                             </nav>

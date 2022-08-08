@@ -45,7 +45,7 @@ class UserController extends Controller
 
     public function news()
     {
-        $news = News::get();
+        $news = News::all();
         return view('user.news', compact('news'));
     }
 

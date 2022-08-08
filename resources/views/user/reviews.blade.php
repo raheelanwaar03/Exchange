@@ -17,22 +17,22 @@
                             satisfaction Is Our Reward!</h3>
                     </div>
                     <div class="card-body">
-                        <form action="#" method="POST">
+                        <form action="{{ route('user.review.store') }}" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="">Stars</label>
                                 <select name="stars" class="form-control">
                                     <option value="">Stars</option>
-                                    <option value="5">5 Star's</option>
-                                    <option value="4">4 Star's</option>
-                                    <option value="3">3 Star's</option>
-                                    <option value="3">2 Star's</option>
-                                    <option value="1">1 Star's</option>
+                                    <option value="5 Star">5 Star's</option>
+                                    <option value="4 Star">4 Star's</option>
+                                    <option value="3 Star">3 Star's</option>
+                                    <option value="2 Star">2 Star's</option>
+                                    <option value="1 Star">1 Star's</option>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="">Your Experince</label>
-                                <input type="text" name="experince" class="form-control" placeholder="Describe Your Experince With Us.">
+                                <textarea name="experience" id="" cols="30" rows="10" class="form-control"></textarea>
                             </div>
                             <button type="submit" class="btn-yellow">Enter</button>
                         </form>

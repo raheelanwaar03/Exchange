@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BuyEcurrencyController;
 use App\Http\Controllers\landingPageController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SellEcurrencyController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserVerificationAccountController;
@@ -28,11 +29,16 @@ Route::get('/faq',[landingPageController::class,'faq'])->name('landingPage.faq')
 Route::get('/help',[landingPageController::class,'help'])->name('landingPage.help');
 Route::get('/policy',[landingPageController::class,'policy'])->name('landingPage.policy');
 Route::get('/news',[landingPageController::class,'news'])->name('landingPage.news');
+Route::get('/review',[landingPageController::class,'review'])->name('landingPage.review');
 
 
 
 
 //user routes
+Route::get('/user/review', [ReviewController::class, 'review'])->name('user.review')->middleware(['auth','userAuth']);
+Route::post('/user/review/store', [ReviewController::class, 'store'])->name('user.review.store')->middleware(['auth','userAuth']);
+Route::get('/user/feedback', [ReviewController::class, 'feedback'])->name('user.feedback')->middleware(['auth','userAuth']);
+
 
 Route::get('/user/about', [UserController::class, 'about'])->name('user.about')->middleware(['auth','userAuth']);
 Route::get('/user/policy', [UserController::class, 'policy'])->name('user.policy')->middleware(['auth','userAuth']);

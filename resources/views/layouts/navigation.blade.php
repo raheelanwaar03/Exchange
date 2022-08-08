@@ -138,7 +138,7 @@
                                             Updates</a>
                                     </li>
                                     <li>
-                                        <a href="#">Reviews</a>
+                                        <a href="{{ route('landingPage.review') }}">FeedBack</a>
                                     </li>
                                 </ul>
                             </nav>
