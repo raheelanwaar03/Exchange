@@ -13,7 +13,7 @@
                     <p>{{ $review->created_at }}</p>
                 </div>
                 @empty
-                   <h1>No Reviews yet</h1>
+                   <h1 class="text-center">No Reviews yet</h1>
                 @endforelse
 
             </div>
