@@ -103,7 +103,7 @@
                                         <a href="{{ route('admin.create') }}">Add E-Currency</a>
                                     </li>
                                     <li>
-                                        <a href="#">Reviews</a>
+                                        <a href="{{ route('admin.review') }}">Reviews</a>
                                     </li>
                                 </ul>
                             </nav>
