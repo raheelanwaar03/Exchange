@@ -1,7 +1,8 @@
 @extends('admin.admin_layout.app')
 
 @section('page-title')
-    <h3>Hi {{ auth()->user()->name }} To Admin Dashboard Your Account Type is {{ auth()->user()->account_type }}</h3>
+    <h3>Welcome {{ auth()->user()->name }} To Admin Dashboard <br> Logged in as: {{ auth()->user()->email }} <br> Account Status:
+        ({{ auth()->user()->account_type }}) </h3>
 @endsection
 
 @section('content')

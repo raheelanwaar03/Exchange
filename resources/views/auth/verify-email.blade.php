@@ -24,7 +24,7 @@
                         </div>
                         <hr>
                         <div class="text-center" style="font-size:26px">
-                            Hello User, Pleas eclick on the link we just emailed to you to verify your email address. If you
+                            Hello User, Pleas click on the link we just emailed to you to verify your email address. If you
                             didn't receive the email, we will gladly send you another.
                         </div>
                         <div class="d-flex justify-content-center align-items-center">

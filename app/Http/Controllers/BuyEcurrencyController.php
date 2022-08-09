@@ -54,9 +54,9 @@ class BuyEcurrencyController extends Controller
         $buyEcurrency->buyingAmount = $validatedData['buyingAmount'];
         // get the user desired amount
         $userBuyingAmount = $validatedData['buyingAmount'];
-        //checking the amount is greater than 50
-        if ($userBuyingAmount < 50) {
-            return redirect()->back()->with('error', 'Minimum amount is 50 for Transaction');
+        //checking the amount is greater than 10
+        if ($userBuyingAmount < 10) {
+            return redirect()->back()->with('error', 'Minimum amount is 10 for Transaction');
         }
 
         // check if user account type is rejected

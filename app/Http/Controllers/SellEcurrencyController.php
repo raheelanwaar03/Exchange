@@ -45,9 +45,9 @@ class SellEcurrencyController extends Controller
         // get the user desired amount
         $userSellingAmount = $validatedData['sellingAmount'];
         //checking the amount is greater than 50
-        if ($userSellingAmount < 50)
+        if ($userSellingAmount < 10)
         {
-            return redirect()->back()->with('error', 'Minimum amount is 50 for Transaction');
+            return redirect()->back()->with('error', 'Minimum amount is 10 for Transaction');
         }
          // check if user account type is rejected
          if (auth()->user()->account_type == 'rejected')
