@@ -24,7 +24,7 @@
                     reliable and efficient e-currency exchange service to the clients who desire to buy and sell online with
                     ease. We are one of the World's most reliable and fastest link to the World of e-currency. We help you
                     convert your Cash to E-currency and we also help you convert your E-currency to Cash. We provide
-                    convenience for our clients in all areas of e-business.
+                    convenience for our clients in all areas of e-business in fast delivery.
 
                     Our mission is to provide unbeatable, un-equalled and unique e-commerce Solutions. We do not even allow
                     you to take any risks. We bear all the risk and deliver our services to your doorsteps wherever you may
