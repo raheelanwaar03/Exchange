@@ -20,6 +20,7 @@ Route::get('/admin/sellingRequest/decline/{id}', [AdminController::class, 'decli
 Route::get('/admin/sellingRequest/closed/{id}', [AdminController::class, 'closed'])->name('admin.sellingRequest.closed')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/review', [AdminController::class, 'review'])->name('admin.review')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/review/delete/{id}', [AdminController::class, 'destroyReview'])->name('admin.review.delete')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/allUser', [AdminController::class, 'allUser'])->name('admin.allUser')->middleware(['auth', 'adminAuth']);
 
 
 // admin account verification request routes

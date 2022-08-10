@@ -34,6 +34,14 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function allUser()
+     {
+         $users = User::paginate(2);
+         return view('admin.allUsers', compact('users'));
+     }
+
+
     public function create()
     {
         return view('admin.addCoin');

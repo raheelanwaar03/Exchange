@@ -8,6 +8,7 @@
         <a href="{{ route('admin.news') }}" class="list-group-item list-group-item-action">Add News</a>
         <a href="{{ route('admin.newsDetails') }}" class="list-group-item list-group-item-action">News Details</a>
         <a href="{{ route('admin.Rejected.accounts') }}" class="list-group-item list-group-item-action">Rejected Account</a>
+        <a href="{{ route('admin.allUser') }}" class="list-group-item list-group-item-action">All User's</a>
         <a href="{{ route('admin.review') }}" class="list-group-item list-group-item-action">Clients Feedback</a>
       </div>
 </div>
