@@ -1,7 +1,9 @@
 @extends('admin.admin_layout.app')
 
 @section('page-title')
-    <h3>Add E-currency Rates</h3>
+    <h3>Welcome {{ auth()->user()->name }} To Admin Dashboard <br> Logged in as: {{ auth()->user()->email }} <br> Account
+        Status:
+        ({{ auth()->user()->account_type }}) </h3>
 @endsection
 
 @section('content')
@@ -34,7 +36,8 @@
                             </div>
                             <div>
                                 <label for="">E-Bank Wallet</label>
-                                <input type="text" class="form-control" name="e_bank" placeholder="Admin Your E-bank Details">
+                                <input type="text" class="form-control" name="e_bank"
+                                    placeholder="Admin Your E-bank Details">
                             </div>
                             <div class="form-group">
                                 <label for="coinImage">E-currency Image</label>

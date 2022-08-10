@@ -1,7 +1,9 @@
 @extends('admin.admin_layout.app')
 
 @section('page-title')
-    <h3>Add Coins</h3>
+    <h3>Welcome {{ auth()->user()->name }} To Admin Dashboard <br> Logged in as: {{ auth()->user()->email }} <br> Account
+        Status:
+        ({{ auth()->user()->account_type }}) </h3>
 @endsection
 
 @section('content')
@@ -13,7 +15,7 @@
                         <h1 style="color: #FF890E" class="card-title text-center">Admin Edit Coin's Details</h1>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.update',['admin'=>$admin->id]) }}" method="POST">
+                        <form action="{{ route('admin.update', ['admin' => $admin->id]) }}" method="POST">
                             @method('PUT')
                             @csrf
                             <div class="form-group">
