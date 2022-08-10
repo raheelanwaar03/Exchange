@@ -1,7 +1,19 @@
 @extends('user.user_layout.app')
 
 @section('page-title')
-    <h3>Hi {{ auth()->user()->name }} To Your {{ env('APP_NAME') }} Account </h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Welcome {{ auth()->user()->name }} <br> Logged in as: {{ auth()->user()->email }} <br> Account Status:
+                    ({{ auth()->user()->account_type }}) </h3>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-white">Our Daily Transction Limit is (50$ to 1000$) for Unverified Account</p>
+                    <p class="text-white">Our Daily Transction Limit is (Unlimited) for Verified Account</p>
+                    <p class="text-white">Contact Us If Your Account is Rejected</p>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('content')
@@ -54,8 +66,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Your Email</label>
-                                <input type="email" class="form-control" name="seller_email"
-                                    placeholder="Enter Email">
+                                <input type="email" class="form-control" name="seller_email" placeholder="Enter Email">
                             </div>
                             <button type="submit" class="btn-yellow">Procced</button>
                         </form>

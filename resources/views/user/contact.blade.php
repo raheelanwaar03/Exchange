@@ -1,7 +1,19 @@
 @extends('user.user_layout.app')
 
 @section('page-title')
-    <h3>Hi {{ auth()->user()->name }} To Your {{ env('APP_NAME') }} Account </h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Welcome {{ auth()->user()->name }} <br> Logged in as: {{ auth()->user()->email }} <br> Account Status:
+                    ({{ auth()->user()->account_type }}) </h3>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-white">Our Daily Transction Limit is (50$ to 1000$) for Unverified Account</p>
+                    <p class="text-white">Our Daily Transction Limit is (Unlimited) for Verified Account</p>
+                    <p class="text-white">Contact Us If Your Account is Rejected</p>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('content')
@@ -22,23 +34,23 @@
                 <div class="d-flex justify-content-center align-items-center my-5">
 
                     <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}" target="_blank" class="m-3">
-                        <img src="{{ asset('assets/images/whatsapp.png') }}"  height="50px" width="50px">
+                        <img src="{{ asset('assets/images/whatsapp.png') }}" height="50px" width="50px">
                     </a>
 
                     <a href="https://www.instagram.com/?url=https://www.drdrop.com/" target="_blank">
-                        <img src="{{ asset('assets/images/instagram.png') }}"  height="50px" width="50px">
+                        <img src="{{ asset('assets/images/instagram.png') }}" height="50px" width="50px">
                     </a>
 
                     <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
-                        <img src="{{ asset('assets/images/Telegram.png') }}"  height="50px" width="60px">
+                        <img src="{{ asset('assets/images/Telegram.png') }}" height="50px" width="60px">
                     </a>
 
                     <a href="https://youtube.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
-                        <img src="{{ asset('assets/images/YouTube.jpg') }}"  height="50px" width="50px">
+                        <img src="{{ asset('assets/images/YouTube.jpg') }}" height="50px" width="50px">
                     </a>
 
                     <a href="https://twitter.com/send?={{ env('APP_TWITTER') }}" target="_blank">
-                        <img src="{{ asset('assets/images/twitter.png') }}"  height="50px" width="50px">
+                        <img src="{{ asset('assets/images/twitter.png') }}" height="50px" width="50px">
                     </a>
 
                 </div>

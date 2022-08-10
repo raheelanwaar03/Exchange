@@ -1,7 +1,19 @@
 @extends('user.user_layout.app')
 
 @section('page-title')
-    <h3>Hi {{ auth()->user()->name }} To Your {{ env('APP_NAME') }} Account </h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Welcome {{ auth()->user()->name }} <br> Logged in as: {{ auth()->user()->email }} <br> Account Status:
+                    ({{ auth()->user()->account_type }}) </h3>
+                <div class="d-flex justify-content-between align-items-center">
+                    <p class="text-white">Our Daily Transction Limit is (50$ to 1000$) for Unverified Account</p>
+                    <p class="text-white">Our Daily Transction Limit is (Unlimited) for Verified Account</p>
+                    <p class="text-white">Contact Us If Your Account is Rejected</p>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('content')
@@ -16,7 +28,8 @@
                         <h3 class="text-center mt-3">Please Provide Your Real Details OtherWise It will not Verified! </h3>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('user.account.verification.store') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('user.account.verification.store') }}" method="POST"
+                            enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="">Your Passport</label>
