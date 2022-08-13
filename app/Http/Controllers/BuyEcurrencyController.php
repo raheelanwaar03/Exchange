@@ -43,7 +43,7 @@ class BuyEcurrencyController extends Controller
 
         // This Method Rates
         $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
-        $adminSellingPrice = $query->sellPrice;
+        $adminSellingPrice = $query->buyPrice;
 
         // return transaction_id();
 

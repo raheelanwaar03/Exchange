@@ -32,7 +32,7 @@ class SellEcurrencyController extends Controller
         ]);
 
         $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
-        $adminBuyingAmount = $query->buyPrice;
+        $adminBuyingAmount = $query->sellPrice;
         $adminBankDetail = $query->e_bank;
 
         // return $adminBankDetail;
@@ -44,7 +44,7 @@ class SellEcurrencyController extends Controller
         $sellEcurrency->sellingAmount = $validatedData['sellingAmount'];
         // get the user desired amount
         $userSellingAmount = $validatedData['sellingAmount'];
-        //checking the amount is greater than 50
+        //checking the amount is greater than 10
         if ($userSellingAmount < 10)
         {
             return redirect()->back()->with('error', 'Minimum amount is 10 for Transaction');
