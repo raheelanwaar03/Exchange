@@ -63,8 +63,8 @@ class AdminController extends Controller
             'coinName' => 'required|string|max:255',
             'e_bank' => 'required|string|max:255',
             'coinImage' => 'required|image|mimes:jpeg,png,jpg,gif,web,svg|max:2048',
-            'buyPrice' => 'required|numeric',
-            'sellPrice' => 'required|numeric',
+            'buyPrice' => 'required',
+            'sellPrice' => 'required',
         ]);
 
         $file = $request->file('coinImage');
