@@ -6,6 +6,7 @@ use App\Mail\TestMal;
 use App\Models\Admin;
 use App\Models\News;
 use App\Models\Review;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -13,10 +14,16 @@ class landingPageController extends Controller
 {
     public function index()
     {
-        // // sending email
-        // $email = "shakeel271@gmail.com";
-        // Mail::to($email)->send(new TestMal());
+      // check if the user is unique then store the user in the database
 
+        $visitor = Visitor::where('ip', request()->ip())->first();
+        if (! $visitor) {
+            $visitor = new Visitor();
+            $visitor->ip = request()->ip();
+            $visitor->save();
+        }
+        //count the number of new visitors
+        $visitors = Visitor::whereDate('created_at', today())->count();
         $news = News::paginate(3);
         $admins = Admin::get();
         $admin = Admin::first();

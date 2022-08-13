@@ -16,6 +16,7 @@
                     <h1>No Update Yet</h1>
                 </div>
                 @endforelse
+                {{ $news->links() }}
             </div>
         </div>
     </div>

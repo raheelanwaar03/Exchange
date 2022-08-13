@@ -15,6 +15,7 @@
                 @empty
                    <h1 class="text-center">No Reviews yet</h1>
                 @endforelse
+                {{ $reviews->links() }}
 
             </div>
         </div>

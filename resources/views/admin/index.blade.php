@@ -3,6 +3,7 @@
 @section('page-title')
     <h3>Welcome {{ auth()->user()->name }} To Admin Dashboard <br> Logged in as: {{ auth()->user()->email }} <br> Account Status:
         ({{ auth()->user()->account_type }}) </h3>
+        <h4 class="text-white">Today's New Visitors are {{ $visitors }}</h4>
 @endsection
 
 @section('content')

@@ -13,6 +13,7 @@ use App\Models\News;
 use App\Models\Review;
 use App\Models\SellEcurrency;
 use App\Models\User;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -26,7 +27,10 @@ class AdminController extends Controller
     public function index()
     {
         $admins = Admin::get();
-        return view('admin.index', compact('admins'));
+        //count the number of new visitors
+        $visitors = Visitor::whereDate('created_at', today())->count();
+        // return $visitors;
+        return view('admin.index', compact('admins', 'visitors'));
     }
 
     /**
