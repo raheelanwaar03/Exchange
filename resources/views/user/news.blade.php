@@ -31,6 +31,8 @@
                 @empty
                     <h1 class="text-center">No News Yet</h1>
                 @endforelse
+                {{-- pagination --}}
+                {{ $news->links() }}
             </div>
 
             <div class="col-md-3">

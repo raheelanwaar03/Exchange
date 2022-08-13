@@ -56,6 +56,10 @@
                                                     @endforeach
                                                 </tbody>
                                             </table>
+                                            {{-- paginate --}}
+
+                                            {{ $buyEcurrencys->links() }}
+
                                         </div>
                                     </div>
                                 </div>
@@ -95,6 +99,9 @@
                                                         @endforeach
                                                     </tbody>
                                                 </table>
+                                                {{-- paginate --}}
+                                                {{ $sellEcurrencys->links() }}
+
                                             </div>
                                         </div>
                                     </div>

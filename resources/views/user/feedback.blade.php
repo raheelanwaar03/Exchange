@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                @foreach ($reviews as $review)
+                @forelse ($reviews as $review)
                     <div class="jumbotron">
                         <h1>{{ $review->name }} give us {{ $review->stars }}</h1>
                         <hr>
@@ -30,13 +30,13 @@
                         <hr class="my-4">
                         <p>{{ $review->created_at }}</p>
                     </div>
-                @endforeach
+                @empty
+                @endforelse
+                {{-- pagination --}}
+                {{ $reviews->links() }}
             </div>
-
             <div class="col-md-3">
-
                 @include('user.user_layout.sideNav')
-
             </div>
         </div>
     </div>

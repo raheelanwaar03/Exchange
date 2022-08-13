@@ -38,7 +38,7 @@ class ReviewController extends Controller
     // view feedback page
     public function feedback()
     {
-        $reviews = Review::all();
+        $reviews = Review::paginate(7);
         return view('user.feedback', compact('reviews'));
     }
 }

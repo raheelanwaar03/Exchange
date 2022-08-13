@@ -16,8 +16,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $buyEcurrencys = BuyEcurrency::where('user_id', auth()->user()->id)->get();
-        $sellEcurrencys = SellEcurrency::where('user_id', auth()->user()->id)->get();
+        $buyEcurrencys = BuyEcurrency::where('user_id', auth()->user()->id)->paginate(8);
+        $sellEcurrencys = SellEcurrency::where('user_id', auth()->user()->id)->paginate(8);
         $admins = Admin::get();
         $admin = Admin::first();
         return view('user.index', compact('admins' , 'admin' , 'buyEcurrencys' , 'sellEcurrencys'));
@@ -45,7 +45,7 @@ class UserController extends Controller
 
     public function news()
     {
-        $news = News::all();
+        $news = News::paginate(5);
         return view('user.news', compact('news'));
     }
 
