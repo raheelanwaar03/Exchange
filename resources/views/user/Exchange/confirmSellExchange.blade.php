@@ -70,8 +70,7 @@
                             <div>
                                 <h5>Note:</h5>
                                 <p>For further assistance or any complaint, please call our Support lines :
-                                    {{ env('APP_Phone') }},
-                                    07086335477 or Email: {{ env('APP_Email') }}</p>
+                                    {{ env('APP_Phone') }} or Email: {{ env('APP_Email') }}</p>
                             </div>
                             <br>
                             <div>
@@ -83,9 +82,11 @@
                     <tr>
                         {{-- delete this transction --}}
                         <th>
-                            <form action="{{ route('user.selling.transcation.delete',['id'=> $sellEcurrency->id]) }}" method="POST">
+                            <form action="{{ route('user.selling.transcation.delete', ['id' => $sellEcurrency->id]) }}"
+                                method="POST">
                                 @csrf
-                                <button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i> Delete Transaction</button>
+                                <button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i> Delete
+                                    Transaction</button>
                             </form>
                         </th>
                         <td>
