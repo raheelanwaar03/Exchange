@@ -46,6 +46,8 @@
                                 </td>
                             </tr>
                         @endforeach
+                        {{-- pagination --}}
+                        {{ $users->links() }}
                     </tbody>
                 </table>
             </div>

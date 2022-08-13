@@ -17,7 +17,7 @@ class landingPageController extends Controller
         // $email = "shakeel271@gmail.com";
         // Mail::to($email)->send(new TestMal());
 
-        $news = News::get();
+        $news = News::paginate(3);
         $admins = Admin::get();
         $admin = Admin::first();
         return view('landingPage.welcome' , compact('admins' , 'admin' , 'news'));
@@ -50,13 +50,13 @@ class landingPageController extends Controller
 
     public function news()
     {
-        $news = News::get();
+        $news = News::paginate(5);
         return view('landingPage.news' , compact('news'));
     }
 
     public function review()
     {
-        $reviews = Review::all();
+        $reviews = Review::paginate(10);
         return view('landingPage.review' , compact('reviews'));
     }
 

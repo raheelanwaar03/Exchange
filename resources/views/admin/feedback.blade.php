@@ -25,6 +25,8 @@
                         </p>
                     </div>
                 @endforeach
+                {{-- pagination --}}
+                {{ $reviews->links() }}
             </div>
             <div class="col-md-3">
                 @include('admin.admin_layout.sideNav')

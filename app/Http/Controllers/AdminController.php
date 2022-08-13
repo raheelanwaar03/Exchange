@@ -37,7 +37,7 @@ class AdminController extends Controller
 
      public function allUser()
      {
-         $users = User::paginate(2);
+         $users = User::paginate(10);
          return view('admin.allUsers', compact('users'));
      }
 
@@ -139,7 +139,7 @@ class AdminController extends Controller
 
     public function newsDetails()
     {
-        $news = News::get();
+        $news = News::paginate(8);
         return view('admin.newsDetails', compact('news'));
     }
 
@@ -162,7 +162,7 @@ class AdminController extends Controller
 
     public function buyingRequest()
     {
-        $buyEcurrencies = BuyEcurrency::where('status', 'pending')->get();
+        $buyEcurrencies = BuyEcurrency::where('status', 'pending')->paginate(10);
         return view('admin.Exchange.sellEcurrency', compact('buyEcurrencies'));
     }
 
@@ -194,7 +194,7 @@ class AdminController extends Controller
 
     public function sellingRequest()
     {
-        $sellEcurrencys = SellEcurrency::where('status', 'pending')->get();
+        $sellEcurrencys = SellEcurrency::where('status', 'pending')->paginate(10);
         return view('admin.Exchange.buyEcurrency', compact('sellEcurrencys'));
     }
 
@@ -250,7 +250,7 @@ class AdminController extends Controller
 
     public function review()
     {
-        $reviews = Review::all();
+        $reviews = Review::paginate(10);
         return view('admin.feedback' , compact('reviews'));
     }
 

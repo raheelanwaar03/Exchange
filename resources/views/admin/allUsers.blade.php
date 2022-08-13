@@ -33,9 +33,9 @@
                     </tbody>
                 </table>
                 {{-- paginate the table --}}
-                {{-- <div class="mx-auto pb-10">
+                <div class="mx-auto pb-10">
                     {{ $users->links() }}
-                </div> --}}
+                </div>
             </div>
             <div class="col-md-3">
                 @include('admin.admin_layout.sideNav')

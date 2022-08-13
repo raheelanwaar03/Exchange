@@ -49,6 +49,7 @@
                             @endforeach
                         </tbody>
                     </table>
+                    {{ $buyEcurrencies->links() }}
                 </div>
             </div>
         </div>

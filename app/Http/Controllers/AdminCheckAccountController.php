@@ -14,7 +14,7 @@ class AdminCheckAccountController extends Controller
     public function index()
     {
         // showing the verification requests
-        $userVerifications = UserVerificationAccount::where('status', 'pending')->get();
+        $userVerifications = UserVerificationAccount::where('status', 'pending')->paginate(8);
         return view('admin.verification', compact('userVerifications'));
     }
 
@@ -41,7 +41,7 @@ class AdminCheckAccountController extends Controller
         $userVerification = UserVerificationAccount::find($id);
         $userVerification->status = 'unverified';
         $userVerification->save();
-        // change the user account type to verified
+        // change the user account type to rejected
         $user = User::find($userVerification->user_id);
         $user->account_type = 'rejected';
         $user->save();
@@ -53,7 +53,7 @@ class AdminCheckAccountController extends Controller
 
     public function rejectedAccounts()
     {
-        $users = User::where('account_type', 'rejected')->get();
+        $users = User::where('account_type', 'rejected')->paginaate(8);
         return view('admin.reject', compact('users'));
     }
 

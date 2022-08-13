@@ -21,6 +21,8 @@
                             style="float: right">Delete</a>
                     </div>
                 @endforeach
+                {{-- pagination --}}
+                {{ $news->links() }}
             </div>
             <div class="col-md-3">
                 @include('admin.admin_layout.sideNav')

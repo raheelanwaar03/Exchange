@@ -50,6 +50,7 @@
                                     </td>
                                 </tr>
                             @endforeach
+                            {{ $sellEcurrencys->links() }}
                         </tbody>
                     </table>
                 </div>

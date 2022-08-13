@@ -52,6 +52,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                {{ $userVerifications->links() }}
             </div>
             <div class="col-md-3">
                 @include('admin.admin_layout.sideNav')
