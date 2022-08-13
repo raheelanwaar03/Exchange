@@ -30,7 +30,7 @@
                         <tbody>
                             @foreach ($sellEcurrencys as $sellEcurrency)
                                 <tr>
-                                    <td>{{ $sellEcurrency->user_id }}</td>
+                                    <td>{{ $sellEcurrency->id }}</td>
                                     <td>{{ $sellEcurrency->transaction_id }}</td>
                                     <td>{{ $sellEcurrency->status }}</td>
                                     <td>{{ $sellEcurrency->sellingAmount }}</td>
