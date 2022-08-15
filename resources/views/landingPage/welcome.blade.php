@@ -1,15 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- new designed section -->
-    <div>
-        <?php
-        //for btc
-        $btcRate = file_get_contents('https://yobit.net/api/3/ticker/btc_usd');
-       // convert to array
-        $btcRate = json_decode($btcRate, true);
-        ?>
-    </div>
+
     <!-- section -->
     <div class="section layout_padding">
         <div class="container">
@@ -18,17 +10,6 @@
                     <div class="full">
                         <div class="heading_main text_align_center">
                             <h2><span class="theme_color"></span>Live Rates</h2>
-                        </div>
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p style="color: #FF890E;font-size:30px">
-                                            1 BTC = <?php echo $btcRate['btc_usd']['buy']; ?> USD
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="container">
                             <div class="row">
