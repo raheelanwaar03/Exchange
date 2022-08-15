@@ -70,8 +70,7 @@
                             <br>
                             <div>
                                 <p>
-
-                                    After your payment has been received, We will proceed to funding your e-currency account
+                                   When Admin approve your transaction then you will send us the payment, We will proceed to funding your e-currency account
                                     as shown above
                                 </p>
                             </div>
@@ -79,12 +78,12 @@
                             <div>
                                 <h5>Note:</h5>
                                 <p>For further assistance or any complaint, please call our Support lines :
-                                    {{ env('APP_Phone') }} or Email: {{ env('APP_Email') }}</p>
+                                    {{ env('APP_Phone') }} or Email us.</p>
                             </div>
                             <br>
                             <div>
                                 <p>
-                                    Click the button below to confirm your transaction!</p>
+                                    Click the button below to procced your transaction!</p>
                             </div>
                         </td>
                     </tr>
@@ -101,7 +100,7 @@
                         <td>
                             <a href="{{ route('user.buy.Ecurrency.mail') }}" class="btn btn-success">
                                 <i class="fa fa-check"></i>
-                                Confirm
+                                Procced
                             </a>
                         </td>
                     </tr>

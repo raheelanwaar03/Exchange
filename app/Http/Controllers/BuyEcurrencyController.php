@@ -38,14 +38,11 @@ class BuyEcurrencyController extends Controller
             'e_bank' => 'required|string',
             'account_number' => 'required|string',
             'account_name' => 'required|string',
-            'buyer_Email' => 'required|email',
         ]);
 
         // This Method Rates
         $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
         $adminSellingPrice = $query->buyPrice;
-
-        // return transaction_id();
 
         // store in the database
         $buyEcurrency = new BuyEcurrency();
@@ -92,10 +89,8 @@ class BuyEcurrencyController extends Controller
         $buyEcurrency->e_bank = $validatedData['e_bank'];
         $buyEcurrency->account_number = $validatedData['account_number'];
         $buyEcurrency->account_name = $validatedData['account_name'];
-        $buyEcurrency->buyer_Email = $validatedData['buyer_Email'];
+        $buyEcurrency->buyer_Email = auth()->user()->email;
         $buyEcurrency->save();
-
-
 
         return view('user.Exchange.confirmBuyExchange', compact('buyEcurrency'))->with('success', 'Buying Request Recevied Successfully');
     }
@@ -109,15 +104,17 @@ class BuyEcurrencyController extends Controller
 
     public function mail()
     {
-       // send Email to user and admin
-       $adminEmail = User::where('role' , 'admin')->firstorFail();
-       $adminEmail = $adminEmail->email;
-       Mail::to($adminEmail)->send(new adminSellEcurrencyReq());
+        // send Email to user and admin
+        $adminEmail = User::where('role', 'admin')->firstorFail();
+        $adminEmail = $adminEmail->email;
+        Mail::to($adminEmail)->send(new adminSellEcurrencyReq());
 
-       //sending email to user
-       $user = User::where('id', auth()->user()->id)->first();
-       $userEmail = $user->email;
-       Mail::to($userEmail)->send(new buyEcurrencyReq());
-       return redirect()->route('user.index')->with('success' , 'We have sent you an Email');
+        //sending email to user
+        $user = User::where('id', auth()->user()->id)->first();
+        $userEmail = $user->email;
+        // getting user latest transaction details
+        $latestTransaction = BuyEcurrency::where('user_id', auth()->user()->id)->latest()->first();
+        Mail::to($userEmail)->send(new buyEcurrencyReq($latestTransaction));
+        return redirect()->route('user.index')->with('success', 'Please Wait for admin approval We have sent you an Email With your Transaction Details');
     }
 }

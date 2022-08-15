@@ -60,10 +60,6 @@
                                 <input type="text" class="form-control" name="account_name"
                                     placeholder="Enter the Name which you had been provide to your E-Bank">
                             </div>
-                            <div class="form-group">
-                                <label for="">Your Email</label>
-                                <input type="email" class="form-control" name="buyer_Email" placeholder="Enter Email">
-                            </div>
                             <button type="submit" class="btn-yellow">Procced</button>
                         </form>
                     </div>

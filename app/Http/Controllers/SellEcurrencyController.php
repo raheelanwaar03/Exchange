@@ -25,10 +25,9 @@ class SellEcurrencyController extends Controller
         $validatedData = request()->validate([
             'sellingAmount' => 'required|numeric',
             'e_bank' => 'required|string',
-            'bank_name'=>'required|string',
+            'bank_name' => 'required|string',
             'account_number' => 'required|string',
             'account_name' => 'required|string',
-            'seller_email' => 'required|email',
         ]);
 
         $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
@@ -45,19 +44,16 @@ class SellEcurrencyController extends Controller
         // get the user desired amount
         $userSellingAmount = $validatedData['sellingAmount'];
         //checking the amount is greater than 10
-        if ($userSellingAmount < 10)
-        {
+        if ($userSellingAmount < 10) {
             return redirect()->back()->with('error', 'Minimum amount is 10 for Transaction');
         }
-         // check if user account type is rejected
-         if (auth()->user()->account_type == 'rejected')
-         {
-             return redirect()->back()->with('error', 'Your account is rejected. Please contact admin');
-         }
+        // check if user account type is rejected
+        if (auth()->user()->account_type == 'rejected') {
+            return redirect()->back()->with('error', 'Your account is rejected. Please contact admin');
+        }
 
         //checking limit for unverified users is not greater than 1000 for one day
-        if (auth()->user()->account_type == 'unverified')
-        {
+        if (auth()->user()->account_type == 'unverified') {
             $limit = 1000;
             $today = date('Y-m-d');
             $sellCount = SellEcurrency::where('user_id', auth()->user()->id)->where('created_at', '>=', $today)->get();
@@ -73,8 +69,7 @@ class SellEcurrencyController extends Controller
             $total = $sellSum + $buySum;
             // return $total;
             //check the sum of the selling amount is greater than the limit
-            if ($total >= $limit)
-            {
+            if ($total >= $limit) {
                 return redirect()->back()->with('error', 'You have exceeded the limit of 1000 for one day.Verify your account to continue');
             }
         }
@@ -88,11 +83,10 @@ class SellEcurrencyController extends Controller
         $sellEcurrency->bank_name = $validatedData['bank_name'];
         $sellEcurrency->account_number = $validatedData['account_number'];
         $sellEcurrency->account_name = $validatedData['account_name'];
-        $sellEcurrency->seller_email = $validatedData['seller_email'];
+        $sellEcurrency->seller_email = auth()->user()->email;
         $sellEcurrency->save();
 
-        return view('user.Exchange.confirmSellExchange', compact('sellEcurrency'))->with('success', 'Your Selling Request Recevied Successful');
-
+        return view('user.Exchange.confirmSellExchange', compact('sellEcurrency'))->with('success', 'Your Selling Request Recevied Successfully.Please check your Email');
     }
     // delete the latest transaction
     public function destroy($id)
@@ -106,15 +100,16 @@ class SellEcurrencyController extends Controller
     {
         //send email to the Admin
 
-        $adminEmail = User::where('role' , 'admin')->firstorFail();
+        $adminEmail = User::where('role', 'admin')->firstorFail();
         $adminEmail = $adminEmail->email;
         Mail::to($adminEmail)->send(new adminBuyEcurrencyReq());
 
         // send Email to user
         $user = User::where('id', auth()->user()->id)->first();
         $userEmail = $user->email;
-        Mail::to($userEmail)->send(new sellEcurrencyReq());
+        // gettin the latest transaction
+        $latestTransaction = SellEcurrency::where('user_id', auth()->user()->id)->latest()->first();
+        Mail::to($userEmail)->send(new sellEcurrencyReq($latestTransaction));
         return redirect()->route('user.index');
     }
-
 }

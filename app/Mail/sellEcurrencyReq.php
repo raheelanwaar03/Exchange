@@ -11,14 +11,15 @@ class sellEcurrencyReq extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $latestTransaction;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($latestTransaction)
     {
-        //
+        $this->latestTransaction = $latestTransaction;
     }
 
     /**
@@ -28,6 +29,6 @@ class sellEcurrencyReq extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.sellEcurrencyReq');
+        return $this->markdown('emails.sellEcurrencyReq',['latestTransaction'=>$this->latestTransaction]);
     }
 }

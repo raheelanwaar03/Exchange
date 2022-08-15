@@ -63,7 +63,7 @@
                             <br>
                             <div>
                                 <p class="text-danger">
-                                    After your fund has been transferred, you will receive a transaction confirmation email
+                                    When Admin approve your request, you will receive a confirmation email
                                     containing all payment details. Please keep this email for reference needs.</p>
                             </div>
                             <br>
@@ -75,7 +75,7 @@
                             <br>
                             <div>
                                 <p>
-                                    Click the button below to confirm your transaction!</p>
+                                    Click the button below to procced your transaction!</p>
                             </div>
                         </td>
                     </tr>
@@ -92,7 +92,7 @@
                         <td>
                             <a href="{{ route('user.sell.ecurrency.mail') }}" class="btn btn-success">
                                 <i class="fa fa-check"></i>
-                                Confirm
+                                Procced
                             </a>
                         </td>
                     </tr>
