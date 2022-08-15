@@ -40,10 +40,13 @@
                                     <td>{{ $buyEcurrency->buyer_Email }}</td>
                                     <td>{{ $buyEcurrency->created_at }}</td>
                                     <td>{{ $buyEcurrency->totalSellingPrice }}</td>
-                                    <td class="d-flex"> <a href="{{ route('admin.buyingRequest.complete', ['id' => $buyEcurrency->id]) }}"
+                                    <td class="d-flex"> <a
+                                            href="{{ route('admin.buyingRequest.complete', ['id' => $buyEcurrency->id]) }}"
                                             class="btn btn-sm btn-success">Complete</a>
                                         <a href="{{ route('admin.buyingRequest.decline', ['id' => $buyEcurrency->id]) }}"
                                             class="btn btn-sm btn-danger">Decline</a>
+                                        <a href="{{ route('admin.buyingRequest.approveBuy', ['id' => $buyEcurrency->id]) }}"
+                                            class="btn btn-sm btn-warning">Approve</a>
                                     </td>
                                 </tr>
                             @endforeach

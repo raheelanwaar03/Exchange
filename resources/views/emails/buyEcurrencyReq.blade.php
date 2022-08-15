@@ -14,6 +14,7 @@
     {{ $latestTransaction['totalSellingPrice'] }} in Naira.So we will transfer your E-currency to {{ $latestTransaction['e_bank'] }}'s {{ $latestTransaction['account_number'] }}.
 
     If your provided details are not correct, please contact us.
+
     @component('mail::button', ['url' => 'https://instantflexy.com/user'])
         View Dashboard
     @endcomponent

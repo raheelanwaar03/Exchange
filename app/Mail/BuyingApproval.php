@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class closedsellTranction extends Mailable
+class BuyingApproval extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,6 +28,6 @@ class closedsellTranction extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.user.closedSellTranction');
+        return $this->markdown('emails.admin.approveBuyingReq');
     }
 }

@@ -12,9 +12,9 @@
 
     We will notify you when Admin will approve your transaction request.Then you will transfer
     {{ $latestTransaction['sellingAmount'] }} E-currency to our given E-wallet Account and
-    we will send you the payment of {{ $latestTransaction['totalBuyingPrice'] }} in Naira.
-
+    we will send you the payment of {{ $latestTransaction['totalBuyingPrice'] }} in Naira
     If your provided details are not correct, please contact us.
+
     @component('mail::button', ['url' => 'https://instantflexy.com/user'])
         View Dashboard
     @endcomponent

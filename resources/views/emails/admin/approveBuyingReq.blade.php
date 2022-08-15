@@ -1,11 +1,10 @@
 @component('mail::message')
-# Tranction Closed
+# Buying Request Approvel
 
-Hi {{auth()->user()->name}}, your tranction is closed.
-Please Contact us for any further queries.
+Congratulations! {{ auth()->user()->name }} Your buying request has been approved by Admin.
 
 @component('mail::button', ['url' => 'https://instantflexy.com/user'])
-View Dashboard
+Dashboard
 @endcomponent
 
 Thanks,<br>

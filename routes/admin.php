@@ -15,9 +15,10 @@ Route::get('/admin/buyingRequest', [AdminController::class, 'buyingRequest'])->n
 Route::get('/admin/sellingRequest', [AdminController::class, 'sellingRequest'])->name('admin.sellingRequest')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/buyingRequest/complete/{id}', [AdminController::class, 'complete'])->name('admin.buyingRequest.complete')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/buyingRequest/decline/{id}', [AdminController::class, 'decline'])->name('admin.buyingRequest.decline')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/buyingRequest/approve/{id}', [AdminController::class, 'approveBuy'])->name('admin.buyingRequest.approveBuy')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/complete/{id}', [AdminController::class, 'completeSell'])->name('admin.sellingRequest.completeSell')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/decline/{id}', [AdminController::class, 'declineSell'])->name('admin.sellingRequest.declineSell')->middleware(['auth', 'adminAuth']);
-Route::get('/admin/sellingRequest/closed/{id}', [AdminController::class, 'closed'])->name('admin.sellingRequest.closed')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/sellingRequest/approve/{id}', [AdminController::class, 'approveSell'])->name('admin.sellingRequest.approveSell')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/review', [AdminController::class, 'review'])->name('admin.review')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/review/delete/{id}', [AdminController::class, 'destroyReview'])->name('admin.review.delete')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/allUser', [AdminController::class, 'allUser'])->name('admin.allUser')->middleware(['auth', 'adminAuth']);

@@ -45,8 +45,8 @@
                                             class="btn btn-sm btn-success">Complete</a>
                                         <a href="{{ route('admin.sellingRequest.declineSell', ['id' => $sellEcurrency->id]) }}"
                                             class="btn btn-sm btn-danger">Decline</a>
-                                        <a href="{{ route('admin.sellingRequest.closed', ['id' => $sellEcurrency->id]) }}"
-                                            class="btn btn-sm btn-dark">Closed</a>
+                                        <a href="{{ route('admin.sellingRequest.approveSell', ['id' => $sellEcurrency->id]) }}"
+                                            class="btn btn-sm btn-warning">Approve</a>
                                     </td>
                                 </tr>
                             @endforeach

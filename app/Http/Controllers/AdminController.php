@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BuyingApproval;
 use App\Mail\closedsellTranction;
 use App\Mail\completesellTranction;
 use App\Mail\completeTranction;
 use App\Mail\declinesellTranction;
 use App\Mail\declineTranction;
+use App\Mail\OrderShipped;
+use App\Mail\SellingApproval;
 use App\Models\Admin;
 use App\Models\BuyEcurrency;
 use App\Models\News;
@@ -195,12 +198,25 @@ class AdminController extends Controller
         Mail::to($user->email)->send(new declineTranction());
         return redirect()->back()->with('success', 'Buying request declined successfully');
     }
+    public function approveBuy($id)
+    {
+        // approve the selling request
+        $sellEcurrency = BuyEcurrency::find($id);
+        $sellEcurrency->status = 'approve';
+        $sellEcurrency->save();
+        // send email to the user
+        $user = User::find($sellEcurrency->user_id);
+        $user->email = $user->email;
+        Mail::to($user->email)->send(new BuyingApproval());
+        return redirect()->back()->with('success', 'Selling request approved successfully');
+    }
 
     public function sellingRequest()
     {
         $sellEcurrencys = SellEcurrency::where('status', 'pending')->paginate(10);
         return view('admin.Exchange.buyEcurrency', compact('sellEcurrencys'));
     }
+
 
     // admin can see the selling requests from users and can complete or decline them
     public function completeSell($id)
@@ -228,15 +244,15 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Buying request declined successfully');
     }
 
-    public function closed($id)
+    public function approveSell($id)
     {
         $sellEcurrency = SellEcurrency::find($id);
-        $sellEcurrency->status = 'closed';
+        $sellEcurrency->status = 'approve';
         $sellEcurrency->save();
         // send email to the user
         $user = User::find($sellEcurrency->user_id);
         $user->email = $user->email;
-        Mail::to($user->email)->send(new closedsellTranction());
+        Mail::to($user->email)->send(new SellingApproval());
         return redirect()->back()->with('success', 'Buying request closed successfully');
     }
 
