@@ -20,7 +20,11 @@ class BuyEcurrencyController extends Controller
      */
     public function index()
     {
-        return view('user.Exchange.buyEcurrency');
+        $first = 7;
+        $second = 2;
+        $result = $first + $second;
+        session()->put('result', $result);
+        return view('user.Exchange.buyEcurrency' , compact('first', 'second'));
     }
 
     /**
@@ -38,7 +42,15 @@ class BuyEcurrencyController extends Controller
             'e_bank' => 'required|string',
             'account_number' => 'required|string',
             'account_name' => 'required|string',
+            'confirm_not_robot' => 'required|integer',
         ]);
+
+        $userNum = $request->input('confirm_not_robot');
+        $result = $request->session()->get('result');
+        // check if the user is a robot
+        if ($userNum != $result) {
+            return redirect()->back()->with('error', 'You are a robot');
+        }
 
         // This Method Rates
         $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();

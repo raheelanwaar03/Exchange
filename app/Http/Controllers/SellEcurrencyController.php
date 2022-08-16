@@ -15,7 +15,11 @@ class SellEcurrencyController extends Controller
 {
     public function index()
     {
-        return view('user.Exchange.sellEcurrency');
+        $first = 5;
+        $second = 3;
+        $result = $first + $second;
+        session()->put('result', $result);
+        return view('user.Exchange.sellEcurrency' , compact('first', 'second'));
     }
 
     // store the sell e-currency details
@@ -28,7 +32,15 @@ class SellEcurrencyController extends Controller
             'bank_name' => 'required|string',
             'account_number' => 'required|string',
             'account_name' => 'required|string',
+            'confirm_not_robot' => 'required|integer',
         ]);
+
+        $userNum = request()->input('confirm_not_robot');
+        $result = request()->session()->get('result');
+        // check if the user is a robot
+        if ($userNum != $result) {
+            return redirect()->back()->with('error', 'You are a robot');
+        }
 
         $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
         $adminBuyingAmount = $query->sellPrice;

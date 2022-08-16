@@ -15,8 +15,7 @@
         </div>
     </div>
 </div>
-
-
+<x-alert />
 <div class="container">
     <div class="row">
         <div class="col-md-12 m-5">
@@ -57,11 +56,16 @@
                             <input type="password" name="password_confirmation" class="form-control"
                                 placeholder="Repeat your password" />
                         </div>
+                        <div class="form-group">
+                            <label for="">Confirm Not Robot ({{ $first }} + {{ $second }})</label>
+                            <input type="text" name="confirm_not_robot" class="form-control"
+                                placeholder="Type Result" />
+                        </div>
                         <div class="form-group form-button">
                             <input type="submit" class="btn-yellow" value="Register" />
                         </div>
                         <div>
-                           <a href="{{ route('login') }}" style="font-size:20px">Already have Account</a>
+                            <a href="{{ route('login') }}" style="font-size:20px">Already have Account</a>
                         </div>
                     </form>
                 </div>

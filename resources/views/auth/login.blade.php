@@ -6,8 +6,7 @@
     <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}" target="_blank"><img
             src="{{ asset('assets/images/whatsapp.png') }}" alt="whats app logo" width="50px" height="50px"></a>
 </div>
-
-
+<x-alert />
 <div class="button_a1a3" style="background: rgb(68, 187, 110);">
     <div class="iconWrap_f760">
         <div class="envelopeIcon_a48c icons_f8f0"
@@ -16,38 +15,40 @@
     </div>
 </div>
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 m-5">
-                <div class="card ">
-                    <div class="card-title">
-                        <h3 class="text-center mt-3 display-4" style="color: #ff890e">Login To Your Account</h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="{{ route('login') }}" method="POST" class="register-form" id="register-form">
-                            @csrf
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" name="email" class="form-control" placeholder="Your Email" />
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" class="form-control" placeholder="Password" />
-                            </div>
-
-                            <div class="form-group form-button">
-                                <input type="submit" class="btn-yellow" value="Login" />
-                            </div>
-                            <div>
-                                <a href="{{ route('register') }}" style="font-size: 20px"> Create New Account</a>
-                            </div>
-                        </form>
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 m-5">
+            <div class="card ">
+                <div class="card-title">
+                    <h3 class="text-center mt-3 display-4" style="color: #ff890e">Login To Your Account</h3>
+                </div>
+                <div class="card-body">
+                    <form action="{{ route('login') }}" method="POST" class="register-form" id="register-form">
+                        @csrf
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Password" />
+                        </div>
+                        <div class="form-group">
+                            <label for="">Confirm Not Robot ({{ $firstNum }} + {{ $secondNum }})</label>
+                            <input type="text" name="confirm_not_robot" class="form-control" placeholder="Type Answer" />
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" class="btn-yellow" value="Login" />
+                        </div>
+                        <div>
+                            <a href="{{ route('register') }}" style="font-size: 20px"> Create New Account</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
 @include('layouts.footer')
@@ -56,9 +57,7 @@
 
 
 
-{{--
-
-@extends('layouts.logApp')
+{{-- @extends('layouts.logApp')
 
 
 @section('linkTitle')

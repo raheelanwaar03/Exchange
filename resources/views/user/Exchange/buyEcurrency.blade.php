@@ -60,6 +60,11 @@
                                 <input type="text" class="form-control" name="account_name"
                                     placeholder="Enter the Name which you had been provide to your E-Bank">
                             </div>
+                            <div class="form-group">
+                                <label for="">Confirm Not Robot ({{ $first }} + {{ $second }})</label>
+                                <input type="text" class="form-control" name="confirm_not_robot"
+                                    placeholder="Enter Result">
+                            </div>
                             <button type="submit" class="btn-yellow">Procced</button>
                         </form>
                     </div>

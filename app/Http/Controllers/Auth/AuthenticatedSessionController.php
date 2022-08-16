@@ -17,7 +17,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        return view('auth.login');
+        $firstNum = 2;
+        $secondNum = 2;
+        $result = $firstNum + $secondNum;
+        session()->put('result', $result);
+        return view('auth.login', compact('firstNum', 'secondNum', 'result'));
     }
 
     /**
@@ -28,11 +32,15 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->authenticate();
-
-        $request->session()->regenerate();
-
-        return redirect()->intended(RouteServiceProvider::HOME);
+        $userNum = $request->input('confirm_not_robot');
+        $result = $request->session()->get('result');
+        if ($userNum == $result) {
+            $request->authenticate();
+            $request->session()->regenerate();
+            return redirect()->intended(RouteServiceProvider::HOME);
+        } else {
+            return redirect()->back()->withErrors(['confirm_not_robot' => 'The number you entered is incorrect.']);
+        }
     }
 
     /**
