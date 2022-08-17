@@ -116,9 +116,20 @@ class AdminController extends Controller
      */
     public function update(Request $request, Admin $admin)
     {
+        // Remove the old image from the folder
+        $oldImage = $admin->coinImage;
+        if (file_exists(public_path('images/' . $oldImage))) {
+            unlink(public_path('images/' . $oldImage));
+        }
+
+        $file = $request->file('coinImage');
+        $fileName = rand(1111, 999999) . '.' .  $file->getClientOriginalExtension();
+        $file->move(public_path('images'), $fileName);
+
         // edit coin
         $admin = Admin::find($admin->id);
         $admin->coinName = $request->coinName;
+        $admin->coinImage = $fileName;
         $admin->buyPrice = $request->buyPrice;
         $admin->sellPrice = $request->sellPrice;
         $admin->e_bank = $request->e_bank;

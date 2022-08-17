@@ -15,13 +15,17 @@
                         <h1 style="color: #FF890E" class="card-title text-center">Admin Edit Coin's Details</h1>
                     </div>
                     <div class="card-body">
-                        <form action="{{ route('admin.update', ['admin' => $admin->id]) }}" method="POST">
+                        <form action="{{ route('admin.update', ['admin' => $admin->id]) }}" method="POST" enctype="multipart/form-data">
                             @method('PUT')
                             @csrf
                             <div class="form-group">
                                 <label for="coinName">Coin Name</label>
                                 <input type="text" class="form-control" id="coinName" name="coinName"
                                     value="{{ $admin->coinName }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Image</label>
+                                <input type="file" class="form-control" id="coinImage" name="coinImage">
                             </div>
                             <div class="form-group">
                                 <label for="e_bank">E-Bank Details</label>
