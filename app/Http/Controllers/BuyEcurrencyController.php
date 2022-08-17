@@ -20,8 +20,8 @@ class BuyEcurrencyController extends Controller
      */
     public function index()
     {
-        $first = 7;
-        $second = 2;
+        $first = rand(4, 5);
+        $second = 3;
         $result = $first + $second;
         session()->put('result', $result);
         return view('user.Exchange.buyEcurrency' , compact('first', 'second'));
@@ -49,7 +49,7 @@ class BuyEcurrencyController extends Controller
         $result = $request->session()->get('result');
         // check if the user is a robot
         if ($userNum != $result) {
-            return redirect()->back()->with('error', 'You are a robot');
+            return redirect()->back()->with('error', 'Confirm your not a robot');
         }
 
         // This Method Rates

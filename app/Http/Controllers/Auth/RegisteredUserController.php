@@ -20,7 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $first = 3;
+        $first = rand(2, 3);
         $second = 2;
         $total = $first + $second;
         session()->put('total', $total);

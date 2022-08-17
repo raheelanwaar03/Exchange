@@ -17,7 +17,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        $firstNum = 2;
+        $firstNum = rand(3, 4);
         $secondNum = 2;
         $result = $firstNum + $secondNum;
         session()->put('result', $result);
@@ -39,7 +39,7 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerate();
             return redirect()->intended(RouteServiceProvider::HOME);
         } else {
-            return redirect()->back()->withErrors(['confirm_not_robot' => 'The number you entered is incorrect.']);
+            return redirect()->back()->withErrors(['confirm_not_robot' => 'Confirm you are not a robot']);
         }
     }
 

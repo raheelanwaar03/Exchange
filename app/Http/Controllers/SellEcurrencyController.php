@@ -15,8 +15,8 @@ class SellEcurrencyController extends Controller
 {
     public function index()
     {
-        $first = 5;
-        $second = 3;
+        $first = rand(6, 7);
+        $second = 2;
         $result = $first + $second;
         session()->put('result', $result);
         return view('user.Exchange.sellEcurrency' , compact('first', 'second'));
@@ -39,7 +39,7 @@ class SellEcurrencyController extends Controller
         $result = request()->session()->get('result');
         // check if the user is a robot
         if ($userNum != $result) {
-            return redirect()->back()->with('error', 'You are a robot');
+            return redirect()->back()->with('error', 'Confir your not a robot');
         }
 
         $query = Admin::where('coinName', $validatedData['e_bank'])->firstorFail();
