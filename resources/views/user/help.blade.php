@@ -7,7 +7,7 @@
                 <h3>Welcome {{ auth()->user()->name }} <br> Logged in as: {{ auth()->user()->email }} <br> Account Status:
                     ({{ auth()->user()->account_type }}) </h3>
                 <div class="d-flex justify-content-between align-items-center">
-                    <p class="text-white">Our Daily Transction Limit is (50$ to 1000$) for Unverified Account</p>
+                    <p class="text-white">Our Daily Transction Limit is (10$ to 1000$) for Unverified Account</p>
                     <p class="text-white">Our Daily Transction Limit is (Unlimited) for Verified Account</p>
                     <p class="text-white">Contact Us If Your Account is Rejected</p>
                 </div>
