@@ -42,7 +42,7 @@
                                 <input type="text" class="form-control" id="sellPrice" name="sellPrice"
                                     value="{{ $admin->sellPrice }}">
                             </div>
-                            <button type="submit" class="btn-yellow">Update Coin</button>
+                            <button type="submit" class="btn-yellow">Update E-currency</button>
                         </form>
                     </div>
                 </div>
