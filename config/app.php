@@ -194,6 +194,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        "Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider"
 
     ],
 
@@ -210,6 +211,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Captcha' =>"Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider",
     ])->toArray(),
 
 ];

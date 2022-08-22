@@ -20,11 +20,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        $first = rand(2, 3);
-        $second = 2;
-        $total = $first + $second;
-        session()->put('total', $total);
-        return view('auth.register', compact('first', 'second'));
+
+        return view('auth.register');
     }
 
     /**
@@ -45,23 +42,19 @@ class RegisteredUserController extends Controller
             'date_of_birth' => ['required', 'date'],
             'phone_number' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
-            'confirm_not_robot' => ['required', 'string', 'max:255'],
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
-        if ($request->confirm_not_robot == session()->get('total')) {
-            $user = User::create([
-                'name' => $request->name,
-                'email' => $request->email,
-                'password' => Hash::make($request->password),
-                'date_of_birth' => $request->date_of_birth,
-                'phone_number' => $request->phone_number,
-                'country' => $request->country,
-            ]);
-            event(new Registered($user));
-            Auth::login($user);
-            return redirect()->intended(RouteServiceProvider::HOME)->with('success', 'Welcome to your new Account');
-        } else {
-            return redirect()->back()->with(['error' => 'Please confirm that you are not a robot']);
-        }
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'date_of_birth' => $request->date_of_birth,
+            'phone_number' => $request->phone_number,
+            'country' => $request->country,
+        ]);
+        event(new Registered($user));
+        Auth::login($user);
+        return redirect()->intended(RouteServiceProvider::HOME)->with('success', 'Welcome to your new Account');
     }
 }

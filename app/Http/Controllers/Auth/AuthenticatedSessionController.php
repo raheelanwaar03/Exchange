@@ -17,11 +17,8 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-        $firstNum = rand(3, 4);
-        $secondNum = 2;
-        $result = $firstNum + $secondNum;
-        session()->put('result', $result);
-        return view('auth.login', compact('firstNum', 'secondNum', 'result'));
+
+        return view('auth.login');
     }
 
     /**
@@ -32,15 +29,10 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $userNum = $request->input('confirm_not_robot');
-        $result = $request->session()->get('result');
-        if ($userNum == $result) {
+
             $request->authenticate();
             $request->session()->regenerate();
             return redirect()->intended(RouteServiceProvider::HOME);
-        } else {
-            return redirect()->back()->withErrors(['confirm_not_robot' => 'Confirm you are not a robot']);
-        }
     }
 
     /**
