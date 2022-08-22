@@ -194,7 +194,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        "Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider"
+        Buzz\LaravelGoogleCaptcha\CaptchaServiceProvider::class,
 
     ],
 
