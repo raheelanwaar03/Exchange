@@ -34,7 +34,6 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        // return session()->get('total');
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -43,17 +42,17 @@ class RegisteredUserController extends Controller
             'phone_number' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
         ]);
-         // checking captcha
-         $secret = env('CAPTCHASECRETKEY');
-         $response = $request->input('g-recaptcha-response');
-         $remoteip = $_SERVER['REMOTE_ADDR'];
-         $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
-         $data = file_get_contents($url);
-         $row = json_decode($data, true);
+        //  // checking captcha
+        //  $secret = env('CAPTCHASECRETKEY');
+        //  $response = $request->input('g-recaptcha-response');
+        //  $remoteip = $_SERVER['REMOTE_ADDR'];
+        //  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
+        //  $data = file_get_contents($url);
+        //  $row = json_decode($data, true);
 
-         if (!$row['success']) {
-             return redirect()->back()->withErrors('Captcha Error, Please try again.');
-         }
+        //  if (!$row['success']) {
+        //      return redirect()->back()->withErrors('Captcha Error, Please try again.');
+        //  }
 
         $user = User::create([
             'name' => $request->name,

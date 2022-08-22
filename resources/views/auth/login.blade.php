@@ -33,9 +33,9 @@
                             <label for="password">Password</label>
                             <input type="password" name="password" class="form-control" placeholder="Password" />
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <div class="g-recaptcha-response" data-sitekey="6LdFFpshAAAAAJ7LUhJlE2gLP8gcecaisrSsCvte"></div>
-                        </div>
+                        </div> --}}
                         <div class="form-group form-button">
                             <input type="submit" class="btn-yellow" value="Login" />
                         </div>
