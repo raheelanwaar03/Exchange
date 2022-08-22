@@ -30,6 +30,7 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!--End of Tawk.to Script-->
 </head>
 
