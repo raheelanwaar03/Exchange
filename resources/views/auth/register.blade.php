@@ -57,7 +57,7 @@
                                 placeholder="Repeat your password" />
                         </div>
                         <div class="form-group">
-                            <div class="g-recaptcha" data-sitekey="6Lfx4JohAAAAAMD9HEqlOrhSjjDmBBWpFEuPZklW"></div>
+                            <div class="g-recaptcha-response" data-sitekey="6Lfx4JohAAAAAMD9HEqlOrhSjjDmBBWpFEuPZklW"></div>
                         </div>
                         <div class="form-group form-button">
                             <input type="submit" class="btn-yellow" value="Register" />
