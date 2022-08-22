@@ -56,18 +56,6 @@
                             <input type="password" name="password_confirmation" class="form-control"
                                 placeholder="Repeat your password" />
                         </div>
-                        <div class="form-group">
-                            <label for="capatcha">Captcha</label>
-                            <div class="captcha">
-                                <span>{!! app('captcha')->display() !!}</span>
-                                <button type="button" class="btn btn-success refresh-cpatcha"><i
-                                        class="fa fa-refresh"></i></button>
-                            </div>
-
-                            @error('g-recaptcha-response')
-                                <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
-                        </div>
                         <div class="form-group form-button">
                             <input type="submit" class="btn-yellow" value="Register" />
                         </div>

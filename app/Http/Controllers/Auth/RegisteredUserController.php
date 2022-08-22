@@ -42,7 +42,6 @@ class RegisteredUserController extends Controller
             'date_of_birth' => ['required', 'date'],
             'phone_number' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
-            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         $user = User::create([
