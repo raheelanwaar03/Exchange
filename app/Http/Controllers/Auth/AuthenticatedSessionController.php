@@ -29,7 +29,7 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-         // checking captcha
+        //  // checking captcha
         //  $secret = env('CAPTCHASECRETKEY');
         //  $response = $request->input('g-recaptcha-response');
         //  $remoteip = $_SERVER['REMOTE_ADDR'];
