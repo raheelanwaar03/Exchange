@@ -22,8 +22,6 @@ class AdminCheckAccountController extends Controller
     public function action($id)
     {
         $userVerification = UserVerificationAccount::find($id);
-        $userVerification->status = 'unverified';
-        $userVerification->save();
         // change the user account type to verified
         $user = User::find($userVerification->user_id);
         $user->account_type = 'verified';
@@ -32,28 +30,26 @@ class AdminCheckAccountController extends Controller
         $userEmail = User::find($userVerification->user_id)->email;
         Mail::to($userEmail)->send(new adminVerifyAccount());
 
-        return redirect()->route('admin.account.verification')->with('success', 'Account verified successfully');
+        return redirect()->back()->with('success', 'Account verified successfully');
     }
 
     // change the user account status to rejected
     public function reject($id)
     {
         $userVerification = UserVerificationAccount::find($id);
-        $userVerification->status = 'unverified';
-        $userVerification->save();
         // change the user account type to rejected
         $user = User::find($userVerification->user_id);
         $user->account_type = 'rejected';
         $user->save();
+        return redirect()->back()->with('success', 'Account rejected successfully');
         // send mail to this user abouny his request
         $userEmail = User::find($userVerification->user_id)->email;
         Mail::to($userEmail)->send(new adminRejectAccount());
-        return redirect()->route('admin.account.verification')->with('success', 'Account rejected successfully');
     }
 
     public function rejectedAccounts()
     {
-        $users = User::where('account_type', 'rejected')->paginaate(8);
+        $users = User::where('account_type', 'rejected')->get();
         return view('admin.reject', compact('users'));
     }
 

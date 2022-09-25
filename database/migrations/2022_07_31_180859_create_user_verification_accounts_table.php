@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('method');
             $table->string('front_side');
             $table->string('back_side');
-            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

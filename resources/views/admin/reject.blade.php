@@ -10,20 +10,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 style="color: #ff880e;" class="text-center">All Rejected Users for verification</h1>
+                <h1 style="color: #ff880e;" class="text-center">All Rejected Users From Verification</h1>
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8">
-                <table>
-                    <thead class="table table-striped table-border">
+                <table class="table table-striped table-border">
+                    <thead>
                         <tr>
-                            <th>#</th>
+                            <th>Account Id</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Account Type</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -32,22 +31,17 @@
                             <tr>
                                 <td>{{ $user->id }}</td>
                                 <td>{{ $user->name }}</td>
-                                <td>
-                                    <a href="mailto:{{ $user->email }}">{{ $user->email }}</a>
-                                </td>
-                                <td>
-                                    {{ $user->account_type }}
-                                </td>
+                                <td>{{ $user->email }}</td>
                                 <td>
                                     <a href="{{ route('admin.account.verification.verify', ['id' => $user->id]) }}"
                                         class="btn btn-success">Verify</a>
-                                    <a href="{{ route('admin.account.verification.unverify', ['id' => $user->id]) }}"
+                                    <a href="{{ route('admin.unverified.accounts', ['id' => $user->id]) }}"
                                         class="btn btn-danger">Unverify</a>
                                 </td>
                             </tr>
                         @endforeach
                         {{-- pagination --}}
-                        {{ $users->links() }}
+                        {{-- {{ $users->links() }} --}}
                     </tbody>
                 </table>
             </div>

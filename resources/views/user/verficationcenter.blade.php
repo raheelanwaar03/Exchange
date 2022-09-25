@@ -52,7 +52,6 @@
                             <button type="submit" class="btn-yellow">Procced</button>
                         </form>
                     </div>
-
                 </div>
             </div>
             <div class="col-md-2">

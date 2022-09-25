@@ -19,6 +19,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Account Type</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -28,6 +29,12 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->account_type }}</td>
+                            <td>
+                                <a href="{{ route('admin.account.verification.verify', ['id' => $user->id]) }}"
+                                    class="btn btn-success">Verify</a>
+                                    <a href="{{ route('admin.account.verification.reject', ['id' => $user->id]) }}"
+                                        class="btn btn-danger">Reject</a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>

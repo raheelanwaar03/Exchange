@@ -20,11 +20,10 @@
                 <table>
                     <thead class="table table-striped table-border">
                         <tr>
-                            <th>#</th>
+                            <th>Account Id</th>
                             <th>Method</th>
                             <th>Front</th>
                             <th>Back</th>
-                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -41,7 +40,6 @@
                                     <img src="{{ asset('images/' . $ver->back_side) }}" alt="{{ $ver->back_side }}"
                                         height="90px" width="90px" class="img-fluid img-thumbnail">
                                 </td>
-                                <td>{{ $ver->status }}</td>
                                 <td>
                                     <a href="{{ route('admin.account.verification.verify', ['id' => $ver->id]) }}"
                                         class="btn btn-success">Verify</a>

@@ -38,7 +38,7 @@ class UserVerificationAccountController extends Controller
         $userVerificationAccount = $userVerificationAccount->account_type;
 
         if ($userVerificationAccount == 'verified') {
-            return redirect()->back()->with('error', 'You have already verified your account');
+            return redirect()->back()->with('error', 'You have already verified account');
         }
 
         $userVerification = new UserVerificationAccount();
