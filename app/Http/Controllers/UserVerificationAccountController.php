@@ -64,4 +64,10 @@ class UserVerificationAccountController extends Controller
 
     }
 
+    public function show(UserVerificationAccount $ver)
+    {
+        $userVerification = UserVerificationAccount::find($ver->id);
+        return view('admin.verificationShow',compact('userVerification'));
+    }
+
 }
