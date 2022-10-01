@@ -21,6 +21,7 @@
                     <thead class="table table-striped table-border">
                         <tr>
                             <th>Account Id</th>
+                            <th>Account Type</th>
                             <th>Method</th>
                             <th>Front</th>
                             <th>Back</th>
@@ -30,7 +31,8 @@
                     <tbody>
                         @foreach ($userVerifications as $ver)
                             <tr>
-                                <td>{{ $ver->id }}</td>
+                                <td>{{ $ver->user_id }}</td>
+                                <td>{{ $ver->status }}</td>
                                 <td>{{ $ver->method }}</td>
                                 <td>
                                     <img src="{{ asset('images/' . $ver->front_side) }}" alt="{{ $ver->front_side }}"

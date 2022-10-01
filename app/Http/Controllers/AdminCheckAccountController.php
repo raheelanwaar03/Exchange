@@ -14,7 +14,7 @@ class AdminCheckAccountController extends Controller
     public function index()
     {
         // showing the verification requests
-        $userVerifications = UserVerificationAccount::where('status', 'pending')->paginate(8);
+        $userVerifications = UserVerificationAccount::where('status', 'unverified')->paginate(8);
         return view('admin.verification', compact('userVerifications'));
     }
 
