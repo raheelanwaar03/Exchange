@@ -17,8 +17,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function create()
     {
-
-        return view('auth.login');
+        session_start();
+        $first_num = rand(1 ,10);
+        $second_num = rand(1,10);
+        $answer = $first_num + $second_num;
+        session(['answer'=>$answer]);
+        return view('auth.login',compact('first_num','second_num'));
     }
 
     /**
@@ -29,21 +33,14 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        //  // checking captcha
-        //  $secret = env('CAPTCHASECRETKEY');
-        //  $response = $request->input('g-recaptcha-response');
-        //  $remoteip = $_SERVER['REMOTE_ADDR'];
-        //  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
-        //  $data = file_get_contents($url);
-        //  $row = json_decode($data, true);
+            if ($request->answer = session('answer')) {
+                $request->authenticate();
+                $request->session()->regenerate();
+                return redirect()->intended(RouteServiceProvider::HOME);
+            } else {
+                return redirect()->back()->with('error','Captcha validation error!');
+            }
 
-        //  if (!$row['success']) {
-        //      return redirect()->back()->withErrors('Captcha Error, Please try again.');
-        //  }
-
-            $request->authenticate();
-            $request->session()->regenerate();
-            return redirect()->intended(RouteServiceProvider::HOME);
     }
 
     /**

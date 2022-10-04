@@ -40,9 +40,11 @@
                                 <input type="password" name="password_confirmation" class="form-control"
                                     placeholder="Repeat your password" />
                             </div>
-                            {{-- <div class="form-group">
-                            <div class="g-recaptcha-response" data-sitekey="6Lclt50hAAAAAK9imkOiYHMVWeDZkGdb4utnoqcb"></div>
-                        </div> --}}
+                            <div class="form-group">
+                                <label for="answer">{{ $first_num . '+' . $second_num }} = ?</label>
+                                <input type="text" name="answer" class="form-control"
+                                    placeholder="Enter the answer that you are not a Robot">
+                            </div>
                             <div class="form-group form-button">
                                 <input type="submit" class="btn-yellow" value="Register" />
                             </div>

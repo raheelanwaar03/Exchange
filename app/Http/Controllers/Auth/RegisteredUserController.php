@@ -20,8 +20,12 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-
-        return view('auth.register');
+        session_start();
+    $first_num = rand(1 ,10);
+    $second_num = rand(1,10);
+    $answer = $first_num + $second_num;
+    session(['answer'=>$answer]);
+        return view('auth.register',compact('first_num','second_num'));
     }
 
     /**
@@ -41,29 +45,23 @@ class RegisteredUserController extends Controller
             'date_of_birth' => ['required', 'date'],
             'phone_number' => ['required', 'string', 'max:255'],
             'country' => ['required', 'string', 'max:255'],
+            'answer' => 'required',
         ]);
-        // //  // checking captcha
-        //  $secret = env('CAPTCHASECRETKEY');
-        //  $response = $request->input('g-recaptcha-response');
-        //  $remoteip = $_SERVER['REMOTE_ADDR'];
-        //  $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
-        //  $data = file_get_contents($url);
-        //  $row = json_decode($data, true);
+        if ($request->answer = session('answer')) {
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'date_of_birth' => $request->date_of_birth,
+                'phone_number' => $request->phone_number,
+                'country' => $request->country,
+            ]);
+            event(new Registered($user));
+            Auth::login($user);
+            return redirect()->intended(RouteServiceProvider::HOME)->with('success', 'Welcome to your new Account');
+        } else {
+            return redirect()->back()->with('error','Captcha validation error');
+        }
 
-        //  if (!$row['success']) {
-        //      return redirect()->back()->withErrors('Captcha Error, Please try again.');
-        //  }
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'date_of_birth' => $request->date_of_birth,
-            'phone_number' => $request->phone_number,
-            'country' => $request->country,
-        ]);
-        event(new Registered($user));
-        Auth::login($user);
-        return redirect()->intended(RouteServiceProvider::HOME)->with('success', 'Welcome to your new Account');
     }
 }
