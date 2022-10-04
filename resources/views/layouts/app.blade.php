@@ -3,10 +3,9 @@
 @yield('content')
 
 <div class="whatsapp">
-    <a href="https://app.whatsapp.com/send?phone={{ env('APP_Phone2') }}" target="_blank"><img
+    <a href="https://web.whatsapp.com/send?phone={{ env('APP_Phone2') }}" target="_blank"><img
             src="{{ asset('assets/images/whatsapp.png') }}" alt="whats app logo" width="50px" height="50px"></a>
 </div>
-
 
 <div class="button_a1a3" style="background: rgb(68, 187, 110);">
     <div class="iconWrap_f760">
