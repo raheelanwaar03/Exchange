@@ -72,7 +72,7 @@
                 <h5 class="text-white">We guarantee instant funding 24/7. If you have questions or suggestions, feel
                     free to Contact us.</h5>
                 <h4 class="text-white">Email: support@instantflexy.com</h4>
-                <h4 class="text-white">Phone:</h4>
+                <h4 class="text-white">Phone:08145319150</h4>
                 <p class="text-white">either you can use our 24 hour live chat support or social accounts</p>
             </div>
             <div class="col-lg-4">

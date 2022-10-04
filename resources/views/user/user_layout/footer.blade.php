@@ -57,9 +57,9 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://telegram.com/send?={{ env('APP_TELEGRAM') }}" target="_blank">
-                                            <img src="{{ asset('assets/images/Telegram.png') }}" height="50px"
-                                                width="60px">
+                                        <a href="https://t.me/instantflexyxchange" target="_blank">
+                                            <img src="{{ asset('assets/images/Telegram.png') }}" alt="social_img"
+                                                height="50px" width="60px">
                                         </a>
                                     </li>
                                     <li>
