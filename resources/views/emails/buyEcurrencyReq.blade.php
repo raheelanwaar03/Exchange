@@ -1,7 +1,7 @@
 @component('mail::message')
     # Buying Request
 
-    Hi, {{ auth()->user()->name }} We have received your request to buy E-currency your reference id is
+    Hi Dear User, We have received your request to buy E-currency your reference id is
     {{ $latestTransaction['transaction_id'] }}.
 
     You requested for buying {{ $latestTransaction['buyingAmount'] }} E-currency for Your {{ $latestTransaction['e_bank'] }}

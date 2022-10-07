@@ -1,7 +1,7 @@
 @component('mail::message')
     # Selling Request
 
-    Hi, {{ auth()->user()->name }} Your Selling Request has been Recived your refrence id is
+    Hi Dear User, Your Selling Request has been Recived your refrence id is
     {{ $latestTransaction['transaction_id'] }}.
 
     Your Requested to sell {{ $latestTransaction['sellingAmount'] }} E-currency from Your
