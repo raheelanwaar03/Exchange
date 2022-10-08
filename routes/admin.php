@@ -13,13 +13,15 @@ Route::post('/admin/newSaving', [AdminController::class, 'newSaving'])->name('ad
 Route::get('/admin/newsDestroy/{id}', [AdminController::class, 'destroyNews'])->name('admin.newsDestroy')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/buyingRequest', [AdminController::class, 'buyingRequest'])->name('admin.buyingRequest')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest', [AdminController::class, 'sellingRequest'])->name('admin.sellingRequest')->middleware(['auth', 'adminAuth']);
-Route::get('/admin/buyingRequest/approvedBuyView', [AdminController::class, 'approvedBuyView'])->name('admin.buyingRequest.approvedBuyView')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/buyingRequest/approvedBuy', [AdminController::class, 'approvedBuyView'])->name('admin.buyingRequest.approvedBuyView')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/buyingRequest/completeBuy', [AdminController::class, 'completeBuyView'])->name('admin.buyingRequest.completeBuyView')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/buyingRequest/complete/{id}', [AdminController::class, 'complete'])->name('admin.buyingRequest.complete')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/buyingRequest/decline/{id}', [AdminController::class, 'decline'])->name('admin.buyingRequest.decline')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/buyingRequest/declineBuy', [AdminController::class, 'declineBuyView'])->name('admin.buyingRequest.declineBuyView')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/buyingRequest/approve/{id}', [AdminController::class, 'approveBuy'])->name('admin.buyingRequest.approveBuy')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/complete/{id}', [AdminController::class, 'completeSell'])->name('admin.sellingRequest.completeSell')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/completeSell', [AdminController::class, 'completeSellView'])->name('admin.sellingRequest.completeSellView')->middleware(['auth', 'adminAuth']);
+Route::get('/admin/sellingRequest/declineSell', [AdminController::class, 'declineSellView'])->name('admin.sellingRequest.declineSellView')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/decline/{id}', [AdminController::class, 'declineSell'])->name('admin.sellingRequest.declineSell')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/approveSellView', [AdminController::class, 'approveSellView'])->name('admin.sellingRequest.approveSellView')->middleware(['auth', 'adminAuth']);
 Route::get('/admin/sellingRequest/approve/{id}', [AdminController::class, 'approveSell'])->name('admin.sellingRequest.approveSell')->middleware(['auth', 'adminAuth']);

@@ -6,6 +6,6 @@
         <a href="{{ route('user.sell.ecurrency') }}" class="list-group-item list-group-item-action">Sell E-Currency</a>
         <a href="{{ route('user.account.verification') }}" class="list-group-item list-group-item-action">Verification Center</a>
         <a href="{{ route('user.news') }}" class="list-group-item list-group-item-action">News</a>
-        <a href="{{ route('user.feedback') }}" class="list-group-item list-group-item-action">Customer's Feedback</a>
+        <a href="{{ route('user.feedback') }}" class="list-group-item list-group-item-action">Give Feedback</a>
       </div>
 </div>

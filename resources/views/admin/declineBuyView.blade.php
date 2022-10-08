@@ -5,10 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="d-flex justify-content-around align-items-center">
-        <h1 style="color: #ff880e;" class="text-center">Completed Selling E-Currency Request of Users </h1>
-        <a href="{{ route('admin.buyingRequest.declineBuyView') }}" class="join_bt">Declined SellTran..</a>
-    </div>
+    <h1 style="color: #ff880e;" class="text-center">Declined Selling E-Currency Request of Users </h1>
     <div class="container">
         <div class="d-flex justify-content-center align-items-centers">
             <div class="row">
@@ -33,8 +30,10 @@
                                     <td>{{ $sellEcurrency->seller_email }}</td>
                                     <td>{{ $sellEcurrency->created_at }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route('admin.sellingRequest.declineSell', ['id' => $sellEcurrency->id]) }}"
-                                            class="btn btn-sm btn-danger">Decline</a>
+                                        <a href="{{ route('admin.sellingRequest.approveSell', ['id' => $sellEcurrency->id]) }}"
+                                            class="btn btn-sm btn-warning">Approve</a>
+                                        <a href="{{ route('admin.sellingRequest.completeSell', ['id' => $sellEcurrency->id]) }}"
+                                            class="btn btn-sm btn-success">Complete</a>
                                     </td>
                                 </tr>
                             @endforeach

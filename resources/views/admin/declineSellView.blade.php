@@ -5,10 +5,7 @@
 @endsection
 
 @section('content')
-<div class="d-flex justify-content-around align-items-center">
-    <h1 style="color: #ff880e;" class="text-center">Competed Selling E-Currency Request from Users </h1>
-    <a href="{{ route('admin.sellingRequest.declineSellView') }}" class="join_bt">Declined SellTran..</a>
-</div>
+    <h1 style="color: #ff880e;" class="text-center">Declined Selling E-Currency Request of Users </h1>
     <div class="container">
             <div class="row">
                 <div class="col-md-9">
@@ -28,12 +25,15 @@
                                 <tr>
                                     <td>{{ $buyEcurrency->id }}</td>
                                     <td>{{ $buyEcurrency->status }}</td>
-                                    <td>{{ $buyEcurrency->buyingAmount }}</td>
-                                    <td>{{ $buyEcurrency->buyer_Email }}</td>
+                                    <td>{{ $buyEcurrency->sellingAmount }}</td>
+                                    <td>{{ $buyEcurrency->seller_email }}</td>
                                     <td>{{ $buyEcurrency->created_at }}</td>
                                     <td class="d-flex">
-                                        <a href="{{ route('admin.buyingRequest.decline', ['id' => $buyEcurrency->id]) }}"
-                                            class="btn btn-sm btn-danger">Decline</a>
+                                        <a
+                                            href="{{ route('admin.buyingRequest.complete', ['id' => $buyEcurrency->id]) }}"
+                                            class="btn btn-sm btn-success">Complete</a>
+                                        <a href="{{ route('admin.buyingRequest.approveBuy', ['id' => $buyEcurrency->id]) }}"
+                                            class="btn btn-sm btn-warning">Approve</a>
                                     </td>
                                 </tr>
                             @endforeach

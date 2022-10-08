@@ -66,6 +66,12 @@ class AdminController extends Controller
         return view ('admin.approvedBuyView',compact('sellEcurrencys'));
     }
 
+    public function declineBuyView()
+    {
+        $sellEcurrencys = SellEcurrency::where('status','declined')->paginate(10);
+        return view('admin.declineBuyView',compact('sellEcurrencys'));
+    }
+
     public function approveSellView()
     {
         $buyEcurrencys = BuyEcurrency::where('status','approved')->paginate(10);
@@ -74,8 +80,14 @@ class AdminController extends Controller
 
     public function completeSellView()
     {
-        $buyEcurrencys = SellEcurrency::where('status','completed')->paginate('10');
+        $buyEcurrencys = BuyEcurrency::where('status','completed')->paginate('10');
         return view('admin.completeSellView',compact('buyEcurrencys'));
+    }
+
+    public function declineSellView()
+    {
+        $buyEcurrencys = BuyEcurrency::where('status','declined')->paginate('10');
+        return view('admin.declineSellView',compact('buyEcurrencys'));
     }
     /**
      * Store a newly created resource in storage.
