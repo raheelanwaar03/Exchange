@@ -5,30 +5,22 @@
 @endsection
 
 @section('content')
-    <div class="d-flex justify-content-around align-items-center">
-        <h1 style="color: #ff880e;" class="text-center">Buying E-Currency Request from Users </h1>
-        <div class="d-flex justify-content-center align-items-center">
-            <a href="{{ route('admin.sellingRequest.approveSellView') }}" class="join_bt">Approved BuyTran..</a>
-            <a href="{{ route('admin.sellingRequest.completeSellView') }}" class="join_bt">Compeleted BuyTran..</a>
-        </div>
-    </div>
+<div class="d-flex justify-content-around align-items-center">
+    <h1 style="color: #ff880e;" class="text-center">Approved Selling E-Currency Request from Users </h1>
+    <a href="{{ route('admin.sellingRequest.completeSellView') }}" class="join_bt">Completed SellTran..</a>
+</div>
+
     <div class="container">
-        <div class="d-flex justify-content-center align-items-centers">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-9">
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th class="bg-warning">#</th>
-                                <th class="bg-warning">REF</th>
                                 <th class="bg-warning">Status</th>
                                 <th class="bg-warning">Amount</th>
-                                <th class="bg-warning">E-Bank Name</th>
-                                <th class="bg-warning">E-Account No:</th>
-                                <th class="bg-warning">E-Account Name</th>
                                 <th class="bg-warning">Email</th>
                                 <th class="bg-warning">Date</th>
-                                <th class="bg-warning">You Received</th>
                                 <th class="bg-warning">Action</th>
                             </tr>
                         </thead>
@@ -36,22 +28,15 @@
                             @foreach ($buyEcurrencys as $buyEcurrency)
                                 <tr>
                                     <td>{{ $buyEcurrency->id }}</td>
-                                    <td>{{ $buyEcurrency->transaction_id }}</td>
                                     <td>{{ $buyEcurrency->status }}</td>
                                     <td>{{ $buyEcurrency->buyingAmount }}</td>
-                                    <td>{{ $buyEcurrency->e_bank }}</td>
-                                    <td>{{ $buyEcurrency->account_number }}</td>
-                                    <td>{{ $buyEcurrency->account_name }}</td>
                                     <td>{{ $buyEcurrency->buyer_Email }}</td>
                                     <td>{{ $buyEcurrency->created_at }}</td>
-                                    <td>{{ $buyEcurrency->totalSellingPrice }}</td>
                                     <td class="d-flex"> <a
                                             href="{{ route('admin.buyingRequest.complete', ['id' => $buyEcurrency->id]) }}"
                                             class="btn btn-sm btn-success">Complete</a>
                                         <a href="{{ route('admin.buyingRequest.decline', ['id' => $buyEcurrency->id]) }}"
                                             class="btn btn-sm btn-danger">Decline</a>
-                                        <a href="{{ route('admin.buyingRequest.approveBuy', ['id' => $buyEcurrency->id]) }}"
-                                            class="btn btn-sm btn-warning">Approve</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -59,7 +44,9 @@
                     </table>
                     {{ $buyEcurrencys->links() }}
                 </div>
+                <div class="col-md-3">
+                    @include('admin.admin_layout.sideNav')
+                </div>
             </div>
-        </div>
     </div>
 @endsection

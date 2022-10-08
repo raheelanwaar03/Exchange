@@ -1,7 +1,7 @@
 @component('mail::message')
 # Account Rejection
 
-Hi {{ auth()->user()->name }}, Your Account Verification Request has been rejected.
+Dear User, Your Account Verification Request has been rejected.
 You did not meet the requirements to be Verified.
 Contact with Admin for more details.
 

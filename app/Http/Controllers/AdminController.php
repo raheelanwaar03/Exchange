@@ -42,11 +42,11 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function allUser()
-     {
-         $users = User::paginate(10);
-         return view('admin.allUsers', compact('users'));
-     }
+    public function allUser()
+    {
+        $users = User::paginate(10);
+        return view('admin.allUsers', compact('users'));
+    }
 
 
     public function create()
@@ -54,6 +54,29 @@ class AdminController extends Controller
         return view('admin.addCoin');
     }
 
+    public function completeBuyView()
+    {
+        $sellEcurrencys = SellEcurrency::where('status', 'completed')->paginate(10);
+        return view('admin.completeBuyTranscation', compact('sellEcurrencys'));
+    }
+
+    public function approvedBuyView()
+    {
+        $sellEcurrencys = SellEcurrency::where('status','approved')->paginate(10);
+        return view ('admin.approvedBuyView',compact('sellEcurrencys'));
+    }
+
+    public function approveSellView()
+    {
+        $buyEcurrencys = BuyEcurrency::where('status','approved')->paginate(10);
+        return view('admin.approveSellView',compact('buyEcurrencys'));
+    }
+
+    public function completeSellView()
+    {
+        $buyEcurrencys = SellEcurrency::where('status','completed')->paginate('10');
+        return view('admin.completeSellView',compact('buyEcurrencys'));
+    }
     /**
      * Store a newly created resource in storage.
      *
@@ -83,17 +106,6 @@ class AdminController extends Controller
         $admin->sellPrice = $data['sellPrice'];
         $admin->save();
         return redirect()->route('admin.index')->with('success', 'E-Currency added successfully');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Admin  $admin
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Admin $admin)
-    {
-        //
     }
 
     /**
@@ -130,7 +142,6 @@ class AdminController extends Controller
         $admin->sellPrice = $request->sellPrice;
         $admin->save();
         return redirect()->route('admin.index')->with('success', 'E-Currency updated successfully');
-
     }
 
     /**
@@ -176,8 +187,8 @@ class AdminController extends Controller
 
     public function buyingRequest()
     {
-        $buyEcurrencies = BuyEcurrency::where('status', 'pending')->paginate(10);
-        return view('admin.Exchange.sellEcurrency', compact('buyEcurrencies'));
+        $buyEcurrencys = BuyEcurrency::where('status', 'pending')->paginate(10);
+        return view('admin.Exchange.sellEcurrency', compact('buyEcurrencys'));
     }
 
     public function complete($id)
@@ -208,11 +219,11 @@ class AdminController extends Controller
     public function approveBuy($id)
     {
         // approve the selling request
-        $sellEcurrency = BuyEcurrency::find($id);
-        $sellEcurrency->status = 'approve';
-        $sellEcurrency->save();
+        $buyEcurrency = BuyEcurrency::find($id);
+        $buyEcurrency->status = 'approved';
+        $buyEcurrency->save();
         // send email to the user
-        $user = User::find($sellEcurrency->user_id);
+        $user = User::find($buyEcurrency->user_id);
         $user->email = $user->email;
         Mail::to($user->email)->send(new BuyingApproval());
         return redirect()->back()->with('success', 'Selling request approved successfully');
@@ -254,7 +265,7 @@ class AdminController extends Controller
     public function approveSell($id)
     {
         $sellEcurrency = SellEcurrency::find($id);
-        $sellEcurrency->status = 'approve';
+        $sellEcurrency->status = 'approved';
         $sellEcurrency->save();
         // send email to the user
         $user = User::find($sellEcurrency->user_id);
@@ -278,7 +289,7 @@ class AdminController extends Controller
     public function review()
     {
         $reviews = Review::paginate(10);
-        return view('admin.feedback' , compact('reviews'));
+        return view('admin.feedback', compact('reviews'));
     }
 
 
@@ -290,6 +301,4 @@ class AdminController extends Controller
         $review->delete();
         return redirect()->back()->with('success', 'Review deleted successfully');
     }
-
-
 }
