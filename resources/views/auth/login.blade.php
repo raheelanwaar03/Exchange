@@ -21,7 +21,7 @@
                             <div class="form-group">
                                 <label for="answer">{{ $first_num . '+' . $second_num }} = ?</label>
                                 <input type="text" name="answer" class="form-control"
-                                    placeholder="Enter the answer that you are not a Robot">
+                                    placeholder="Enter the answer that you are not a Robot" required>
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" class="btn-yellow" value="Login" />
