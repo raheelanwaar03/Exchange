@@ -20,6 +20,7 @@
                                 <th class="bg-warning">Status</th>
                                 <th class="bg-warning">Amount</th>
                                 <th class="bg-warning">Email</th>
+                                <th class="bg-warning">Sell Rate</th>
                                 <th class="bg-warning">Date</th>
                                 <th class="bg-warning">Action</th>
                             </tr>
@@ -31,6 +32,7 @@
                                     <td>{{ $buyEcurrency->status }}</td>
                                     <td>{{ $buyEcurrency->buyingAmount }}</td>
                                     <td>{{ $buyEcurrency->buyer_Email }}</td>
+                                    <td>{{ $buyEcurrency->auth()->admin()->sellPrice }}</td>
                                     <td>{{ $buyEcurrency->created_at }}</td>
                                     <td class="d-flex"> <a
                                             href="{{ route('admin.buyingRequest.complete', ['id' => $buyEcurrency->id]) }}"

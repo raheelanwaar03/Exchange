@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="d-flex justify-content-around align-items-center">
-    <h1 style="color: #ff880e;" class="text-center">Approved Selling E-Currency Request of Users </h1>
+    <h1 style="color: #ff880e;" class="text-center">Approved Buying E-Currency Request from Users </h1>
     <a href="{{ route('admin.buyingRequest.completeBuyView') }}" class="join_bt">Completed SellTran..</a>
 </div>
     <div class="container">
@@ -20,6 +20,7 @@
                                 <th class="bg-warning">Status</th>
                                 <th class="bg-warning">Amount</th>
                                 <th class="bg-warning">Email</th>
+                                <th class="bg-warning">buying Rate</th>
                                 <th class="bg-warning">Date</th>
                                 <th class="bg-warning">Action</th>
                             </tr>
@@ -31,6 +32,7 @@
                                     <td>{{ $sellEcurrency->status }}</td>
                                     <td>{{ $sellEcurrency->sellingAmount }}</td>
                                     <td>{{ $sellEcurrency->seller_email }}</td>
+                                    <td>{{ $sellEcurrency->auth()->admin()->buyPrice }}</td>
                                     <td>{{ $sellEcurrency->created_at }}</td>
                                     <td class="d-flex"> <a
                                             href="{{ route('admin.sellingRequest.completeSell', ['id' => $sellEcurrency->id]) }}"

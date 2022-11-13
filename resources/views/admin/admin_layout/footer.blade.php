@@ -59,11 +59,11 @@
                                                 height="50px" width="60px">
                                         </a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="https://twitter.com/send?={{ env('APP_TWITTER') }}" target="_blank">
                                             <img src="{{ asset('assets/images/twitter.png') }}" height="50px" width="50px">
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>

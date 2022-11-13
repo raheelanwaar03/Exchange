@@ -62,13 +62,13 @@
                                                 height="50px" width="60px">
                                         </a>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <a href="https://twitter.com/Instantflexy?t=efd24_80Zf0Kt8ygOTs0FQ&s=09"
                                             target="_blank">
                                             <img src="{{ asset('assets/images/twitter.png') }}" alt="social_img"
                                                 height="50px" width="50px">
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
