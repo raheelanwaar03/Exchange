@@ -32,7 +32,7 @@
                                     <td>{{ $sellEcurrency->status }}</td>
                                     <td>{{ $sellEcurrency->sellingAmount }}</td>
                                     <td>{{ $sellEcurrency->seller_email }}</td>
-                                    <td>{{ $sellEcurrency->auth()->admin()->buyPrice }}</td>
+                                    {{-- <td>{{ $sellEcurrency->auth()->admin()->buyPrice }}</td> --}}
                                     <td>{{ $sellEcurrency->created_at }}</td>
                                     <td class="d-flex"> <a
                                             href="{{ route('admin.sellingRequest.completeSell', ['id' => $sellEcurrency->id]) }}"
