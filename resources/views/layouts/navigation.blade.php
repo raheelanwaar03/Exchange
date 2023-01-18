@@ -1,4 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{ env('App_NAME') }} </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/typography.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/revslider/css/settings.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+    <link rel="stylesheet" href="javascript:void(0)" data-style="styles">
+    <link rel="stylesheet" href="{{ asset('assets/css/style-customizer.css') }}" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113778816-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-113778816-1');
+    </script>
+</head>
+
+<body>
+    <!-- loading -->
+    <div id="loading">
+        <div id="loading-center">
+            <img src="{{ asset('assets/images/loader.gif') }}" alt="loder">
+        </div>
+    </div>
+    <header class="simpal-yellow">
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="topbar-left">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="fa fa-phone text-blue"></i>+2349128499395</li>
+                                <li class="list-inline-item ms-2"><i class="fa fa-envelope-o ms-3"> </i>
+                                    support@instantflexy.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="topbar-right text-end">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <ul class="list-inline iq-left">
+                                        <li class="list-inline-item"><a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target=".iq-login" data-bs-whatever="@mdo"><i
+                                                    class="fa fa-lock"></i>Login</a></li>
+                                        <li class="list-inline-item"><a href="javascript:void(0)" data-bs-toggle="modal"
+                                                data-bs-target=".iq-register" data-bs-whatever="@fat"><i
+                                                    class="fa fa-user"></i>Register</a></li>
+                                    </ul>
+                                </li>
+                                <li class="list-inline-item"><a href="javascript:void(0)"><i
+                                            class="fa fa-comments-o ms-3"></i>Free Consulting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="iq-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo">
+                            <a href="home-1.html"><img id="logo_dark" class="img-fluid" src="{{ asset('assets/images/logo.png') }}"
+                                    alt="logo"></a>
+                        </div>
+                        <nav> <a id="resp-menu" class="responsive-menu" href="javascript:void(0)"><i
+                                    class="fa fa-reorder"></i> Menu</a>
+                            <ul class="menu text-end">
+                                <li><a class="active" href="javascript:void(0)">HOME</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="home-1.html">Home 1</a></li>
+                                        <li><a class="active" href="home-2.html">Home 2</a></li>
+                                        <li><a href="home-3.html">Home 3</a></li>
+                                        <li><a href="home-4.html">Home 4</a></li>
+                                        <li><a href="home-5.html">Home 5</a></li>
+                                        <li><a href="app-landing-page.html">App Landing Page</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="javascript:void(0)">Services <i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="services-1.html">Services 1</a></li>
+                                                <li><a href="services-2.html">Services 2</a></li>
+                                                <li><a href="services-3.html">Services 3</a></li>
+                                                <li><a href="services-details.html">Services Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="history.html">History</a></li>
+                                        <li><a href="event.html">Event</a></li>
+                                        <li><a href="customer-support.html">Customer Support</a></li>
+                                        <li><a href="clients.html">Clients</a></li>
+                                        <li><a href="javascript:void(0)">Team <i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="team-1.html">Team 1</a></li>
+                                                <li><a href="team-2.html">Team 2</a></li>
+                                                <li><a href="team-details.html">Team Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Pricing <i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="pricing.html">Pricing 1</a></li>
+                                                <li><a href="pricing-1.html">Pricing 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Faq <i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="faqs-1.html">Faq 1</a></li>
+                                                <li><a href="faqs-2.html">Faq 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Coming Soon <i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="coming-soon-1.html">Coming Soon 1</a></li>
+                                                <li><a href="coming-soon-2.html">Coming Soon 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Error <i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="error-404-1.html">Error 404 1</a></li>
+                                                <li><a href="error-404-2.html">Error 404 2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="javascript:void(0)">Breadcrumb <i class="fa fa-angle-right"
+                                                    aria-hidden="true"></i></a>
+                                            <ul>
+                                                <li><a href="breadcrumb-left.html">Breadcrumb left</a></li>
+                                                <li><a href="breadcrumb-right.html">Breadcrumb Right</a></li>
+                                                <li><a href="breadcrumb-center.html">Breadcrumb Center</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="video.html">Video</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Coin</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="market-data.html">Market Data</a></li>
+                                        <li><a href="wallet.html">WallEt</a></li>
+                                        <li><a href="buy-sell.html">buy & sell</a></li>
+                                        <li><a href="exchange.html">Exchange</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Blog</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="blog-2-columns.html">2 Columns</a></li>
+                                        <li><a href="blog-3-columns.html">3 Columns</a></li>
+                                        <li><a href="blog-fullwidth.html">Full Width</a></li>
+                                        <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
+                                        <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
+                                        <li><a href="blog-single.html">Single Page</a></li>
+                                        <li><a href="blog-single-left-sidebar.html">Single Left Sidebar</a></li>
+                                        <li><a href="blog-single-right-sidebar.html">Single Right Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="shop-2-columns.html">Shop 2 columns</a></li>
+                                        <li><a href="shop-single.html">Shop Single</a></li>
+                                        <li><a href="shop-cart.html">Shop Cart</a></li>
+                                        <li><a href="checkout.html">checkout</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0)">Contact</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="contact-1.html">Contact Us 1</a></li>
+                                        <li><a href="contact-2.html">Contact Us 2</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="iq-search"> <a class="search-btn not_click"
+                                            href="javascript:void(0);"> <span>Search Button</span></a>
+                                        <div class="search-box not-click">
+                                            <input type="email" class="form-control not-click"
+                                                id="exampleInputEmail1" placeholder="Search">
+                                            <i class="ti-search"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+{{-- !DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,7 +253,6 @@
 <body id="home" data-offset="98">
 
     <header class="top-header">
-        {{-- <div class="header_top"> --}}
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 d-flex justify-content-around align-itmes-center">
@@ -54,7 +269,6 @@
                 </div>
             </div>
         </div>
-        {{-- </div> --}}
     </header>
     <hr style="color: #ff890e;font-size:2px">
 
@@ -103,7 +317,6 @@
     </div>
 
 
-    {{-- navbar --}}
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-12">
@@ -148,4 +361,4 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
